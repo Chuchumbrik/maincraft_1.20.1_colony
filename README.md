@@ -12,7 +12,7 @@
 4. Выделите игре 6–8 ГБ памяти и запускайте.
 
 ## Важно
-- Версии модов на клиенте и сервере должны совпадать. Особенно это касается **colonyboard 1.2.0** (окно колонии на J): при разной версии на сервер не зайти. То же для других модов, которые стоят с обеих сторон (MineColonies, Recruits, Epic Fight, Iron's Spells и т.д.).
+- Версии модов на клиенте и сервере должны совпадать. Особенно это касается **colonyboard 1.5.0** (окно колонии на J): при разной версии на сервер не зайти. То же для других модов, которые стоят с обеих сторон (MineColonies, Recruits, Epic Fight, Iron's Spells и т.д.).
 - При обновлении сборки скачивайте новый архив целиком.
 - `custom-mods-only.zip` — только наши собственные моды/патчи, для тех, у кого остальное уже стоит.
 
@@ -26,9 +26,9 @@
 - `blockui-1.20.1-1.0.193.jar`
 - `Chunky-1.3.146.jar`
 - `cloth-config-11.1.136-forge.jar`
-- `coloniesru-1.0.0.jar`
+- `coloniesru-1.0.1.jar`
 - `colonistsrecruited-1.0.5.jar`
-- `colonyboard-1.2.0.jar`
+- `colonyboard-1.5.0.jar`
 - `CombatEvolution-2.1.10.jar`
 - `corpse-forge-1.20.1-1.0.23.jar`
 - `curios-forge-5.14.1+1.20.1.jar`
@@ -103,9 +103,9 @@
 - `worldedit-mod-7.2.15.jar`
 
 ## Наши моды (custom-mods-only.zip, 12)
-- `coloniesru-1.0.0.jar`
+- `coloniesru-1.0.1.jar`
 - `colonistsrecruited-1.0.5.jar`
-- `colonyboard-1.2.0.jar`
+- `colonyboard-1.5.0.jar`
 - `ecmbalance-1.5.0.jar`
 - `efr_patch-1.4.1.jar`
 - `icefirecolonies-1.1.0.jar`
