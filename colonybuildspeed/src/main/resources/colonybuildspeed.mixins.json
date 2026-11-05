@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.wik.colonybuildspeed.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": ["StepsMixin", "StructureAIAccessor", "DelayAccessor", "MiningMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

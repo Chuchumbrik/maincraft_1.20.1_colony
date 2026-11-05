@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="colonybuildspeed"
+version="${file.jarVersion}"
+displayTest="IGNORE_SERVER_VERSION"
+displayName="Colony Build Speed (Война и Колонии)"
+description="Logical server: MineColonies builders place several plain blocks per work cycle, and during CLEAR/REMOVE mine up to the same number of ordinary solids. Client install is unnecessary. Default reach is 5; a server config may raise it (the live file on this pack uses 10)."
+[[dependencies.colonybuildspeed]]
+modId="minecolonies"
+mandatory=true
+versionRange="[1.1,)"
+ordering="AFTER"
+side="SERVER"
+[[dependencies.colonybuildspeed]]
+modId="structurize"
+mandatory=true
+versionRange="[1.0,)"
+ordering="AFTER"
+side="SERVER"
