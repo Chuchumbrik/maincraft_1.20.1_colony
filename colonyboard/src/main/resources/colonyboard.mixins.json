@@ -1,0 +1,1 @@
+{ "required": true, "minVersion": "0.8", "package": "ru.wik.colonyboard.mixin", "compatibilityLevel": "JAVA_17", "mixins": ["ToolRequestMixin"], "injectors": { "defaultRequire": 1 } }
