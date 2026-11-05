@@ -1,0 +1,357 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "daily"
+	group: "56104B959F6BF66C"
+	icon: "minecraft:clock"
+	id: "27AC9C758D343037"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: true
+			description: [
+				"Повторяемое задание: после получения награды снова доступно через 3 часа."
+				"Убейте 30 зомби."
+			]
+			id: "6DB011A9D033997B"
+			repeat_cooldown: 10800
+			rewards: [{
+				ftb_money: 150.0d
+				id: "6B9EC740D5DE0D3A"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				entity: "minecraft:zombie"
+				id: "50DF7AE9BD9DD94C"
+				type: "kill"
+				value: 30L
+			}]
+			title: "Зачистка: зомби"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Повторяемое задание: после получения награды снова доступно через 3 часа."
+				"Убейте 30 скелетов."
+			]
+			id: "582E974849278FA1"
+			repeat_cooldown: 10800
+			rewards: [{
+				ftb_money: 150.0d
+				id: "63905DFC1D878E94"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				entity: "minecraft:skeleton"
+				id: "29571F8335840EA8"
+				type: "kill"
+				value: 30L
+			}]
+			title: "Зачистка: скелеты"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Повторяемое задание: после получения награды снова доступно через 3 часа."
+				"Убейте 30 пауков."
+			]
+			id: "7F80180C1C716404"
+			repeat_cooldown: 10800
+			rewards: [{
+				ftb_money: 150.0d
+				id: "1B3B363E4A894774"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				entity: "minecraft:spider"
+				id: "3FD7D6A45EEDA1D8"
+				type: "kill"
+				value: 30L
+			}]
+			title: "Зачистка: пауки"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Повторяемое задание: после получения награды снова доступно через 3 часа."
+				"Убейте 20 криперов."
+			]
+			id: "467427C051CF034F"
+			repeat_cooldown: 10800
+			rewards: [{
+				ftb_money: 200.0d
+				id: "575BDCE4C5209C90"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				entity: "minecraft:creeper"
+				id: "319437633A60F30B"
+				type: "kill"
+				value: 20L
+			}]
+			title: "Зачистка: криперы"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Ежедневное задание: после получения награды снова доступно через 20 часов."
+				"Просто отметьте задание и заберите монеты."
+			]
+			icon: "minecraft:sunflower"
+			id: "7AC8608A0948B33D"
+			repeat_cooldown: 72000
+			rewards: [{
+				ftb_money: 50.0d
+				id: "56F3CD473868C784"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "3A8C582812D9D65F"
+				type: "checkmark"
+			}]
+			title: "&eЕжедневная награда"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Ежедневное задание: после получения награды снова доступно через 20 часов."
+				"Сдайте 32 хлеба."
+				"Предметы забираются из инвентаря при сдаче (кнопка в окне задания)."
+			]
+			id: "2863FAC38858C561"
+			repeat_cooldown: 72000
+			rewards: [{
+				ftb_money: 150.0d
+				id: "72E95332F3F51DA1"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				consume_items: true
+				count: 32L
+				id: "70234FD1602985B9"
+				item: "minecraft:bread"
+				type: "item"
+			}]
+			title: "Хлеб для гарнизона"
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Ежедневное задание: после получения награды снова доступно через 20 часов."
+				"Сдайте 16 стейков."
+				"Предметы забираются из инвентаря при сдаче (кнопка в окне задания)."
+			]
+			id: "41780D5BD0564B58"
+			repeat_cooldown: 72000
+			rewards: [{
+				ftb_money: 125.0d
+				id: "3F016EC8B8F9C583"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "3960DA3F0741328C"
+				item: "minecraft:cooked_beef"
+				type: "item"
+			}]
+			title: "Мясо для казарм"
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Ежедневное задание: после получения награды снова доступно через 20 часов."
+				"Сдайте 64 дубовых бревна."
+				"Предметы забираются из инвентаря при сдаче (кнопка в окне задания)."
+			]
+			id: "37FCFCD561860048"
+			repeat_cooldown: 72000
+			rewards: [{
+				ftb_money: 140.0d
+				id: "3F377D0859FA75C8"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				id: "6F423A42FB6DB324"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			title: "Лес для стройки"
+			x: 4.5d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Ежедневное задание: после получения награды снова доступно через 20 часов."
+				"Сдайте 64 угля."
+				"Предметы забираются из инвентаря при сдаче (кнопка в окне задания)."
+			]
+			id: "546C5D63D3E17DB0"
+			repeat_cooldown: 72000
+			rewards: [{
+				ftb_money: 100.0d
+				id: "1F9F030231A32939"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				id: "577253F6FFC78672"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			title: "Уголь для кузниц"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Ежедневное задание: после получения награды снова доступно через 20 часов."
+				"Сдайте 16 кожи."
+				"Предметы забираются из инвентаря при сдаче (кнопка в окне задания)."
+			]
+			id: "428B737BFC9D2DF2"
+			repeat_cooldown: 72000
+			rewards: [{
+				ftb_money: 100.0d
+				id: "675F3077D949039F"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "6E5B092329054A97"
+				item: "minecraft:leather"
+				type: "item"
+			}]
+			title: "Кожа для доспехов"
+			x: 7.5d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			description: [
+				"Ежедневное задание: после получения награды снова доступно через 20 часов."
+				"Сдайте 16 железных слитков."
+				"Предметы забираются из инвентаря при сдаче (кнопка в окне задания)."
+			]
+			id: "4374A533032CD744"
+			repeat_cooldown: 72000
+			rewards: [{
+				ftb_money: 250.0d
+				id: "63B371C8CA076FF1"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "square"
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "3C5099308C1ACA9E"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			title: "Железо для кузницы"
+			x: 9.0d
+			y: 2.0d
+		}
+		{
+			description: [
+				"Подарок каждому новому игроку: 1000 ◎ на кошелёк SDM."
+				"Выдаётся автоматически один раз через несколько секунд после первого входа."
+			]
+			icon: "minecraft:gold_ingot"
+			id: "1C7D6BAC88B1031F"
+			rewards: [{
+				auto: "enabled"
+				ftb_money: 1000.0d
+				id: "3ADC8F13BF93193C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "1EA1FA68B4AC871C"
+				stat: "minecraft:play_time"
+				type: "stat"
+				value: 100
+			}]
+			title: "&6Стартовый капитал"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: [
+				"6DB011A9D033997B"
+				"582E974849278FA1"
+				"7F80180C1C716404"
+				"467427C051CF034F"
+			]
+			description: [
+				"Бонус охотника: выполните все четыре зачистки (зомби, скелеты, пауки, криперы)."
+				"Награда: +1 очко характеристик (Epic Class Mod). Повтор через 5 часов."
+			]
+			icon: "minecraft:experience_bottle"
+			id: "3E5D7A1C9B2F4E61"
+			repeat_cooldown: 18000
+			rewards: [{
+				command: "/ecmbalance statpoint {p} 1"
+				elevate_perms: true
+				id: "5A2C8E1F7D3B9064"
+				silent: true
+				title: "+1 очко характеристик"
+				type: "command"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6C1F3A9E2B7D5048"
+				type: "checkmark"
+			}]
+			title: "&bБонус охотника"
+			x: 2.25d
+			y: -1.0d
+		}
+	]
+	subtitle: ["Повторяемая охота (раз в 3 ч), бонус охотника +1 очко (раз в 5 ч) и ежедневные поставки (раз в 20 ч)"]
+	title: "Ежедневные задания"
+}

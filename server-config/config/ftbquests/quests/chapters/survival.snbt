@@ -1,0 +1,220 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "survival"
+	group: ""
+	icon: "minecraft:compass"
+	id: "04AD703A0266D3DB"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Короткая справка по модам интерфейса и командам сервера. Квесты этой главы без наград — отметьте, когда прочитаете."]
+			icon: "minecraft:compass"
+			id: "4CC7481015BB39E2"
+			rewards: [{
+				ftb_money: 30.0d
+				id: "6AAD9887E37ADBD0"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "26F50EAF18A461EE"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "&6Выживание и интерфейс"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4CC7481015BB39E2"]
+			description: [
+				"После смерти ваши вещи остаются в &bтеле&r (Corpse) на месте гибели. ПКМ по телу — забрать предметы («Перенести вещи»). Через час тело превращается в скелет."
+				"&cВнимание:&r на сервере обыскать тело может &eлюбой игрок&r, не только владелец. Возвращайтесь быстро!"
+			]
+			icon: "minecraft:skeleton_skull"
+			id: "3DB26A791B83BB20"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "45BCDDA97BB9F0C3"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "3880A340FABC55CE"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Тело после смерти"
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3DB26A791B83BB20"]
+			description: ["&eAlt + U&r — история смертей: дата, измерение и координаты каждой гибели, а также список вещей. Записи хранятся бессрочно."]
+			icon: "minecraft:recovery_compass"
+			id: "5FDA3AF08C7C7277"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "5848F83BF970024C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4F8FF40E4572C0B5"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "История смертей"
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4CC7481015BB39E2"]
+			description: ["Миникарта в углу экрана. Полная карта — &eM&r (на этой же клавише карта территорий Recruits; переназначить — Управление → JourneyMap), &eCtrl + J&r — показать/скрыть миникарту, &e[&r — вид миникарты, &e=&r / &e-&r — масштаб."]
+			icon: "minecraft:filled_map"
+			id: "7C1BF3EC7309C018"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "2C0D4DC5AE07AC6F"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "29FA902D8494C23F"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Карта мира"
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["7C1BF3EC7309C018"]
+			description: ["&eB&r — создать путевую точку на месте, &eN&r — список точек, &eCtrl + Z&r — показать/скрыть точки. Отмечайте колонию, логова драконов и места смерти."]
+			icon: "minecraft:lodestone"
+			id: "5EEBBF8514794E7B"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "658C8F363B422E2D"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "129A7019E0C0179F"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Путевые точки"
+			x: 4.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["4CC7481015BB39E2"]
+			description: ["Jade показывает сверху экрана, на что вы смотрите: блок, мод, здоровье моба, содержимое сундука. С JadeColonies — сведения о жителях и зданиях MineColonies."]
+			icon: "minecraft:spyglass"
+			id: "7E6E8F98A6B51502"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "73FD8B420C963EF0"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "17E0165DF8005AC8"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Подсказки при наведении"
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4CC7481015BB39E2"]
+			description: ["&eAlt + E&r — инвентарь Curios: отдельные слоты для колец, амулетов и других аксессуаров (например, из Iron's Spells)."]
+			icon: "minecraft:amethyst_shard"
+			id: "30B8CD2F5CC2E3F2"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "7A9AA69956B40DD9"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "0C5646D831A2B73D"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Слоты украшений (Curios)"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4CC7481015BB39E2"]
+			description: ["&e/sethome&r — запомнить точку дома (одна на игрока), &e/home&r — вернуться (перезарядка 10 с). &e/back&r — на место смерти или прошлого телепорта (30 с). &e/spawn&r — на спавн."]
+			icon: "minecraft:red_bed"
+			id: "7A60A3964029AA31"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "36D8EBEAC0FDF695"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "7BF66225D05E1C5C"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Дом и возврат"
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7A60A3964029AA31"]
+			description: ["&e/tpa <игрок>&r — попросить телепорт к игроку (он подтверждает), &e/warp <имя>&r — точки сервера, &e/rtp&r — случайная точка до 25 000 блоков (раз в 10 минут) — удобно для поиска места под колонию."]
+			icon: "minecraft:ender_pearl"
+			id: "1720877E4DDD3AE6"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "5FA0913494AA3F85"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "1E8C3F01C46CC72C"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Телепорты"
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4CC7481015BB39E2"]
+			description: [
+				"Все клавиши сервера собраны в одном месте — глава &e«Начни здесь»&r, квесты «Управление: …» (бой, класс, магия, колония, магазин и карта, армия и осада, драконы)."
+				""
+				"Назначения можно поменять: Настройки → Управление."
+			]
+			icon: "minecraft:book"
+			id: "2E6B0B7901D75081"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "58378FEB74113ED3"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6A605BCEA084D89E"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Где все клавиши"
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+	subtitle: ["Смерть, карта, подсказки и полезные команды"]
+	title: "Выживание и интерфейс"
+}

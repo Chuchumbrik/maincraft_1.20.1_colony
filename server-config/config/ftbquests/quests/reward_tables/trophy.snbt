@@ -1,0 +1,19 @@
+{
+	icon: "minecraft:chest"
+	id: "345B9F16D8A4EFCB"
+	loot_size: 1
+	order_index: 9
+	rewards: [
+		{ count: 4, item: "minecraft:emerald" }
+		{ count: 8, item: "minecraft:iron_ingot" }
+		{ count: 4, item: "minecraft:gold_ingot" }
+		{ count: 16, item: "minecraft:bread" }
+		{ count: 16, item: "minecraft:oak_log" }
+		{ count: 32, item: "minecraft:cobblestone" }
+		{ count: 8, item: "minecraft:lapis_lazuli" }
+		{ count: 4, item: "minecraft:experience_bottle" }
+		{ count: 8, item: "minecraft:cooked_beef" }
+		{ count: 2, item: "irons_spellbooks:arcane_essence" }
+	]
+	title: "Трофеи искателя"
+}

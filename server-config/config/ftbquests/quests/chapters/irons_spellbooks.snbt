@@ -1,0 +1,3612 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "irons_spellbooks"
+	group: "28B6561BD5815F42"
+	icon: "irons_spellbooks:gold_spell_book"
+	id: "76DF5FAA7961E5E7"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["300F2E45D185A9A1"]
+			description: [
+				"Свитки можно вкладывать в книгу заклинаний на столе начертания. Свиток в книге не тратится — заклинание расходует ману."
+				""
+				"Свиток можно прочитать (он сгорает), но лучше вписать в книгу: тогда заклинание многоразовое и тратит только ману. Свитки падают с магов и лежат в сундуках; цвет рамки — редкость, то есть уровень заклинания."
+			]
+			id: "615C3E012B2DECD3"
+			rewards: [
+				{
+					count: 3
+					id: "231B5B9731B07E53"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					id: "4A13407A49FD10F8"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "30ED61026E1E099D"
+					item: "minecraft:oak_slab"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "66970B64E0ADDA12"
+					item: "minecraft:oak_fence"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				id: "6502D0124314BF25"
+				item: "minecraft:paper"
+				type: "item"
+			}]
+			title: "&eКниги заклинаний"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4407BD7B5F033765"]
+			description: [
+				"Сложная в крафте книга. Труднее всего достать Разрушенную книгу — она в сундуках &9Древнего города&r. Флаконы крови получают в алхимическом котле, «молнию в бутылке» — бутылкой у заряженного крипера."
+				""
+				"Поздние книги: незеритовая (нужен мифрил и незерит), из драконьей кожи (дракон Края), книги боссов. Перенесите заклинания на столе начертания и улучшите книгу сферами."
+			]
+			id: "7408CCF998D9CD37"
+			rewards: [{
+				count: 2
+				id: "4A55C808BAC88ECE"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "6F0B2D8E0F4A8F27"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:netherite_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 12
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Древний кодекс"
+			x: 14.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2A787B99A8B0C767"]
+			description: [
+				"Самая простая и дешёвая книга: 5 ячеек заклинаний."
+				""
+				"Первая книга: крафтится из простых материалов. Книга носится в слоте Curios (пояс) — держать её в руке не нужно. Чем лучше книга, тем больше слотов и бонусов."
+			]
+			id: "67A587F4BAD76C70"
+			rewards: [
+				{
+					id: "0181CA7B3448C53C"
+					item: "irons_spellbooks:common_ink"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "7550D42608993564"
+					item: "minecraft:chain"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6111523A3D0F8C9A"
+					item: "minecraft:leather"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "5A871C312D0C6C49"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					id: "4153064BBFA4DBA1"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				id: "6077B2E430D01066"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:copper_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 5
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Хлипкий журнал"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["67A587F4BAD76C70"]
+			description: ["На одну ячейку больше хлипкого журнала."]
+			id: "6CE7115DA2B23776"
+			rewards: [
+				{
+					id: "4B016E7BB94B93F9"
+					item: "irons_spellbooks:uncommon_ink"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "21166453BF534399"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "1B7096DAE8A1EE4D"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "610FD530FA523E6F"
+					item: "irons_spellbooks:hogskin"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				id: "34EBDAAB54DEC7D7"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:iron_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 6
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Окованный журнал"
+			x: 8.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6CE7115DA2B23776"]
+			description: ["Нужна шкура хоглина. 8 ячеек заклинаний."]
+			id: "66762A4743104157"
+			rewards: [
+				{
+					id: "7CF77C5B3E6D55F7"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "383464A6D6BED25C"
+					item: "irons_spellbooks:magic_cloth"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "60F2014C0405C96A"
+					item: "irons_spellbooks:hogskin"
+					type: "item"
+				}
+				{
+					id: "121E801EBD3D6F65"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				id: "4A1F6C4CC2624031"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:gold_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 8
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Книга ученика"
+			x: 10.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["66762A4743104157"]
+			description: ["Нужны магическая ткань, золото и любая зачарованная книга. 10 ячеек и заметный бонус к мане."]
+			id: "4407BD7B5F033765"
+			rewards: [
+				{
+					id: "17E703890863C286"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "14E0438BB95905DC"
+					item: "irons_spellbooks:magic_cloth"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "676A044CF999873F"
+					item: "irons_spellbooks:blood_vial"
+					type: "item"
+				}
+				{
+					id: "255C7CC2D93F0E1C"
+					item: "irons_spellbooks:lightning_bottle"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				id: "7040BF1C496C2185"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:diamond_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 10
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Зачарованная книга заклинаний"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0436DF3308681913"]
+			description: ["Часто попадается в сундуках. 8 ячеек, но снижает сопротивление магии."]
+			id: "1CAEC4C273EDDB99"
+			rewards: [{
+				id: "7BA21F76F1D1563F"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "463614EE1B9E0590"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:rotten_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 8
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Гнилая книга заклинаний"
+			x: 6.0d
+			y: 11.7d
+		}
+		{
+			dependencies: ["68B44B9E939F4228"]
+			description: ["Редкий дроп с Архиэвокера и обычных Вызывателей. 10 ячеек, 3 заняты неснимаемыми заклинаниями вызова. Усиливает школу Вызова."]
+			id: "4E3355FDCB65BB63"
+			rewards: [{
+				id: "158AAA21F5E6260C"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "2C2307F605F18979"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:evoker_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [
+								{
+									id: "irons_spellbooks:fang_strike"
+									index: 0
+									level: 6
+									locked: 1b
+								}
+								{
+									id: "irons_spellbooks:fang_ward"
+									index: 1
+									level: 4
+									locked: 1b
+								}
+								{
+									id: "irons_spellbooks:summon_vex"
+									index: 2
+									level: 4
+									locked: 1b
+								}
+							]
+							maxSpells: 10
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "&aГримуар вызова"
+			x: 6.0d
+			y: 15.3d
+		}
+		{
+			dependencies: ["204B969DA081056A"]
+			description: ["Добывается с &4Мёртвого короля&r. 10 ячеек, 4 заняты неснимаемыми заклинаниями крови и огня."]
+			id: "48C68664319B0294"
+			rewards: [{
+				id: "3980F859732CFA37"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "63FB8946440CCEDB"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:necronomicon_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [
+								{
+									id: "irons_spellbooks:blood_slash"
+									index: 0
+									level: 5
+									locked: 1b
+								}
+								{
+									id: "irons_spellbooks:blood_step"
+									index: 1
+									level: 5
+									locked: 1b
+								}
+								{
+									id: "irons_spellbooks:ray_of_siphoning"
+									index: 2
+									level: 5
+									locked: 1b
+								}
+								{
+									id: "irons_spellbooks:blaze_storm"
+									index: 3
+									level: 5
+									locked: 1b
+								}
+							]
+							maxSpells: 10
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Некрономикон"
+			x: 6.0d
+			y: 12.9d
+		}
+		{
+			dependencies: ["59E68086A8B99EA7"]
+			description: ["Редкий дроп с ифритов. 10 ячеек, усиливает заклинания огня."]
+			id: "1A0368CB49B8CBFF"
+			rewards: [{
+				id: "017C87162F328470"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "093FE39726FF986E"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:blaze_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 10
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "&cИнструкция ифрита"
+			x: 8.0d
+			y: 20.1d
+		}
+		{
+			dependencies: ["7F85669FEA41CD97"]
+			description: ["Найдите в &aФорте Вызывателей&r исследовательскую книгу, дайте её перевести торговцу-пленнику, затем обменяйте у &6Священника&r в деревне. Усиливает Святую школу."]
+			id: "73D6B980D35082A0"
+			rewards: [{
+				id: "3BA65ACBDE632A92"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "0C83BA739BAA08DA"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:villager_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 10
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "&6Библия жителя"
+			x: 6.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["548F85EE6B6F1811"]
+			description: ["Книга школы Природы: 10 ячеек. Крафтится из гнилой книги заклинаний."]
+			id: "78AA7BFABBFB9973"
+			rewards: [{
+				id: "35475D285361ED90"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "3861A10D8E2EF77B"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:druidic_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 10
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "&2Друидический том"
+			x: 6.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["7408CCF998D9CD37"]
+			description: ["Нужны Разрушенная книга (Древний город) и драконья кожа с Эндер-дракона. 12 ячеек, усиливает школу Края."]
+			id: "652A14E17DDE97E6"
+			rewards: [
+				{
+					count: 2
+					id: "7BB7AECDA4A62E3D"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+				{
+					id: "46FC1494A82B33C5"
+					item: "irons_spellbooks:upgrade_orb"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				id: "5D6DCB8FCAC5B1C6"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:dragonskin_spell_book"
+					tag: {
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 12
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "&dКнига из драконьей кожи"
+			x: 16.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["615C3E012B2DECD3"]
+			description: [
+				"Стол начертания вкладывает и вынимает свитки из книги заклинаний: книгу — в слот книги, свиток — ниже."
+				""
+				"Без стола книга бесполезна — ставьте сразу. Вынутый свиток возвращается, а слот освобождается."
+			]
+			id: "2A787B99A8B0C767"
+			rewards: [
+				{
+					count: 6
+					id: "70AB901751BE0F43"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "628D2EAE798A91A4"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					id: "343C0558C84C7F55"
+					item: "minecraft:string"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "6EAC7D1EB04B2686"
+				item: "irons_spellbooks:inscription_table"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["69838E3F12218D68"]
+			description: [
+				"Магическая наковальня: повышает уровень заклинаний, вкладывает свитки в оружие, задаёт школу кольцам и добавляет сферы улучшений в оружие и броню."
+				""
+				"Самые высокие уровни некоторых заклинаний доступны только через наковальню: два одинаковых свитка → свиток уровнем выше."
+			]
+			id: "551A4916F032ACCF"
+			rewards: [{
+				count: 3
+				id: "12BF12853B302708"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "7A0BAF69F0AEE0AE"
+				item: "irons_spellbooks:arcane_anvil"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["541446863A72B96C"]
+			description: [
+				"Кузня свитков делает свитки: чернила задают редкость, бумага — основа, фокус-предмет — школу (огненный стержень — Огонь, ядовитый картофель — Природа и т. д.)."
+				""
+				"Это середина игры: кузня крафтится из полированного глубинного сланца и плачущего обсидиана. Главный способ получить нужное заклинание, а не случайное."
+			]
+			id: "69838E3F12218D68"
+			rewards: [
+				{
+					count: 3
+					id: "20EDABAC9A96258A"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "38252656CFF15889"
+					item: "minecraft:amethyst_block"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4E4C18FFB3892617"
+					item: "minecraft:polished_deepslate"
+					type: "item"
+				}
+				{
+					id: "79434C3D5DEB0946"
+					item: "irons_spellbooks:cinder_essence"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "6FC286A3EC91DE9F"
+				item: "irons_spellbooks:scroll_forge"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["69838E3F12218D68"]
+			description: [
+				"Алхимический котёл: добывает кровь, варит и улучшает зелья, с шансом возвращает чернила из свитка, объединяет 4 чернила в чернила более высокой редкости."
+				""
+				"В рецепте котла нужна &bпепельная эссенция&r Древнего рыцаря, поэтому он открывается после похода в Незер. Чернила варятся по ступеням: обычные + медь → необычные и т. д."
+			]
+			id: "3E8077AB45C79E6A"
+			rewards: [
+				{
+					id: "4065C90A9423D9A9"
+					item: "irons_spellbooks:oakskin_elixir"
+					type: "item"
+				}
+				{
+					id: "54B576CCD81B30BF"
+					item: "irons_spellbooks:invisibility_elixir"
+					type: "item"
+				}
+				{
+					id: "047CA47141F8B998"
+					item: "irons_spellbooks:evasion_elixir"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "7DE683FE83AE2C19"
+				item: "irons_spellbooks:alchemist_cauldron"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["615C3E012B2DECD3"]
+			description: ["Редкость свитка: &7обычная&r → &aнеобычная&r → &bредкая&r → &5эпическая&r → &6легендарная&r; чем выше, тем сильнее заклинание. Чернила нужной редкости нужны Кузне свитков."]
+			id: "541446863A72B96C"
+			rewards: [
+				{
+					count: 2
+					id: "18ABCBE38C93164A"
+					item: "irons_spellbooks:common_ink"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "40897D5A7551FDF0"
+					item: "minecraft:polished_deepslate"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "25BB5491A18FBB9E"
+					item: "minecraft:crying_obsidian"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "3508E0BECB5DD919"
+				item: "irons_spellbooks:common_ink"
+				type: "item"
+			}]
+			title: "&7Обычные чернила"
+			x: 4.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["541446863A72B96C"]
+			description: ["Необычные чернила: свитки 2-й ступени. Варятся в Алхимическом котле из обычных чернил с медью или находятся в добыче."]
+			id: "637C87D8968CD51A"
+			rewards: [{
+				count: 2
+				id: "5D16DACA6D6E8EA2"
+				item: "irons_spellbooks:uncommon_ink"
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "718C6E669D17F0C0"
+				item: "irons_spellbooks:uncommon_ink"
+				type: "item"
+			}]
+			title: "&aНеобычные чернила"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["637C87D8968CD51A"]
+			description: ["Редкие чернила регулярно встречаются в магических сундуках и падают с заклинателей. Можно сварить в котле из необычных."]
+			id: "60FAD8BF235E381B"
+			rewards: [{
+				count: 2
+				id: "0DF72CE9CA1693CD"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "38691751D6156791"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			title: "&bРедкие чернила"
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["60FAD8BF235E381B"]
+			description: ["Эпические чернила: лучше всего искать в магических сокровищницах и у магов. Варятся в котле из редких."]
+			id: "06F8EDF7513F8611"
+			rewards: [{
+				id: "1EEABD789960AC05"
+				item: "irons_spellbooks:rare_ink"
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "1C60DB6E320883DF"
+				item: "irons_spellbooks:epic_ink"
+				type: "item"
+			}]
+			title: "&5Эпические чернила"
+			x: 10.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["06F8EDF7513F8611"]
+			description: ["Легендарные чернила — самые сильные заклинания. Для заклинаний с несколькими легендарными уровнями нужна ещё Волшебная наковальня."]
+			id: "67D40A1A9332C03D"
+			rewards: [
+				{
+					count: 2
+					id: "2AC73A86B874938C"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+				{
+					id: "142A9773FE47BA16"
+					item: "irons_spellbooks:upgrade_orb"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "4948A54224513853"
+				item: "irons_spellbooks:legendary_ink"
+				type: "item"
+			}]
+			title: "&6Легендарные чернила"
+			x: 12.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Школа Молнии: электричество для атаки и поддержки. Фокус — «молния в бутылке» (бутылка у заряженного крипера)."]
+			id: "36F87173D8CD1D68"
+			rewards: [{
+				count: 4
+				id: "3B60CA662CF4E48E"
+				item: "irons_spellbooks:lightning_rune"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.3d
+			tasks: [{
+				id: "0DCF8CD129263225"
+				item: "irons_spellbooks:lightning_rune"
+				type: "item"
+			}]
+			title: "&5&lМолния"
+			x: -1.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["67A587F4BAD76C70"]
+			description: [
+				"Руны — основа школ. Пустую руну дают Мёртвый король или очистка руны точильным камнем. Восемь школ (одна тайная), у каждой свои свитки, фокус, улучшения и одежда."
+				""
+				"Школ девять вместе с тайной (Жуть), плюс &fВетер&r из аддона. Броня, кольца сродства и сферы усиливают одну школу — выберите 1–2 основные."
+				""
+				"Руна школы = пустая руна + 8 фокусов школы; ещё каждый маг-класс всегда роняет руну своей школы."
+			]
+			hide_dependency_lines: true
+			id: "639531AB27DCD267"
+			rewards: [
+				{
+					count: 3
+					id: "22A13BA6CFA84533"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "3AF02A1CF7812CD8"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				id: "3D0E50F79BBFB8E2"
+				item: "irons_spellbooks:blank_rune"
+				type: "item"
+			}]
+			title: "&lШколы магии"
+			x: 8.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4CCA1E2AAA9AB9D9"]
+			description: ["Сфера школы «Молния»: сфера улучшения + 8 рун школы. Вставляется в броню или книгу на Волшебной наковальне и усиливает эту школу."]
+			id: "05DBDD86FCFF3BA8"
+			rewards: [{
+				id: "6E3D432F89004AF6"
+				item: "irons_spellbooks:lightning_upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "659F1A7D0E67F23E"
+				item: "irons_spellbooks:lightning_upgrade_orb"
+				type: "item"
+			}]
+			title: "&5Сфера улучшения: Молния"
+			x: -1.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Школа Огня: сжигать и ранить. Фокус — огненный стержень. Руны можно скрафтить или добыть с Пироманта."]
+			id: "69763C2E2F454A73"
+			rewards: [{
+				count: 4
+				id: "4D17EFD179403504"
+				item: "irons_spellbooks:fire_rune"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.3d
+			tasks: [{
+				id: "634698E023224876"
+				item: "irons_spellbooks:fire_rune"
+				type: "item"
+			}]
+			title: "&c&lОгонь"
+			x: 1.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Школа Льда: лёд и снег. Фокус — замороженная кость (дроп со зимогоров). Руну можно скрафтить или добыть с Криоманта."]
+			id: "7C79BCE482A06199"
+			rewards: [{
+				count: 4
+				id: "47BE12E5770D5DDF"
+				item: "irons_spellbooks:ice_rune"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.3d
+			tasks: [{
+				id: "54D2968A39335B94"
+				item: "irons_spellbooks:ice_rune"
+				type: "item"
+			}]
+			title: "&b&lЛёд"
+			x: 3.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Школа Края: телепорты, огненные шары, драконье дыхание. Фокус — жемчуг Края."]
+			id: "0EED5D755D2C866A"
+			rewards: [{
+				count: 4
+				id: "395F8BF373AC047E"
+				item: "irons_spellbooks:ender_rune"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.3d
+			tasks: [{
+				id: "4C392FED43CE3A79"
+				item: "irons_spellbooks:ender_rune"
+				type: "item"
+			}]
+			title: "&d&lКрай"
+			x: 5.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Святая школа — лечение и поддержка. Фокус — божественный жемчуг (крафт). Руны — крафт или со Священника."]
+			id: "7270A37E31A70C91"
+			rewards: [{
+				count: 4
+				id: "332785208A140301"
+				item: "irons_spellbooks:holy_rune"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.3d
+			tasks: [{
+				id: "76FE9CD7C301AD3B"
+				item: "irons_spellbooks:holy_rune"
+				type: "item"
+			}]
+			title: "&6&lСвятость"
+			x: 7.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Школа Крови: урон с вампиризмом. Фокус — флакон крови (алхимический котёл)."]
+			id: "24150DE600C2D761"
+			rewards: [{
+				count: 4
+				id: "547550452D865205"
+				item: "irons_spellbooks:blood_rune"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.3d
+			tasks: [{
+				id: "46FE75ED07A456F7"
+				item: "irons_spellbooks:blood_rune"
+				type: "item"
+			}]
+			title: "&4&lКровь"
+			x: 9.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Школа Вызова: клыки, досаждатели и призывы. Фокус — изумруды. Руну можно скрафтить или добыть с Архиэвокера."]
+			id: "1BE69992D2C5085B"
+			rewards: [{
+				count: 4
+				id: "41C19F9FA3187DBA"
+				item: "irons_spellbooks:evocation_rune"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.3d
+			tasks: [{
+				id: "79C97582AC678CBF"
+				item: "irons_spellbooks:evocation_rune"
+				type: "item"
+			}]
+			title: "&a&lВызов"
+			x: 11.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Школа Природы: яды и ослабление врагов. Фокус — ядовитый картофель."]
+			id: "000C1ECD781F3F81"
+			rewards: [{
+				count: 4
+				id: "545B0278B6FE8509"
+				item: "irons_spellbooks:nature_rune"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.3d
+			tasks: [{
+				id: "638387342D93E886"
+				item: "irons_spellbooks:nature_rune"
+				type: "item"
+			}]
+			title: "&2&lПрирода"
+			x: 13.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["06F2C42E6408149E"]
+			description: ["Сфера школы «Огонь»: сфера улучшения + 8 рун школы. Вставляется в броню или книгу на Волшебной наковальне и усиливает эту школу."]
+			id: "32D2CE292E088939"
+			rewards: [{
+				id: "128A56F15DBD0BBC"
+				item: "irons_spellbooks:fire_upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "17BDD679028814A2"
+				item: "irons_spellbooks:fire_upgrade_orb"
+				type: "item"
+			}]
+			title: "&cСфера улучшения: Огонь"
+			x: 1.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["489833A2A6C39151"]
+			description: ["Сфера школы «Лёд»: сфера улучшения + 8 рун школы. Вставляется в броню или книгу на Волшебной наковальне и усиливает эту школу."]
+			id: "76558D23A70AFF78"
+			rewards: [{
+				id: "2926EE1DDA1EAE25"
+				item: "irons_spellbooks:ice_upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1363286BCB4D1B2F"
+				item: "irons_spellbooks:ice_upgrade_orb"
+				type: "item"
+			}]
+			title: "&bСфера улучшения: Лёд"
+			x: 3.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["19542103E042BDB5"]
+			description: ["Сфера школы «Край»: сфера улучшения + 8 рун школы. Вставляется в броню или книгу на Волшебной наковальне и усиливает эту школу."]
+			id: "2BB910B217DF3A12"
+			rewards: [{
+				id: "760BB6C069D24785"
+				item: "irons_spellbooks:ender_upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "739EFE9E68204C8E"
+				item: "irons_spellbooks:ender_upgrade_orb"
+				type: "item"
+			}]
+			title: "&dСфера улучшения: Край"
+			x: 5.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["24BAC1C0392E950E"]
+			description: ["Сфера школы «Святость»: сфера улучшения + 8 рун школы. Вставляется в броню или книгу на Волшебной наковальне и усиливает эту школу."]
+			id: "401BB95B740385B7"
+			rewards: [{
+				id: "04F75F97A70D4F92"
+				item: "irons_spellbooks:holy_upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5C06B792E65671B7"
+				item: "irons_spellbooks:holy_upgrade_orb"
+				type: "item"
+			}]
+			title: "&6Сфера улучшения: Святость"
+			x: 7.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["5DE863C3FB6492BE"]
+			description: ["Сфера школы «Кровь»: сфера улучшения + 8 рун школы. Вставляется в броню или книгу на Волшебной наковальне и усиливает эту школу."]
+			id: "2E6F1C8718EB8C66"
+			rewards: [{
+				id: "6883DD602681DE95"
+				item: "irons_spellbooks:blood_upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "51A955F8266388C0"
+				item: "irons_spellbooks:blood_upgrade_orb"
+				type: "item"
+			}]
+			title: "&4Сфера улучшения: Кровь"
+			x: 9.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["0E594BC58CC7476F"]
+			description: ["Сфера школы «Вызов»: сфера улучшения + 8 рун школы. Вставляется в броню или книгу на Волшебной наковальне и усиливает эту школу."]
+			id: "0CE1F6DE5FD6A6D9"
+			rewards: [{
+				id: "61833CFDCEF0E599"
+				item: "irons_spellbooks:evocation_upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "445AFFA43D663E2E"
+				item: "irons_spellbooks:evocation_upgrade_orb"
+				type: "item"
+			}]
+			title: "&aСфера улучшения: Вызов"
+			x: 11.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["6D232F6D8E8DA546"]
+			description: ["Сфера школы «Природа»: сфера улучшения + 8 рун школы. Вставляется в броню или книгу на Волшебной наковальне и усиливает эту школу."]
+			id: "4104ABDC0E577350"
+			rewards: [{
+				id: "64D833B66910C00A"
+				item: "irons_spellbooks:nature_upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2827F04FDE7E2EFF"
+				item: "irons_spellbooks:nature_upgrade_orb"
+				type: "item"
+			}]
+			title: "&2Сфера улучшения: Природа"
+			x: 13.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["69763C2E2F454A73"]
+			description: ["Облачение пироманта: магическая ткань + руна школы «Огонь». Даёт ману и силу заклинаний этой школы."]
+			id: "06F2C42E6408149E"
+			rewards: [{
+				count: 10
+				id: "4FB4692B0380ECAF"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "15A5A3E9B5E7408D"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:pyromancer_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "16B174CC92560C1D"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:pyromancer_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "773A7DAC74D1129E"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:pyromancer_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3DD0EAF67B234245"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:pyromancer_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&cОблачение пироманта"
+			x: 1.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["7C79BCE482A06199"]
+			description: ["Облачение криоманта: магическая ткань + руна школы «Лёд». Даёт ману и силу заклинаний этой школы."]
+			id: "489833A2A6C39151"
+			rewards: [{
+				count: 10
+				id: "7A8AA6AD4583AD31"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "074C34798C780717"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:cryomancer_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "16E1EA352F3AE603"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:cryomancer_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6902B4D88C5D1D9E"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:cryomancer_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "02A8F765C44A7CD6"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:cryomancer_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&bОблачение криоманта"
+			x: 3.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["36F87173D8CD1D68"]
+			description: ["Облачение электроманта: магическая ткань + руна школы «Молния». Даёт ману и силу заклинаний этой школы."]
+			id: "4CCA1E2AAA9AB9D9"
+			rewards: [{
+				count: 10
+				id: "05611EF761E22078"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "648C0C5589A1EBF8"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:electromancer_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "64556EDCE8DFDC01"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:electromancer_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "17B2E0E42C9E7FD4"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:electromancer_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5E5E043729B00A2F"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:electromancer_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&5Облачение электроманта"
+			x: -1.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["0EED5D755D2C866A"]
+			description: ["Облачение теневого странника: магическая ткань + руна школы «Край». Даёт ману и силу заклинаний этой школы."]
+			id: "19542103E042BDB5"
+			rewards: [{
+				count: 10
+				id: "556A75A230A7FB7F"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "45EA8BAA78E35A59"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:shadowwalker_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3390FC17DC27AE44"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:shadowwalker_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6F42DE6255FA2EC5"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:shadowwalker_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "79BA11CC61AFF789"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:shadowwalker_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&dОблачение теневого странника"
+			x: 5.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["7270A37E31A70C91"]
+			description: ["Облачение священника: магическая ткань + руна школы «Святость». Даёт ману и силу заклинаний этой школы."]
+			id: "24BAC1C0392E950E"
+			rewards: [{
+				count: 10
+				id: "3234598909E89E39"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "180047D663C0E520"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:priest_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7A7FA15862290EB5"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:priest_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4666D04D6F72D4EF"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:priest_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "42915369150F71AC"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:priest_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&6Облачение священника"
+			x: 7.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["24150DE600C2D761"]
+			description: ["Облачение культиста: магическая ткань + руна школы «Кровь». Даёт ману и силу заклинаний этой школы."]
+			id: "5DE863C3FB6492BE"
+			rewards: [{
+				count: 10
+				id: "7E0AB4E3643616E9"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "31E9928D9D8E56B1"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:cultist_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3B58AA5A37681F95"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:cultist_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0DE64C8F5E57D530"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:cultist_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "51AF0872134A9438"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:cultist_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&4Облачение культиста"
+			x: 9.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["1BE69992D2C5085B"]
+			description: ["Облачение архиэвокера: магическая ткань + руна школы «Вызов». Даёт ману и силу заклинаний этой школы."]
+			id: "0E594BC58CC7476F"
+			rewards: [{
+				count: 10
+				id: "030656069DF2B656"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "4C54C4B0BEA37C43"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:archevoker_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "103B9A33981DA57E"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:archevoker_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "12462F1FBEF40EC7"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:archevoker_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6DD1859E412EDD24"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:archevoker_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&aОблачение архиэвокера"
+			x: 11.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["000C1ECD781F3F81"]
+			description: ["Облачение чумного: магическая ткань + руна школы «Природа». Даёт ману и силу заклинаний этой школы."]
+			id: "6D232F6D8E8DA546"
+			rewards: [{
+				count: 10
+				id: "1C626523F443307E"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "5F3591F891E97AE9"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:plagued_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "12A9B2F2883A2B64"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:plagued_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2E4C5DDFBAF2E7F1"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:plagued_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "795A76F0EDCF55DD"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:plagued_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&2Облачение чумного"
+			x: 13.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Самое большое и сложное подземелье мода: спавнеры, ловушки, добыча. В тронном зале пробуждается &4Мёртвый король&r. Найти помогает компас скитальца."]
+			icon: "minecraft:stone_bricks"
+			id: "6DB5732177AABB87"
+			rewards: [{
+				count: 8
+				id: "5393F61EE3C9DEF3"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "58BDC26BCCADEC22"
+				structure: "irons_spellbooks:catacombs"
+				type: "structure"
+			}]
+			title: "&4Катакомбы"
+			x: 2.0d
+			y: 11.7d
+		}
+		{
+			dependencies: ["6DB5732177AABB87"]
+			description: [
+				"Сильнейший босс Iron's Spells с собственной полосой здоровья и музыкой. Готовьтесь основательно."
+				""
+				"На сервере — босс Epic Class 55 уровня, за него дают 100 монет. Идите с бронёй школы, едой и группой."
+			]
+			icon: "minecraft:wither_skeleton_skull"
+			id: "0436DF3308681913"
+			rewards: [
+				{
+					count: 5
+					id: "03C23C77EF25C4C0"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "18DB2BA28FD98C68"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				entity: "irons_spellbooks:dead_king"
+				id: "0578D51FAF53123E"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&4&lМёртвый король"
+			x: 4.0d
+			y: 11.7d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Укреплённый форт с ильнджерами, поборниками, вызывателями и разорителями. На крыше ждёт Архиэвокер."]
+			icon: "minecraft:dark_oak_log"
+			id: "641888DC7BC40AA9"
+			rewards: [{
+				count: 8
+				id: "0A507F7F42EA3B4A"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "15B0574265D66F03"
+				structure: "irons_spellbooks:evoker_fort"
+				type: "structure"
+			}]
+			title: "&aФорт Вызывателей"
+			x: 2.0d
+			y: 15.3d
+		}
+		{
+			dependencies: ["641888DC7BC40AA9"]
+			description: [
+				"Атакует как вызыватель, плюс фейерверки, щит и порыв ветра. Дроп: магическая эссенция, чернила, руны и свитки Вызова, редко — Гримуар вызова."
+				""
+				"На сервере — уровневый моб Epic Class: даёт опыт класса и монеты."
+			]
+			icon: "minecraft:totem_of_undying"
+			id: "68B44B9E939F4228"
+			rewards: [
+				{
+					count: 3
+					id: "0984DAB8E3603A83"
+					item: "irons_spellbooks:evocation_rune"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4BAFE12A4D30F12D"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				entity: "irons_spellbooks:archevoker"
+				id: "057705B366878174"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&a&lАрхиэвокер"
+			x: 4.0d
+			y: 15.3d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["В мангровых болотах живёт отшельник-Аптекарь со своими зельями."]
+			icon: "minecraft:mangrove_log"
+			id: "6963EC8A71D66AE3"
+			rewards: [{
+				count: 8
+				id: "1AD3F48A00B9856F"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "60894C5B3A6E9DC1"
+				structure: "irons_spellbooks:mangrove_hut"
+				type: "structure"
+			}]
+			title: "&2Мангровая хижина"
+			x: 2.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["6963EC8A71D66AE3"]
+			description: [
+				"Нейтрален. Торгует зельями, ингредиентами и свитками Природы. В бою бросает зелья и колдует заклинания Природы."
+				""
+				"На сервере — уровневый моб Epic Class: даёт опыт класса и монеты."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:potion"
+				tag: {
+					Potion: "healing"
+				}
+			}
+			id: "548F85EE6B6F1811"
+			rewards: [
+				{
+					count: 3
+					id: "4EBAE4CBE310C358"
+					item: "irons_spellbooks:nature_rune"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "310DF8585AA3363F"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				entity: "irons_spellbooks:apothecarist"
+				id: "24CB88A2AB1614D2"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&2&lАптекарь"
+			x: 4.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["72AB70FD8D8FABBF"]
+			description: ["Обгоревшая каменная башня с пристройкой. Наверху — Пиромант."]
+			icon: "minecraft:blackstone"
+			id: "30B7AF815D9D7553"
+			rewards: [{
+				count: 8
+				id: "2AA4DDD3E70D6C51"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "461BA0C4C9389E1D"
+				structure: "irons_spellbooks:pyromancer_tower"
+				type: "structure"
+			}]
+			title: "&cБашня пироманта"
+			x: 4.0d
+			y: 20.1d
+		}
+		{
+			dependencies: ["30B7AF815D9D7553"]
+			description: [
+				"Нейтрален, торгует всем огненным, чернилами и свитками Огня. В бою поджигает всё вокруг."
+				""
+				"На сервере — уровневый моб Epic Class: даёт опыт класса и монеты."
+			]
+			icon: "minecraft:fire_charge"
+			id: "59E68086A8B99EA7"
+			rewards: [
+				{
+					count: 3
+					id: "7FEA8FCAF3452395"
+					item: "irons_spellbooks:fire_rune"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4BAF6362490ADE9F"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				entity: "irons_spellbooks:pyromancer"
+				id: "7954F2F744B999C4"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&c&lПиромант"
+			x: 6.0d
+			y: 20.1d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Башня высоко в горах — логово Криоманта."]
+			icon: "minecraft:packed_ice"
+			id: "13F77C38AC015E9F"
+			rewards: [{
+				count: 8
+				id: "68D4B581ECCF20B7"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "2E3B052C7DDEC133"
+				structure: "irons_spellbooks:mountain_tower"
+				type: "structure"
+			}]
+			title: "&bГорная башня"
+			x: 2.0d
+			y: 17.7d
+		}
+		{
+			dependencies: ["13F77C38AC015E9F"]
+			description: [
+				"Враждебен к игрокам, атакует ледяной магией. Дроп: эссенция, чернила, руны и свитки Льда."
+				""
+				"На сервере — уровневый моб Epic Class: даёт опыт класса и монеты."
+			]
+			icon: "minecraft:snowball"
+			id: "555ED1E39131D91B"
+			rewards: [
+				{
+					count: 3
+					id: "6DA1755FA3A0E77F"
+					item: "irons_spellbooks:ice_rune"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "2F0A8EFD26A6F205"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				entity: "irons_spellbooks:cryomancer"
+				id: "7B5566E59E84B1FE"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&b&lКриомант"
+			x: 4.0d
+			y: 17.7d
+		}
+		{
+			dependencies: ["72AB70FD8D8FABBF"]
+			description: ["Обломки стен и груды доспехов. Попробуйте добыть груду доспехов киркой..."]
+			icon: "minecraft:deepslate_tiles"
+			id: "7FC54AF87CBDD222"
+			rewards: [{
+				id: "68D7E0E5F683B522"
+				item: {
+					Count: 1
+					id: "minecraft:diamond_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "5663C7A9B9DB0F11"
+				structure: "irons_spellbooks:ancient_battleground"
+				type: "structure"
+			}]
+			title: "&5Древнее поле битвы"
+			x: 4.0d
+			y: 21.299999999999997d
+		}
+		{
+			dependencies: ["7FC54AF87CBDD222"]
+			description: ["Груда доспехов оживает! Бьёт мечом, рубит и таранит. Магией не пользуется."]
+			icon: "irons_spellbooks:armor_pile"
+			id: "395A33977B18B9AD"
+			rewards: [
+				{
+					count: 5
+					id: "09AA886DDCA0ECD2"
+					item: "irons_spellbooks:cinder_essence"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "7D2EC82E2E275750"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				entity: "irons_spellbooks:citadel_keeper"
+				id: "02CDD36D03E62071"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&5&lДревний рыцарь"
+			x: 6.0d
+			y: 21.299999999999997d
+		}
+		{
+			description: [
+				"Магия с заклинаниями разной редкости, уровня и школы. Всё нельзя скрафтить из железа и редстоуна — придётся путешествовать и сражаться."
+				""
+				"&eС чего начать:&r добудьте &bмагическую эссенцию&r (маги и сундуки магических строений), затем стол начертания и первую книгу. Дальше глава идёт по разделам: &bначало → чернила и свитки → школы → снаряжение → мир и маги → поздняя игра → наш сервер&r."
+				""
+				"Подробная книга по моду (на английском) — Patchouli-гайд Iron's Spells."
+				""
+				"&7Клавиши — глава «Начни здесь», квест «Управление: магия». Здесь только механики.&r"
+			]
+			id: "300F2E45D185A9A1"
+			rewards: [
+				{
+					count: 10
+					id: "5BEC54791A7352FB"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "732AA8967EB06CC4"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "6FACC23855E611F7"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					id: "67F5966ED59FBCE9"
+					item: "minecraft:leather_helmet"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "4E7FDA9DE2071EE5"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			title: "&lМагия заклинаний"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Почти в любой деревне может жить &6Священник&r — обычно у рынка в центре."]
+			icon: "minecraft:oak_log"
+			id: "01119871B1D5C576"
+			rewards: [{
+				count: 8
+				id: "21F4BD3CC3708E34"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "1758F9A1E399448B"
+				structure: "#minecraft:village"
+				tags: ["village"]
+				type: "structure"
+			}]
+			title: "&6Деревня"
+			x: 2.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["01119871B1D5C576"]
+			description: [
+				"Нейтральный защитник деревни, бьёт враждебных мобов. Торгует зельями лечения и картами к фортам. В бою — святая магия."
+				""
+				"На сервере — уровневый моб Epic Class: даёт опыт класса и монеты."
+			]
+			icon: "minecraft:golden_apple"
+			id: "7F85669FEA41CD97"
+			rewards: [
+				{
+					count: 3
+					id: "061AE7083D11867A"
+					item: "irons_spellbooks:holy_rune"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "2DDF5A1C62F1479A"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				entity: "irons_spellbooks:priest"
+				id: "25BF2D52BEB024B3"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&6&lСвященник"
+			x: 4.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["67A587F4BAD76C70"]
+			description: [
+				"В Верхнем мире шесть магических структур с боссами."
+				""
+				"Магия добывается в строениях: Катакомбы (Мёртвый король, некроманты), Форт вызывателей (архиэвокер), Мангровая хижина (аптекарь), Горная башня (криомант), Башня пироманта и Древнее поле битвы в Незере. Свёрнутые карты указывают путь к некоторым из них."
+			]
+			hide_dependency_lines: true
+			icon: "minecraft:grass_block"
+			id: "3009018DEC1EC952"
+			rewards: [
+				{
+					id: "2D116FDCEA070CBA"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "2941E86D09C60A99"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					id: "3D5349E2B2A87A4B"
+					item: "minecraft:compass"
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				dimension: "minecraft:overworld"
+				id: "08BA6518F2BBDD85"
+				type: "dimension"
+			}]
+			title: "&lВремя приключений!"
+			x: 0.0d
+			y: 14.5d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["&cНезер&r!"]
+			icon: "minecraft:netherrack"
+			id: "72AB70FD8D8FABBF"
+			rewards: [
+				{
+					count: 4
+					id: "6EDDF7198031D12F"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "16F667354CA32E15"
+					item: "minecraft:blaze_rod"
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			size: 1.2d
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "10B368D0D52F377B"
+				type: "dimension"
+			}]
+			title: "Дорога в..."
+			x: 2.0d
+			y: 20.1d
+		}
+		{
+			dependencies: ["6DB5732177AABB87"]
+			description: ["Обычные враги, спавнятся почти везде. Призывают зомби и скелетов, бьют клыками и снежками."]
+			icon: {
+				Count: 1
+				id: "irons_spellbooks:tarnished_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "204B969DA081056A"
+			rewards: [{
+				id: "008A3E406FB09885"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:tarnished_helmet"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				entity: "irons_spellbooks:necromancer"
+				id: "1CC0E97BB8DC4F35"
+				type: "kill"
+				value: 5L
+			}]
+			title: "Некроманты"
+			x: 4.0d
+			y: 12.9d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: ["Знания о последней школе утеряны. Искать их нужно в &9Древнем городе&r — тихо."]
+			icon: "minecraft:sculk_sensor"
+			id: "5ED368C926E5F32C"
+			rewards: [{
+				id: "37DB5B8BEB5F094E"
+				item: {
+					Count: 1
+					id: "minecraft:enchanted_book"
+					tag: {
+						StoredEnchantments: [{
+							id: "minecraft:swift_sneak"
+							lvl: 3s
+						}]
+					}
+				}
+				type: "item"
+			}]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				biome: "minecraft:deep_dark"
+				id: "6D7DD99A02A8F451"
+				type: "biome"
+			}]
+			title: "Последняя школа..."
+			x: 17.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["5ED368C926E5F32C"]
+			description: ["Фрагменты древних знаний лежат в сундуках Древнего города. Понадобятся и осколки эха."]
+			hide_details_until_startable: true
+			id: "5B013A3A37D6902B"
+			rewards: [{
+				count: 3
+				id: "218DA9B1217C1CBE"
+				item: "irons_spellbooks:ancient_knowledge_fragment"
+				type: "item"
+			}]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				id: "45C1F9BF5C0EAE0A"
+				item: "irons_spellbooks:ancient_knowledge_fragment"
+				type: "item"
+			}]
+			title: "В Древний город"
+			x: 17.0d
+			y: 7.6d
+		}
+		{
+			dependencies: ["5B013A3A37D6902B"]
+			description: ["Из фрагментов получается Жуткий манускрипт — последняя, самая сильная школа. Каждый манускрипт одноразовый."]
+			hide_details_until_startable: true
+			id: "2B901ECF97FFA181"
+			rewards: [
+				{
+					id: "0B7A3F07EDA98210"
+					item: "minecraft:echo_shard"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "34DD98BEC78C492E"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			tasks: [{
+				id: "3D0B1A6B945A87B5"
+				item: "irons_spellbooks:eldritch_manuscript"
+				type: "item"
+			}]
+			title: "&9&lЖуть"
+			x: 17.0d
+			y: 8.7d
+		}
+		{
+			dependencies: ["300F2E45D185A9A1"]
+			description: ["Декоративный пьедестал для ваших артефактов."]
+			id: "1FF823759AD032DD"
+			rewards: [{
+				count: 4
+				id: "7685F2ADB29AA306"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6558AF0256759696"
+				item: "irons_spellbooks:pedestal"
+				type: "item"
+			}]
+			title: "Пьедестал"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Посох крови: только добыча. Сильный посох школы Крови; нужен Чародею для классового квеста Epic Class Mod."]
+			id: "3E6892FC6A0B4FC7"
+			rewards: [{
+				id: "7D262FAC17CE3C8D"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1D3F5B4423142006"
+				item: "irons_spellbooks:blood_staff"
+				type: "item"
+			}]
+			title: "Посох крови"
+			x: -2.0d
+			y: 11.5d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Посох Серобородого: универсальный магический посох, даёт ману и силу заклинаний."]
+			id: "64BAE7EF1F741415"
+			rewards: [{
+				id: "5116D43EE052CF24"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "437BD1C42354EFB3"
+				item: "irons_spellbooks:graybeard_staff"
+				type: "item"
+			}]
+			title: "Посох Серобородого"
+			x: -2.0d
+			y: 12.7d
+		}
+		{
+			dependencies: ["551A4916F032ACCF"]
+			description: ["Ледяной посох: усиливает школу Льда."]
+			id: "687D2431D774D6A4"
+			rewards: [{
+				id: "51F1AF3B3BC92D81"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "501977CFB4A07165"
+				item: "irons_spellbooks:ice_staff"
+				type: "item"
+			}]
+			title: "Ледяной посох"
+			x: 10.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["551A4916F032ACCF"]
+			description: ["Трость изобретателя: посох для смешанных школ, крафтится."]
+			id: "5B05AB9C1754A9F8"
+			rewards: [{
+				id: "0747CFBD50642018"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0EF0A38D892474E3"
+				item: "irons_spellbooks:artificer_cane"
+				type: "item"
+			}]
+			title: "Трость изобретателя"
+			x: 10.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Громоотвод: посох школы Молнии, только добыча."]
+			id: "6708D7E58ABBF10F"
+			rewards: [{
+				id: "76788C76DEB56493"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6442345CBF413347"
+				item: "irons_spellbooks:lightning_rod"
+				type: "item"
+			}]
+			title: "Громоотвод"
+			x: -2.0d
+			y: 13.9d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Магоборец: меч против магов, только добыча. В него можно вложить заклинание на наковальне."]
+			id: "59E324D64358C9D7"
+			rewards: [{
+				id: "14A7879244164379"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2F533E822268FF3F"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:magehunter"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Магоборец"
+			x: -2.0d
+			y: 15.1d
+		}
+		{
+			dependencies: ["395A33977B18B9AD"]
+			description: ["Фламберг хранителя: оружие Древних рыцарей, падает с них."]
+			id: "2F2831E2C3B2DDA6"
+			rewards: [{
+				id: "2AAEEC83133E8786"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "70841FBACE0CC0AD"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:keeper_flamberge"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Фламберг хранителя"
+			x: 8.0d
+			y: 21.299999999999997d
+		}
+		{
+			dependencies: ["551A4916F032ACCF"]
+			description: ["Разрушитель чар: меч, который мешает касту противника."]
+			id: "6E66E60D0750E1D1"
+			rewards: [{
+				id: "73CBA66AB43E14A8"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2BE72786F783BDE7"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:spellbreaker"
+					tag: {
+						Damage: 0
+						ISB_Spells: {
+							data: [{
+								id: "irons_spellbooks:counterspell"
+								index: 0
+								level: 1
+								locked: 1b
+							}]
+							maxSpells: 1
+							mustEquip: 0b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Разрушитель чар"
+			x: 10.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["551A4916F032ACCF"]
+			description: ["Аметистовая рапира: быстрый магический клинок, крафтится."]
+			id: "7A0E7168249CFF1A"
+			rewards: [{
+				id: "5711057B58EF626D"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7430F9BB35ECF5F9"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:amethyst_rapier"
+					tag: {
+						Damage: 0
+						ISB_Spells: {
+							data: [{
+								id: "irons_spellbooks:echoing_strikes"
+								index: 0
+								level: 5
+								locked: 1b
+							}]
+							maxSpells: 1
+							mustEquip: 0b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Аметистовая рапира"
+			x: 10.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["300F2E45D185A9A1"]
+			description: ["Праздничная магическая броня: даёт ману и силу заклинаний на уровне ранней брони мага."]
+			id: "08ABAA91FA3C0420"
+			rewards: [{
+				count: 4
+				id: "768778CAFE671F52"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "4B59C5EE4C645A65"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:pumpkin_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "058041A85714653D"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:pumpkin_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1E96F261EA151483"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:pumpkin_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "19956D4A2C586083"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:pumpkin_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Тыквенное облачение"
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["300F2E45D185A9A1"]
+			description: ["Первая магическая броня: кожаная броня + магическая эссенция (по предмету). Даёт ману и немного силы заклинаний — хороший выбор, пока нет брони школ."]
+			id: "102B4B762F6E2A14"
+			rewards: [{
+				count: 4
+				id: "46E130D13780547F"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "5CC87B44428AF94B"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:wandering_magician_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2A5F51775A0635D8"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:wandering_magician_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4930A732FC5D6DA7"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:wandering_magician_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2A4AEAF615AC43BA"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:wandering_magician_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Облачение странствующего мага"
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["204B969DA081056A"]
+			description: ["Потускневший шлем: падает с некромантов Катакомб. Магический шлем с бонусами к заклинаниям."]
+			id: "04C521649C801577"
+			rewards: [{
+				id: "2B2E72BEEF5455B1"
+				item: "irons_spellbooks:arcane_salvage"
+				type: "item"
+			}]
+			tasks: [{
+				id: "728250ABBE16AD03"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:tarnished_helmet"
+					tag: {
+						Damage: 0
+						ISB_Spells: {
+							data: [ ]
+							maxSpells: 1
+							mustEquip: 1b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Потускневший шлем"
+			x: 6.0d
+			y: 14.1d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Жезл «Туда-сюда»: редкая добыча из магических сокровищниц, перемещение по точкам."]
+			id: "3F0E3AA23530D57E"
+			rewards: [{
+				count: 8
+				id: "6E7A10CF30812CEC"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			tasks: [{
+				id: "763367FAC564AD6E"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:hither_thither_wand"
+					tag: {
+						ISB_Spells: {
+							data: [{
+								id: "irons_spellbooks:portal"
+								index: 0
+								level: 1
+								locked: 1b
+							}]
+							maxSpells: 1
+							mustEquip: 0b
+							spellWheel: 1b
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "Жезл «Туда-сюда»"
+			x: -2.0d
+			y: 16.3d
+		}
+		{
+			dependencies: ["72AB70FD8D8FABBF"]
+			description: ["Незеритовое облачение мага: лучшая универсальная магическая броня без привязки к школе. Крафтится из брони мага и незерита, улучшается сферами."]
+			id: "6D3F141705BC1566"
+			rewards: [
+				{
+					count: 2
+					id: "46B09CD1BCAD09A2"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					id: "592BBED86217BC4A"
+					item: "irons_spellbooks:upgrade_orb"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "540A003FB9F78E29"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:netherite_mage_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2908AB56B32246D9"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:netherite_mage_chestplate"
+						tag: {
+							Damage: 0
+							ISB_Spells: {
+								data: [ ]
+								maxSpells: 1
+								mustEquip: 1b
+								spellWheel: 1b
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2B83428A79375AB5"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:netherite_mage_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0EF42FAA4C229A91"
+					item: {
+						Count: 1
+						id: "irons_spellbooks:netherite_mage_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Незеритовое облачение мага"
+			x: 4.0d
+			y: 22.5d
+		}
+		{
+			dependencies: ["43218B72FBE91FA1"]
+			description: [
+				"Пустая сфера — основа всех сфер улучшения."
+				""
+				"Базовая сфера крафтится из волшебных слитков, пепельной эссенции и мифрила. Сфера + 8 рун школы = сфера школы; вставляется в броню и книги на Волшебной наковальне."
+			]
+			id: "26DF59F5E5AEE91C"
+			rewards: [
+				{
+					count: 4
+					id: "111AD2C5B09BE192"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "5346A1531F7BCBEC"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "310960C32673B929"
+					item: "minecraft:phantom_membrane"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "02712757B4B59130"
+				item: "irons_spellbooks:upgrade_orb"
+				type: "item"
+			}]
+			title: "Сфера улучшения"
+			x: 6.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["26DF59F5E5AEE91C"]
+			description: ["Сфера маны: сфера улучшения + руны маны. Вставляется на Волшебной наковальне, увеличивает запас маны."]
+			id: "1A8AD2ABAB77A665"
+			rewards: [
+				{
+					count: 12
+					id: "1E83D4EFF09D990E"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "2799E45284C085BF"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "56C4EA6C64ECF48E"
+				item: "irons_spellbooks:mana_upgrade_orb"
+				type: "item"
+			}]
+			title: "Сфера улучшения: Мана"
+			x: 8.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["26DF59F5E5AEE91C"]
+			description: ["Сфера перезарядки: сокращает перезарядку заклинаний. Вставляется на Волшебной наковальне."]
+			id: "3EAAFBDEAC5C0F45"
+			rewards: [
+				{
+					count: 12
+					id: "1C2627FB84A50C8C"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "690B1639DD42D08F"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "747557D7FF94C9DB"
+				item: "irons_spellbooks:cooldown_upgrade_orb"
+				type: "item"
+			}]
+			title: "Сфера улучшения: Перезарядка"
+			x: 8.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["26DF59F5E5AEE91C"]
+			description: ["Сфера защиты: добавляет броне защиту. Вставляется на Волшебной наковальне."]
+			id: "6AEBB00DA72BE7FF"
+			rewards: [
+				{
+					count: 12
+					id: "7F74084AC76CB376"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "1065D46D2B4430A6"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "54CD7F6BDEF3DD91"
+				item: "irons_spellbooks:protection_upgrade_orb"
+				type: "item"
+			}]
+			title: "Сфера улучшения: Защита"
+			x: 8.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Кольцо маны: + к запасу маны. Крафтится из волшебных слитков и алмаза."]
+			id: "0F39081277115513"
+			rewards: [{
+				id: "6961F352D7F5F0F9"
+				item: "irons_spellbooks:arcane_salvage"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3C0F5D6E62529501"
+				item: "irons_spellbooks:mana_ring"
+				type: "item"
+			}]
+			title: "Кольцо маны"
+			x: 13.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["6E5747E17B68A181"]
+			description: ["Слоты Curios: два кольца, ожерелье и пояс для книги. Серебряное кольцо — только добыча; большинство магических колец крафтится из волшебных слитков и самоцветов."]
+			id: "275CB217D14F96AF"
+			rewards: [
+				{
+					id: "4FD2144CA612CD0F"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "160AAEBE77692C35"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "51956488EC023B6F"
+				item: "irons_spellbooks:silver_ring"
+				type: "item"
+			}]
+			title: "Серебряное кольцо"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Кольцо перезарядки: сокращает перезарядку заклинаний."]
+			id: "1A35EA8FEFEA029F"
+			rewards: [{
+				id: "672F47D42FB2C864"
+				item: "irons_spellbooks:arcane_salvage"
+				type: "item"
+			}]
+			tasks: [{
+				id: "75DFCD2F339E80A6"
+				item: "irons_spellbooks:cooldown_ring"
+				type: "item"
+			}]
+			title: "Кольцо перезарядки"
+			x: 14.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Кольцо быстрого каста: сокращает время подготовки заклинаний."]
+			id: "65C0475A520618D3"
+			rewards: [{
+				id: "5F040D67440FAA23"
+				item: "irons_spellbooks:arcane_salvage"
+				type: "item"
+			}]
+			tasks: [{
+				id: "20D9701CBDEB3EBF"
+				item: "irons_spellbooks:cast_time_ring"
+				type: "item"
+			}]
+			title: "Кольцо быстрого каста"
+			x: 15.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["6E5747E17B68A181"]
+			description: ["Тяжёлая цепь: основа для амулетов (слот ожерелья)."]
+			id: "357A3275C57D8394"
+			rewards: [
+				{
+					count: 2
+					id: "3D6A265EDC3DBC39"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "3521BF1DFCB2D154"
+					item: "minecraft:chain"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "17AAB437E42E22BE"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "635D41C6BE50D9E8"
+				item: "irons_spellbooks:heavy_chain_necklace"
+				type: "item"
+			}]
+			title: "Тяжёлая цепь"
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Изумрудное кольцо: дополнительная защита и бонусы при обороне."]
+			id: "577C09AAABDD449F"
+			rewards: [
+				{
+					id: "42945674F44708FB"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					id: "7C2D0AFDE5F4C029"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "346C5085B684BF41"
+				item: "irons_spellbooks:emerald_stoneplate_ring"
+				type: "item"
+			}]
+			title: "Изумрудное кольцо"
+			x: 17.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Защищает от огня: незаменимо против пиромантов и в Незере."]
+			id: "1054F56AC9DC4409"
+			rewards: [
+				{
+					id: "5C39AC9F9DF10C29"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					id: "11B17DF5BD8B658D"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "0D19D53C3287E21C"
+				item: "irons_spellbooks:fireward_ring"
+				type: "item"
+			}]
+			title: "Кольцо защиты от огня"
+			x: 18.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Защищает от холода и ледяных заклинаний: против криомантов."]
+			id: "4291BE36CE76CA60"
+			rewards: [
+				{
+					id: "2E2941003948274F"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					id: "70A92707FA5197BC"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "42EA78ED6E71F137"
+				item: "irons_spellbooks:frostward_ring"
+				type: "item"
+			}]
+			title: "Кольцо защиты от холода"
+			x: 19.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Защищает от яда: против аптекарей и школы Природы."]
+			id: "399F247FA37116D1"
+			rewards: [
+				{
+					id: "4EC8EDA46B0766E9"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					id: "68681918C70C8D7F"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "29A60D9B094FF3CB"
+				item: "irons_spellbooks:poisonward_ring"
+				type: "item"
+			}]
+			title: "Кольцо защиты от яда"
+			x: 20.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["357A3275C57D8394"]
+			description: ["Талисман заклинателя: усиливает призванных существ (школа Вызова)."]
+			id: "47FA1B2052E23694"
+			rewards: [
+				{
+					id: "6A043AD13227576B"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "4733013FCD13ED81"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "416194836CF3527A"
+				item: "irons_spellbooks:conjurers_talisman"
+				type: "item"
+			}]
+			title: "Талисман заклинателя"
+			x: 15.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Кольцо родства: +1 к уровню заклинаний одной школы. Школа задаётся на Волшебной наковальне."]
+			id: "5C016C7A3FCCEE56"
+			rewards: [
+				{
+					id: "5F478EA7CDA17F29"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					id: "6E31166CE10BA0DA"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "23C4DE252AECDB64"
+				item: "irons_spellbooks:affinity_ring"
+				type: "item"
+			}]
+			title: "Кольцо родства"
+			x: 16.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["357A3275C57D8394"]
+			description: ["Амулет концентрации: усиливает восстановление маны."]
+			id: "73AA20CA7AE6272E"
+			rewards: [
+				{
+					id: "7185BDB817179FE5"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "158C8E6DA186AE34"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "425841F2E7156F77"
+				item: "irons_spellbooks:concentration_amulet"
+				type: "item"
+			}]
+			title: "Амулет концентрации"
+			x: 14.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["357A3275C57D8394"]
+			description: ["Аметистовый резонатор: оберег, повышающий магическую силу."]
+			id: "0C62986C62326FED"
+			rewards: [
+				{
+					id: "3E4C0BBFB70ADBD8"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "7B01870243CEFBC8"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "330718E400C0D477"
+				item: "irons_spellbooks:amethyst_resonance_charm"
+				type: "item"
+			}]
+			title: "Аметистовый резонатор"
+			x: 16.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["275CB217D14F96AF"]
+			description: ["Кольцо невидимости: редкая добыча, делает невидимым при касте некоторых заклинаний."]
+			id: "26C2525DA180E7E9"
+			rewards: [
+				{
+					id: "2F77EC1E77064EDF"
+					item: "irons_spellbooks:arcane_salvage"
+					type: "item"
+				}
+				{
+					id: "228517B4280FCBD6"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "404F50D250A05B70"
+				item: "irons_spellbooks:invisibility_ring"
+				type: "item"
+			}]
+			title: "Кольцо невидимости"
+			x: 21.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["551A4916F032ACCF"]
+			description: ["Малое улучшение ячеек добавляет книге заклинаний ячейку."]
+			id: "5F4F21589F363BD8"
+			rewards: [
+				{
+					count: 2
+					id: "280C7D43BA0AF78C"
+					item: "irons_spellbooks:upgrade_orb"
+					type: "item"
+				}
+				{
+					id: "68973A43A93AECAE"
+					item: "irons_spellbooks:lesser_spell_slot_upgrade"
+					type: "item"
+				}
+			]
+			subtitle: "Больше страниц!"
+			tasks: [{
+				id: "583BD1DFC0B5F743"
+				item: "irons_spellbooks:lesser_spell_slot_upgrade"
+				type: "item"
+			}]
+			title: "Улучшение книги"
+			x: 8.0d
+			y: -4.5d
+		}
+		{
+			dependencies: [
+				"395A33977B18B9AD"
+				"0436DF3308681913"
+			]
+			description: [
+				"Древний огненный дух-босс Iron's Spells. Одолейте его."
+				""
+				"На сервере — босс 55 уровня; «зловещий» вариант выключен."
+			]
+			hide_dependency_lines: true
+			id: "63EC9BFB381B0E7E"
+			rewards: [
+				{
+					count: 2
+					id: "37B8769A8CDDF052"
+					item: "irons_spellbooks:fire_rune"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "213D36F755380B6A"
+					item: "irons_spellbooks:upgrade_orb"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "1063E41322254170"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			subtitle: "Первый Огненосец"
+			tasks: [{
+				entity: "irons_spellbooks:fire_boss"
+				id: "112C2D7D87C6E5D9"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&cЭхо Тироса"
+			x: 10.0d
+			y: 20.7d
+		}
+		{
+			description: ["Часть квестов основана на модпаках All the Mods 9 (ATM Team) и MATS (All Rights Reserved), переведена и переработана для приватного сервера. Не распространять."]
+			hide_until_deps_visible: false
+			id: "2E0067677AA924B3"
+			invisible: true
+			optional: true
+			rewards: [{
+				count: 4
+				id: "15264B1226321AD3"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7531A4AB07A593DB"
+				type: "checkmark"
+			}]
+			title: "Об этой главе"
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["300F2E45D185A9A1"]
+			description: [
+				"Магией может пользоваться любой класс, но &bЧародей&r из Epic Class Mod заточен под неё: +2% к восстановлению маны всегда, +50% после 7 секунд без движения, −5% урона от огня, взрывов, яда и иссушения."
+				"&eРывок&r Чародея: телепорт на 8 блоков за 50 маны, перезарядка 3 секунды. В новой раскладке — клавиша &eC&r (проверьте в «Управлении»)."
+				"В книге класса (&eY&r) очки можно вкладывать в &bману&r, &bвосстановление маны&r и &bмагическую атаку&r. Класс выбирается один раз; сброс очков стоит 20 алмазов."
+			]
+			icon: {
+				Count: 1
+				id: "irons_spellbooks:wizard_hat"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "6E1B5787659BA9DF"
+			rewards: [
+				{
+					count: 4
+					id: "3EC76A8564D2A173"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "498D581D490DC280"
+					item: "minecraft:paper"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "766A3B8D15E09C75"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Класс Чародей"
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["67A587F4BAD76C70"]
+			description: [
+				"Заклинания из книги выбираются &bколесом заклинаний&r и применяются клавишей каста. В новой раскладке колесо — &eZ&r (проверьте в «Управлении», там же клавиша каста)."
+				"Бывают мгновенные заклинания, с подготовкой и длительные (держать клавишу). У каждого — расход маны и перезарядка."
+			]
+			icon: "irons_spellbooks:chronicle"
+			id: "1ACEF148957AE53E"
+			rewards: [{
+				count: 4
+				id: "346D4DEE411150D4"
+				item: "irons_spellbooks:arcane_essence"
+				type: "item"
+			}]
+			tasks: [{
+				id: "34AEB12521F834E6"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Каст и колесо заклинаний"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1ACEF148957AE53E"]
+			description: [
+				"Базовый запас маны — 100. Его повышают магическая броня, кольца, амулеты, сферы улучшения и характеристики класса (книга класса, &eY&r)."
+				"Другие важные атрибуты: &bсила заклинаний&r, &bсокращение перезарядки&r, &bскорость каста&r, &bсопротивление магии&r, а также сила и сопротивление каждой школы. Смотрите их в подсказках предметов."
+			]
+			icon: "irons_spellbooks:mana_upgrade_orb"
+			id: "6E5747E17B68A181"
+			rewards: [
+				{
+					count: 3
+					id: "3A997D1D1F163C66"
+					item: "minecraft:chain"
+					type: "item"
+				}
+				{
+					id: "5C7E68CAFFBC789D"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "0DA292D75508B186"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Мана и атрибуты"
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["102B4B762F6E2A14"]
+			description: ["&bМагическая ткань&r — основа брони школ и лучших книг. Рецепт: 8 магических эссенций вокруг шерсти."]
+			icon: "irons_spellbooks:magic_cloth"
+			id: "4854BD03B24263A4"
+			rewards: [
+				{
+					count: 2
+					id: "4B0D9F3A1D868D8D"
+					item: "irons_spellbooks:hogskin"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "23D39915B15EB74F"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "29E74E01286F6E54"
+				item: "irons_spellbooks:magic_cloth"
+				type: "item"
+			}]
+			title: "Магическая ткань"
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["639531AB27DCD267"]
+			description: [
+				"Школа &fВетра&r из аддона Wind Spellbooks: заклинания воздуха и Торнадо. На сервере стоит исправленная версия аддона, Торнадо больше не роняет сервер."
+				"Руна ветра падает с &bАэроманта&r. Из неё — броня аэроманта и сфера улучшения ветра."
+			]
+			icon: "wind_spellbooks:wind_rune"
+			id: "34DF25D3F7A178EC"
+			rewards: [
+				{
+					count: 2
+					id: "67636AABEEF8DB6A"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "4FFCCE921FC450BA"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "38279F94128BD1A1"
+				item: "wind_spellbooks:wind_rune"
+				type: "item"
+			}]
+			title: "&f&lВетер"
+			x: 15.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["3009018DEC1EC952"]
+			description: ["Маг школы Ветра из аддона Wind Spellbooks. Роняет руну ветра. Как и другие маги, на сервере это уровневый моб Epic Class: даёт опыт класса и монеты."]
+			icon: {
+				Count: 1
+				id: "wind_spellbooks:aeromancer_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "3AF8F995115FF7D1"
+			rewards: [
+				{
+					count: 2
+					id: "7FA1F4F40F14131B"
+					item: "irons_spellbooks:mithril_scrap"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "23BA7CAC9CB9D632"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "wind_spellbooks:aeromancer"
+				id: "712CED37ACA073CF"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&f&lАэромант"
+			x: 4.0d
+			y: 18.9d
+		}
+		{
+			dependencies: ["69838E3F12218D68"]
+			description: ["&bМифриловая руда&r лежит ниже Y −38, не касаясь воздуха; нужна незеритовая кирка. Мифрил идёт в базовую сферу улучшения и поздние предметы."]
+			icon: "irons_spellbooks:mithril_ingot"
+			id: "43218B72FBE91FA1"
+			rewards: [
+				{
+					count: 2
+					id: "39FE18C847D1CDD0"
+					item: "irons_spellbooks:arcane_ingot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "62D1C76AD900059B"
+					item: "irons_spellbooks:cinder_essence"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2DE61C6CDC916E5A"
+				item: "irons_spellbooks:mithril_ingot"
+				type: "item"
+			}]
+			title: "Мифрил"
+			x: 6.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["6E1B5787659BA9DF"]
+			description: [
+				"Маги из Iron's Spells (пиромант, криомант, аптекарь, аэромант и др.) — уровневые мобы Epic Class: дают опыт класса и монеты. Мёртвый король и Эхо Тироса — боссы 55 уровня, за босса — 100 монет."
+				"В колонии можно нанять &bстража-мага&r (исследование Mage Troops): ему нужна книга хотя бы с одним заклинанием, а уровень его заклинаний ограничен уровнем сторожевой башни (максимум 5)."
+				"Запретов заклинаний на сервере нет, восстановление маны и перезарядки стандартные."
+			]
+			icon: "irons_spellbooks:staff_of_the_nines"
+			id: "6A93D226D306FA2C"
+			rewards: [{
+				count: 2
+				id: "3AF6877A3B9E66C8"
+				item: "irons_spellbooks:common_ink"
+				type: "item"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "7865788926BB2851"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Магия на нашем сервере"
+			x: 4.0d
+			y: -1.5d
+		}
+	]
+	subtitle: ["Заклинания, книги, посохи и маги"]
+	title: "Магия"
+}

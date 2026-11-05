@@ -1,0 +1,337 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "kitchen"
+	group: "56104B959F6BF66C"
+	icon: "farmersdelight:cooking_pot"
+	id: "562FB4BC8DDF5A8F"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["60F4A0E213534B65"]
+			description: ["Нож режет на разделочной доске и при сборе высокой травы даёт солому. Первый нож — кремнёвый."]
+			id: "22494077409C59C5"
+			rewards: [
+				{
+					ftb_money: 125.0d
+					id: "342838D264F4D73F"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+				{
+					count: 8
+					id: "4F72F4A6360BC709"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "401C74254B2769AB"
+					item: "minecraft:stick"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "farmersdelight:main/craft_knife"
+				criterion: ""
+				id: "5FF7F1D7DCC11BC8"
+				type: "advancement"
+			}]
+			title: "Кухонный нож"
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["22494077409C59C5"]
+			description: ["Положите продукт на доску (ПКМ) и ударьте ножом — получите нарезку: мясо, рыбу, капусту, тесто и т. д. Топором на доске раскалывают брёвна."]
+			id: "6C28F75CC0358F47"
+			rewards: [
+				{
+					ftb_money: 125.0d
+					id: "6EAB275C6D0D71F5"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+				{
+					count: 3
+					id: "443C3AC6FB807BE4"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "64D2869274D6EFDC"
+					item: "minecraft:brick"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "4EC89E4211244958"
+				item: "farmersdelight:cutting_board"
+				type: "item"
+			}]
+			title: "Разделочная доска"
+			x: -4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["22494077409C59C5"]
+			description: ["В кастрюле варят супы и рагу — поставьте её над огнём."]
+			id: "6F3C4DC34992C928"
+			rewards: [
+				{
+					ftb_money: 250.0d
+					id: "37B120E9A4B4A3EE"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+				{
+					count: 3
+					id: "5E10AE2718C49578"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "4EB1FD39F0AD34CB"
+					item: "minecraft:brick"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "5A95CD5CCC11DB31"
+				item: "farmersdelight:cooking_pot"
+				type: "item"
+			}]
+			title: "Кастрюля"
+			x: -4.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["3A72DCE4A773F662"]
+			description: ["Сковорода жарит еду в руке над источником жара, а в бою годится как тяжёлое оружие."]
+			id: "22A039E2F1C9576D"
+			rewards: [
+				{
+					ftb_money: 125.0d
+					id: "76D3BD005A0500BC"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+				{
+					count: 16
+					id: "659BA7C004EE1C18"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2BFF81336D36961B"
+				item: {
+					Count: 1
+					id: "farmersdelight:skillet"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Сковорода"
+			x: -6.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["60F4A0E213534B65"]
+			description: ["Посадите рис в воду."]
+			id: "46C5E32CC4563A2A"
+			rewards: [
+				{
+					ftb_money: 125.0d
+					id: "7BC771B94AC75BDD"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+				{
+					count: 16
+					id: "3BD78374D076227B"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "farmersdelight:main/plant_rice"
+				criterion: ""
+				id: "16DB9F5FD1FFBBD8"
+				type: "advancement"
+			}]
+			title: "Рисовое поле"
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["46C5E32CC4563A2A"]
+			description: ["Органический компост со временем превращается в плодородную почву."]
+			id: "503A283D8E38272E"
+			rewards: [
+				{
+					ftb_money: 250.0d
+					id: "17E33FFDA0C3A6AF"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+				{
+					count: 32
+					id: "78601510D2749366"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "farmersdelight:main/get_rich_soil"
+				criterion: ""
+				id: "4951620B370B442A"
+				type: "advancement"
+			}]
+			title: "Плодородная почва"
+			x: -4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6F3C4DC34992C928"]
+			description: ["Приготовьте и поставьте блюдо-пир."]
+			id: "3D489AB3DE7D8C28"
+			rewards: [{
+				ftb_money: 500.0d
+				id: "4CF122FFAF8E00F9"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				advancement: "farmersdelight:main/place_feast"
+				criterion: ""
+				id: "53FDD745A2124182"
+				type: "advancement"
+			}]
+			title: "Праздничный стол"
+			x: -6.0d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"3D489AB3DE7D8C28"
+				"503A283D8E38272E"
+			]
+			description: ["Попробуйте все блюда Farmer's Delight."]
+			id: "2B30C3D4129EA629"
+			rewards: [{
+				ftb_money: 1250.0d
+				id: "75DC67129C4ABD82"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				advancement: "farmersdelight:main/master_chef"
+				criterion: ""
+				id: "4C0027C4BEC05E04"
+				type: "advancement"
+			}]
+			title: "&5Шеф-повар"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2617105197387E69"]
+			description: [
+				"Farmer's Delight добавляет готовку: нож, разделочную доску, котёл, сковороду и плиту, новые культуры (рис, томаты, капуста, лук) и сытные блюда."
+				"Блюда дают эффекты &bСытость&r (голод не уходит) и &bКомфорт&r (регенерация при любом голоде). Готовая еда поваров колонии продаётся в магазине (вкладка «Скупка: продукция колонии»)."
+			]
+			icon: "farmersdelight:cooking_pot"
+			id: "60F4A0E213534B65"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "5CBCAB8A0B63ACDA"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "10F5E683957B65E7"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "&6Кухня"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6F3C4DC34992C928"]
+			description: ["Кухонная плита — источник жара для котла и сковороды, на ней же можно жарить еду прямо сверху (ПКМ продуктом по плите)."]
+			icon: "farmersdelight:stove"
+			id: "3A72DCE4A773F662"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "375542F201EB4B4C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "552C5025D5097BDD"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Кухонная плита"
+			x: -4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6F3C4DC34992C928"]
+			description: ["&bСытость&r: голод не тратится (кроме лечения за счёт насыщения) — берите рагу и супы в долгий поход или на войну. &bКомфорт&r: естественная регенерация, даже если вы голодны."]
+			icon: "farmersdelight:beef_stew"
+			id: "094EC6861ADAA7BC"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "1E3FBEC57E894121"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "361DD9F6DDC8A2DC"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Сытость и Комфорт"
+			x: -6.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"Отдельных клавиш у Farmer's Delight нет: всё через &eПКМ&r. Нож — нарезка на доске и сбор соломы с травы. Котёл и сковорода работают над источником жара (плита или огонь)."
+				"На плиту можно класть еду &eПКМ&r — она жарится сверху. Готовые блюда дают эффекты Сытость и Комфорт."
+			]
+			icon: {
+				Count: 1
+				id: "farmersdelight:skillet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "2617105197387E69"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "7AE31F751AE0CDCE"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4E36463AC13C1920"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Как готовить"
+			x: -3.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Farmer's Delight: готовка, урожай и пиры"]
+	title: "Кухня"
+}

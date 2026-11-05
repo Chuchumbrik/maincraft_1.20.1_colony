@@ -1,0 +1,10 @@
+{
+	chapter_groups: [
+		{ id: "6123070DFC361467", title: "Колония" }
+		{ id: "46F7B06134EF6D6F", title: "Герой" }
+		{ id: "28B6561BD5815F42", title: "Магия" }
+		{ id: "1B7C17E8F4BC2E16", title: "Драконы" }
+		{ id: "6CBCCB4882FF76B3", title: "Война" }
+		{ id: "56104B959F6BF66C", title: "Экономика" }
+	]
+}

@@ -1,0 +1,950 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "dragons"
+	group: "1B7C17E8F4BC2E16"
+	icon: "iceandfire:dragonegg_red"
+	id: "4B36701BE93A0F84"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"В мире появились мифические существа: от безобидных пикси до огромных драконов. Драконы живут в пещерах и гнёздах на поверхности, охраняя кучи золота."
+				""
+				"Не лезьте к взрослому дракону без хорошей брони и запаса еды — сначала окрепните на квестах этой главы."
+				""
+				"&7Клавиши — глава «Начни здесь», квест «Управление: драконы». Здесь только механики.&r"
+			]
+			id: "289D78362E0CC6FB"
+			rewards: [
+				{
+					ftb_money: 50.0d
+					id: "20BE3E903A59621C"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+				{
+					count: 8
+					id: "4CBD480F058E8443"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					id: "1ECF2232C7DEA565"
+					item: "minecraft:book"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "484B419236B66F8F"
+				type: "checkmark"
+			}]
+			title: "&6Мир Льда и Пламени"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["289D78362E0CC6FB"]
+			description: ["Манускрипты встречаются в сундуках подземелий и сокровищниц. Три манускрипта нужны для бестиария."]
+			id: "0C7F7484A9FD051A"
+			rewards: [
+				{
+					id: "6082434EFCE9985A"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "720A98EE10292501"
+					item: "minecraft:leather"
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 3L
+				id: "6DED86D9E9FE8893"
+				item: "iceandfire:manuscript"
+				type: "item"
+			}]
+			title: "Манускрипты"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0C7F7484A9FD051A"]
+			description: ["Книга обо всех существах мода. Новые страницы добавляются, если положить в бестиарий манускрипты и другие находки."]
+			id: "7F5F4BFBE9B24438"
+			rewards: [{
+				count: 16
+				id: "0F80F7B3212750FA"
+				item: "minecraft:paper"
+				type: "item"
+			}]
+			tasks: [{
+				id: "59368DCFFA5B848B"
+				item: "iceandfire:bestiary"
+				type: "item"
+			}]
+			title: "&eБестиарий"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7F5F4BFBE9B24438"]
+			description: ["Скрафтите кафедру бестиария — на ней можно дописывать книгу новыми разделами."]
+			id: "7C06F94742A47431"
+			rewards: [{
+				count: 3
+				id: "5E28E5E6E9E849FC"
+				item: "iceandfire:manuscript"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/lectern"
+				criterion: ""
+				id: "1EA407ACB50134D8"
+				type: "advancement"
+			}]
+			title: "Кафедра бестиария"
+			x: 6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["289D78362E0CC6FB"]
+			description: ["Серебряная руда встречается под землёй. Серебряное оружие особенно хорошо против нежити."]
+			id: "755F686341980BBA"
+			rewards: [{
+				count: 4
+				id: "67CE1A58EC002076"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "0511C3173E1CB784"
+				item: "iceandfire:silver_ingot"
+				type: "item"
+			}]
+			title: "Серебро"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["755F686341980BBA"]
+			description: ["Сапфировая руда встречается в холодных заснеженных краях — там же, где живут ледяные драконы."]
+			id: "0D81137FB17CBB9D"
+			rewards: [{
+				count: 6
+				id: "499C29A721173B0C"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "54A7B497AE231561"
+				item: "iceandfire:sapphire_gem"
+				type: "item"
+			}]
+			title: "Сапфиры"
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["755F686341980BBA"]
+			description: ["Повязка защищает от окаменяющего взгляда горгоны. Без неё к горгоне лучше не подходить."]
+			id: "78A6E8DA952FAD35"
+			rewards: [{
+				count: 4
+				id: "567175AC0C9598E1"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "38B90F0B2001A164"
+				item: {
+					Count: 1
+					id: "iceandfire:blindfold"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Повязка на глаза"
+			x: 4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["289D78362E0CC6FB"]
+			description: ["Приручите кокатрикса — вырастите из яйца или долго смотрите на него, выдерживая его взгляд."]
+			id: "55D89AEA1A7C3F2A"
+			rewards: [{
+				count: 16
+				id: "73052F8B58E8F5F5"
+				item: "minecraft:wheat_seeds"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/tame_cockatrice"
+				criterion: ""
+				id: "5A3A91B018D48B8D"
+				type: "advancement"
+			}]
+			title: "Кокатрикс"
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["55D89AEA1A7C3F2A"]
+			description: ["Бросайте рядом с гиппогрифом кроличьи лапки, чтобы приручить его. Это первый летающий скакун."]
+			id: "78E5A7DA4DA28D77"
+			rewards: [{
+				id: "2867C2CEF15A2A70"
+				item: "minecraft:saddle"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/tame_hippogryph"
+				criterion: ""
+				id: "61AFB54EA2E066AC"
+				type: "advancement"
+			}]
+			title: "Гиппогриф"
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["55D89AEA1A7C3F2A"]
+			description: ["Подружитесь с пикси: бросьте рядом с ней торт. Пикси живут в деревушках из грибных домиков."]
+			id: "2BAB99763D8EB187"
+			rewards: [{
+				id: "526BE84B6691C39B"
+				item: "minecraft:cake"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/tame_pixie"
+				criterion: ""
+				id: "6943E14E0A6B4573"
+				type: "advancement"
+			}]
+			title: "Пикси"
+			x: -2.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["78E5A7DA4DA28D77"]
+			description: ["Подстрелите амфиптера в джунглях и оседлайте его, чтобы приручить."]
+			id: "7CB83E5D411780E0"
+			rewards: [{
+				count: 32
+				id: "59A57E4B7F237B3D"
+				item: "minecraft:arrow"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/tame_amphithere"
+				criterion: ""
+				id: "1A3D7E3CA25DDAAC"
+				type: "advancement"
+			}]
+			title: "Амфиптер"
+			x: -6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["78E5A7DA4DA28D77"]
+			description: ["Приручите морского конька гиппокампа, кормя его ламинарией."]
+			id: "638C480AA36626D8"
+			rewards: [{
+				count: 16
+				id: "14A025820E4B5936"
+				item: "minecraft:kelp"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/tame_hippocampus"
+				criterion: ""
+				id: "53D305DABB4EC714"
+				type: "advancement"
+			}]
+			title: "Гиппокамп"
+			x: -4.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["755F686341980BBA"]
+			description: ["Тролли живут в тёмных пещерах и днём каменеют на солнце. Сражайтесь с ними с запасом здоровья."]
+			id: "392C040BCF4B6F54"
+			rewards: [{
+				count: 6
+				id: "2A35564CF2FF5A0B"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:troll"
+				id: "27B2B2107202AB94"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Пещерный тролль"
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["392C040BCF4B6F54"]
+			description: ["Циклопы пасут овец у своих пещер. Он может схватить и съесть игрока — держите дистанцию."]
+			id: "72E79945C74C6DFA"
+			rewards: [{
+				count: 16
+				id: "6F8E5E563A99420B"
+				item: "minecraft:white_wool"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:cyclops"
+				id: "3D5ACBA6B6EE1824"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Циклоп"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["392C040BCF4B6F54"]
+			description: ["Сирены зачаровывают моряков песней. Найдите сирену на морском острове и одолейте её."]
+			id: "0DD108E9E6B06D68"
+			rewards: [{
+				id: "678C493047CD33F8"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:siren"
+				id: "26CE3D13F465A267"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Сирена"
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["392C040BCF4B6F54"]
+			description: ["Стаи стимфалийских птиц обитают на болотах и бросаются бронзовыми перьями."]
+			id: "5F93557314A85144"
+			rewards: [{
+				count: 32
+				id: "6ED1F0E4D020E929"
+				item: "minecraft:arrow"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:stymphalian_bird"
+				id: "797D286F457985A6"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Стимфалийская птица"
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5F93557314A85144"]
+			description: ["Черви смерти плавают под песком пустынь. Говорят, они обожают динамит."]
+			id: "4E3E4192710D3AC8"
+			rewards: [{
+				id: "71C24BF4F3DE4272"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:deathworm"
+				id: "34874FEDE780FA31"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Червь смерти"
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["78A6E8DA952FAD35"]
+			description: ["Добудьте голову горгоны — она обращает в камень всех, кто на неё посмотрит. Наденьте повязку!"]
+			id: "6809E4DF494EB2F6"
+			rewards: [{
+				count: 2
+				id: "176ACEEB863C1122"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6F912FF44D7602D9"
+				item: {
+					Count: 1
+					id: "iceandfire:gorgon_head"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "&dГолова горгоны"
+			x: 4.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["0DD108E9E6B06D68"]
+			description: ["Морские змеи появляются в океанах. Бой на воде опасен — запаситесь зельями."]
+			id: "799B875BF1768D9C"
+			rewards: [{
+				count: 2
+				id: "7A92085ADC1574E8"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:sea_serpent"
+				id: "0010C3485E3D5DF0"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Морской змей"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["799B875BF1768D9C"]
+			description: ["У гидры вырастают новые головы. Огонь не даёт головам отрасти."]
+			id: "1C2F863EF2BC2EA0"
+			rewards: [{
+				count: 2
+				id: "6046A5799D5EE88C"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:hydra"
+				id: "257F4CB658D0C673"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&cГидра"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["392C040BCF4B6F54"]
+			description: ["Огненные драконы живут в тёплых краях. Молодые драконы слабее взрослых — начните с них."]
+			id: "60DE95FC0E4A75F9"
+			rewards: [{
+				count: 2
+				id: "597DD27719ACD097"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:fire_dragon"
+				id: "0677C0E82B0B5625"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&cОгненный дракон"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["392C040BCF4B6F54"]
+			description: ["Ледяные драконы обитают в заснеженных краях и замораживают противников."]
+			id: "0978B72F6F914766"
+			rewards: [{
+				count: 2
+				id: "7F69041635BB7729"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:ice_dragon"
+				id: "5B9D45E09A012B84"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&bЛедяной дракон"
+			x: 8.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["392C040BCF4B6F54"]
+			description: ["Грозовые драконы живут в засушливых краях и бьют молниями."]
+			id: "720FB1056508D431"
+			rewards: [{
+				count: 2
+				id: "1E1916DF11AAEB16"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			tasks: [{
+				entity: "iceandfire:lightning_dragon"
+				id: "11B6E6C71A76B34B"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&eГрозовой дракон"
+			x: 8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"60DE95FC0E4A75F9"
+				"0978B72F6F914766"
+				"720FB1056508D431"
+			]
+			dependency_requirement: "one_completed"
+			description: ["Кости выпадают из драконов и встречаются в их логовах."]
+			id: "4E62596323B5BDCE"
+			rewards: [{
+				count: 4
+				id: "214E5F9AEEFB457C"
+				item: "minecraft:gold_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "4513B7589835C93F"
+				item: "iceandfire:dragonbone"
+				type: "item"
+			}]
+			title: "Драконья кость"
+			x: 10.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4E62596323B5BDCE"]
+			description: ["Скрафтите любой инструмент или оружие из драконьей кости."]
+			id: "369C89F6C1B25A78"
+			rewards: [{
+				id: "6548134D1C6115C2"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragonbone_tool"
+				criterion: ""
+				id: "26D52DDFBE9FB89A"
+				type: "advancement"
+			}]
+			title: "Инструмент из кости"
+			x: 12.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["369C89F6C1B25A78"]
+			description: ["Пропитайте меч из драконьей кости кровью дракона — получится огненный, ледяной или грозовой клинок."]
+			id: "057DF6EF8B8A0637"
+			rewards: [{
+				count: 2
+				id: "50271D9556621227"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragonbone_flaming_sword"
+				criterion: ""
+				id: "0AAA61AE4C32C9AA"
+				type: "advancement"
+			}]
+			title: "Легендарный клинок"
+			x: 14.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4E62596323B5BDCE"]
+			description: ["Яйца лежат в гнёздах драконов. Огненное яйцо высиживают в огне, ледяное — в воде, грозовое — под грозой."]
+			id: "0B055176412ABA71"
+			rewards: [{
+				count: 32
+				id: "1C384CB40D3B8121"
+				item: "minecraft:beef"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragon_egg"
+				criterion: ""
+				id: "0191B02DF80884CD"
+				type: "advancement"
+			}]
+			title: "&6Драконье яйцо"
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0B055176412ABA71"]
+			description: ["Драконья мука быстро растит маленьких драконов."]
+			id: "49D6EB1259B5F7E0"
+			rewards: [{
+				count: 16
+				id: "48D5B3EAD8C1F676"
+				item: "minecraft:bone_meal"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragon_meal"
+				criterion: ""
+				id: "1013EA995100EFF3"
+				type: "advancement"
+			}]
+			title: "Драконья мука"
+			x: 14.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0B055176412ABA71"]
+			description: ["Посох позволяет отдавать приказы драконам: сидеть, следовать или бродить."]
+			id: "6B9044336759DA00"
+			rewards: [{
+				id: "3D271619B73C029F"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragon_staff"
+				criterion: ""
+				id: "0E6FE67D8CFE15DC"
+				type: "advancement"
+			}]
+			title: "Посох повелителя"
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6B9044336759DA00"]
+			description: ["В роге можно хранить и переносить своего дракона."]
+			id: "138147D80F61DF39"
+			rewards: [{
+				count: 8
+				id: "5406878B5DA59070"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragon_horn"
+				criterion: ""
+				id: "4BF0976408A457FF"
+				type: "advancement"
+			}]
+			title: "Драконий рог"
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6B9044336759DA00"]
+			description: ["Защитите своего дракона бронёй."]
+			id: "18BCD09C62B3F799"
+			rewards: [{
+				count: 2
+				id: "12D39A22A7BC2076"
+				item: "minecraft:iron_block"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragonarmor"
+				criterion: ""
+				id: "5DE40CE0BA874C08"
+				type: "advancement"
+			}]
+			title: "Броня для дракона"
+			x: 12.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4E62596323B5BDCE"]
+			description: ["Кирпичи кузни делают из каменных кирпичей и драконьей чешуи."]
+			id: "1533E931FAC64807"
+			rewards: [{
+				count: 32
+				id: "1654C4F04D575DBD"
+				item: "minecraft:stone_bricks"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragon_forge_brick"
+				criterion: ""
+				id: "1AF3FF3E5A66EBAF"
+				type: "advancement"
+			}]
+			title: "Кирпичи драконьей кузни"
+			x: 16.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1533E931FAC64807"]
+			description: ["Ядро ставится в центр кузни из кирпичей. Кузню разжигает дыхание дракона."]
+			id: "601BD9DB78CC0800"
+			rewards: [{
+				count: 2
+				id: "7A9447EC71EA2B51"
+				item: "minecraft:iron_block"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragon_forge_core"
+				criterion: ""
+				id: "2034D35C01FC2359"
+				type: "advancement"
+			}]
+			title: "Ядро кузни"
+			x: 18.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["601BD9DB78CC0800"]
+			description: ["В кузне из драконьей крови и железа получается драконья сталь — лучший металл мода."]
+			id: "5E3F10B7093ADB25"
+			rewards: [{
+				count: 3
+				id: "348477AC6BBDEF5E"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragonsteel"
+				criterion: ""
+				id: "5B7B74928338912D"
+				type: "advancement"
+			}]
+			title: "&5Драконья сталь"
+			x: 20.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5E3F10B7093ADB25"]
+			description: ["Скрафтите оружие из драконьей стали."]
+			id: "16DAA1E6E7EBF4B4"
+			rewards: [{
+				count: 3
+				id: "23F077791DCD3133"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragonsteel_weapon"
+				criterion: ""
+				id: "4571FC8293694C6B"
+				type: "advancement"
+			}]
+			title: "&5Оружие из драконьей стали"
+			x: 22.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0B055176412ABA71"]
+			description: [
+				"Поставьте яйцо &eсами&r — дракон будет считать хозяином того, кто положил яйцо."
+				"&cОгненное&r: подожгите огонь прямо в блоке яйца и поддерживайте его. &bЛедяное&r: поставьте в воду — яйцо вмёрзнет в лёд и позже вылупится. &eГрозовое&r: под открытым небом во время дождя или грозы."
+			]
+			icon: "iceandfire:dragonegg_red"
+			id: "143A03F2A647D9DF"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7D068D26B8B1DCC7"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "21BC0BA6317A8C9B"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Высиживание яйца"
+			x: 12.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["143A03F2A647D9DF"]
+			description: [
+				"Вылупившийся дракончик сразу приручён и принадлежит вам. Дайте ему имя биркой — так его проще найти и не спутать."
+				"Дракон растёт 5 стадий: 1 (0–24 дня), 2 (25–49), 3 (50–74), 4 (75–99), 5 (100+ игровых дней)."
+			]
+			icon: "iceandfire:dragon_skull_fire"
+			id: "1F9B9DADF698AFCF"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "1A8E5E1BEBDCFF11"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4F71444BD7BA4481"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Свой дракон"
+			x: 14.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["1F9B9DADF698AFCF"]
+			description: [
+				"Кормите дракона мясом (&eПКМ&r с едой) — сытость и здоровье. Ледяные драконы едят и рыбу."
+				"&bДраконья еда&r добавляет дракону 1 день возраста — так он вырастет быстрее."
+			]
+			icon: "iceandfire:dragon_meal"
+			id: "5A6FCA61BD24A8C9"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7264EBD395CF6140"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "299829E3F1AAE584"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Кормление и рост"
+			x: 16.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["1F9B9DADF698AFCF"]
+			description: ["Маленький дракон (1 стадия) садится вам на плечо: &eПКМ пустой рукой&r. Так его удобно носить с собой."]
+			icon: "minecraft:bone"
+			id: "34DEC07D1CE5C0C8"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "6633AC427484BA3D"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "60CA26B5690E2B58"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Дракон на плече"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5A6FCA61BD24A8C9"]
+			description: ["&eShift + ПКМ пустой рукой&r — инвентарь дракона: туда кладут броню для дракона."]
+			icon: "minecraft:chest"
+			id: "6BDDB0263D70DEFB"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "20532BA9F7B7FC9B"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "0216EF9393320D1E"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Инвентарь дракона"
+			x: 18.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5A6FCA61BD24A8C9"]
+			description: ["С 3-й стадии (50 дней) дракона можно оседлать: &eПКМ пустой рукой&r."]
+			icon: {
+				Count: 1
+				id: "minecraft:elytra"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "4ACF05718534ED81"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "3FAB392A64ED124F"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4A2944125009530F"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Первый полёт"
+			x: 18.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["4ACF05718534ED81"]
+			description: [
+				"Клавиши на сервере: &eAlt + V&r — дыхание (огонь, лёд или молния), &eAlt + G&r — удар когтями, &eAlt + X&r — снижение, &eF7&r — сменить вид камеры. Набор высоты — как обычный прыжок (Пробел)."
+				"Разрушение блоков драконами на сервере выключено — ни дикие, ни ваши драконы не ломают постройки."
+			]
+			icon: "minecraft:fire_charge"
+			id: "0EAE8938D3845B85"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "1CBC43A89DD40A0C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "27EBBDCDD31286D3"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Управление в полёте"
+			x: 20.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["4ACF05718534ED81"]
+			description: ["Кристалл призыва нужного типа: &eПКМ кристаллом по своему дракону&r — кристалл запомнит его. Связанного дракона кристалл может призвать к вам (подробности — в бестиарии)."]
+			icon: "iceandfire:summoning_crystal_fire"
+			id: "35FC00BE20CD1D92"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "70F837F50E018A6D"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6B43F46E3B4BF813"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Кристалл призыва"
+			x: 20.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6B9044336759DA00"]
+			description: [
+				"&bЖезл командования&r (Ice and Fire Colonies; крафт: алмаз, палка, золотой слиток — вертикально) делает приручённого зверя или дракона &eнапарником стража колонии&r."
+				"&eShift + ПКМ&r жезлом по сторожевой башне (или &eAlt + H&r) — выбрать ближайшего стража, затем &eПКМ&r по своему приручённому дракону — он будет следовать за стражем и сражаться вместе с ним. Новое назначение заменяет прежнего зверя."
+			]
+			icon: "icefirecolonies:command_baton"
+			id: "2334C29F34A4516E"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "606A5763AB3AD183"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "39F6E7F88219B20E"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Драконы и колония"
+			x: 14.0d
+			y: 8.5d
+		}
+	]
+	subtitle: ["Существа и драконы Ice and Fire CE"]
+	title: "Драконы (Лёд и Пламя)"
+}

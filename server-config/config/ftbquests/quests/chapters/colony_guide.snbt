@@ -1,0 +1,1836 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "colony_guide"
+	group: "6123070DFC361467"
+	icon: "minecolonies:blockhutbuilder"
+	id: "0DEF87DE3ACE3B72"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Это справочник по развитию колонии MineColonies на нашем сервере. Квесты идут в рекомендуемом порядке: каждое следующее здание опирается на предыдущие."
+				""
+				"Порядок старта: &eлагерь снабжения → жезл строителя → ратуша → панель J → хижина строителя&r → остальное. Друзей в колонию — отдельная ветка под ратушей."
+				""
+				"Квесты на здания засчитываются &eдостижением MineColonies&r (поставили ратушу, заказали или достроили хижину) — второй блок хижины крафтить не нужно. Остальные — галочка «Прочитано». Награды — ресурсы на следующую постройку цепочки."
+				""
+				"&eВажно:&r колония работает (жители ходят, строят, растут поля), только пока рядом с ней есть игрок из колонии. Уехали далеко — всё замирает."
+				""
+				"&eКак смотреть, что не так:&r клавиша &eJ&r — панель колонии (запросы, простой, жалобы, стройка). Ещё: значок над головой жителя, окно жителя (ПКМ), вкладка запросов в хижине."
+				""
+				"&7Клавиши — глава «Начни здесь», квест «Управление: колония». Достижения и награды за постройки — в главе «Колония: достижения».&r"
+			]
+			icon: "minecolonies:supplycampdeployer"
+			id: "666EB3F920F3879D"
+			rewards: [
+				{
+					count: 16
+					id: "5D711D993B102769"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "55546FF4F56849CB"
+					item: "minecraft:torch"
+					type: "item"
+				}
+			]
+			size: 2.0d
+			tasks: [{
+				id: "1F40945AD983EC9C"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "&6Путь колонии"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["666EB3F920F3879D"]
+			description: [
+				"Поставьте &bразвёртыватель лагеря снабжения&r на суше (или &bкорабля снабжения&r на воде): появится небольшой лагерь, &eвнутри него стоит сундук&r."
+				""
+				"Загляните в сундук: если там есть &bблок ратуши&r и &bхижина строителя&r — берите их оттуда. Если их нет — скрафтите (рецепты в JEI/EMI: доски + золотой скипетр + ключевой предмет). Лагерь сам по себе — ещё &cне колония&r."
+				""
+				"&eКолония появляется, когда вы ставите ратушу&r (следующий квест). Граница колонии растёт от ратуши, перенести её потом нельзя — место выбирайте заранее: ровная площадка, рядом лес, вода и камень."
+				""
+				"Совет: не ставьте колонию вплотную к чужой: на сервере идут войны и набеги, буферная зона полезна."
+				""
+				"&7Награда — брёвна, палки и булыжник: скрафтите жезл строителя в следующем квесте. Ратушу берите из сундука или крафтите после жезла.&r"
+			]
+			icon: "minecolonies:supplycampdeployer"
+			id: "64EF96CBAE720219"
+			rewards: [
+				{
+					count: 32
+					id: "668B95AAB7E521E2"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "4633DBA2E650F673"
+					item: "minecraft:stick"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "A1B7C3D5E9F20468"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1E55C48A4FFA0068"
+					item: "minecraft:torch"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "5ADD30E607AA646D"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Лагерь снабжения"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["64EF96CBAE720219"]
+			description: [
+				"&bЖезл строителя&r (Build Tool, &estructurize:sceptergold&r) — главный инструмент MineColonies: через него ставят &eвсе&r хижины и постройки."
+				""
+				"&eКрафт:&r 2 палки по диагонали + 1 булыжник (или другой камень для крафта) в правом верхнем углу. &eКаждый рецепт хижины тоже съедает 1 жезл&r — держите запас палок и булыжника."
+				""
+				"&eКак ставить здание:&r"
+				"1. Блок хижины — в инвентаре. Жезл в руку, &bПКМ&r — откроется окно: выберите стиль и нужную хижину."
+				"2. Появится превью. Стрелками в окне &bдвигайте и поворачивайте&r его, высоту тоже можно менять."
+				"3. Место ровное и свободное — подтвердите &aгалочкой&r. Встанет блок хижины."
+				"4. &bПКМ по блоку хижины&r → &bОпции строительства&r → &bСтроить здание&r. Это заказ: его выполнит житель-строитель. Дальше тем же меню — &bУлучшить&r и &bПочинить&r."
+				""
+				"Поставили блок ≠ построили: пока строитель не выполнит заказ, здание не работает."
+				""
+				"&7Награда — доски и 2 жезла: хватит на ратушу (7 досок + 2 жезла), если её нет в сундуке лагеря.&r"
+			]
+			icon: "structurize:sceptergold"
+			id: "FF22F61E6DC32DFD"
+			rewards: [
+				{
+					count: 16
+					id: "0AFCB1FD774189D5"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "D58A09B25786F0D1"
+					item: "structurize:sceptergold"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "41D71BDAA6609D9D"
+					item: "minecraft:torch"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "E932CC46A0CFE81A"
+				item: "structurize:sceptergold"
+				type: "item"
+			}]
+			title: "Жезл строителя"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4D640312D7D84A9D"]
+			description: [
+				"&eШаг 2:&r поставьте &bхижину строителя&r жезлом рядом с ратушей. Блок — из сундука лагеря, если выпал, иначе скрафтите: 7 досок + жезл + деревянная дверь."
+				""
+				"Откройте хижину (ПКМ) → &bОпции строительства&r → &bСтроить здание&r. Свободный житель сам станет строителем (или назначьте его во вкладке работника кнопкой &bНанять&r). Строитель берёт заказы по очереди: сначала свою хижину, потом ратушу и всё, что вы закажете."
+				""
+				"&bСтроитель&r строит и улучшает все здания. Уровень его хижины ограничивает уровень зданий, которые он строит, — улучшайте её вовремя. На уровне 3 открывается исследование «Режимы строителя»."
+				""
+				"Материалы строитель просит запросами. Несите их в хижину или нажмите &eJ → Запросы → Выполнить&r (оплата из кошелька). Застрявшие запросы строителя можно купить и из казны: &e/colonybuy&r — квест «Покупка застрявших запросов»."
+				""
+				"Сделайте &b2–3 строителей&r, как только хватит жителей: стройка — главный тормоз развития."
+				""
+				"&7Засчитается, когда вы закажете постройку хижины строителя. Награда — доски, жезлы, деревянные топор и кирка (лесоруб, шахта), факелы (дом), кожаные ботинки (курьер), лук (сторожевая башня).&r"
+			]
+			icon: "minecolonies:blockhutbuilder"
+			id: "7EF50C3626A9B1A3"
+			rewards: [
+				{
+					count: 32
+					id: "336D271D092A523F"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "6637DC4A527F5E90"
+					item: "structurize:sceptergold"
+					type: "item"
+				}
+				{
+					id: "5C0E55D3428CA2F2"
+					item: "minecraft:wooden_axe"
+					type: "item"
+				}
+				{
+					id: "32AAB0EA6C23F2D1"
+					item: "minecraft:wooden_pickaxe"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "7EC15F68465C869D"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					id: "2B1737212A2FD633"
+					item: "minecraft:leather_boots"
+					type: "item"
+				}
+				{
+					id: "67DABE4F7B2DE803"
+					item: "minecraft:bow"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "minecolonies:minecolonies/start_builder"
+				criterion: ""
+				id: "4135A9689C6BCD23"
+				type: "advancement"
+			}]
+			title: "Хижина строителя"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["FF22F61E6DC32DFD"]
+			description: [
+				"&eШаг 1:&r поставьте &bратушу&r &eжезлом строителя&r (прошлый квест). Блок ратуши — из сундука лагеря, если выпал, иначе скрафтите: 7 досок + 2 жезла. Как только ратуша встала — колония создана и записана на вас; рядом появятся первые жители."
+				""
+				"&bРатуша&r — сердце колонии: задаёт границы, через неё настраиваются права, жители и статистика. Перенести её потом нельзя."
+				""
+				"Саму ратушу (уровень 1) строит &bстроитель&r — поэтому следующий шаг — его хижина. Уровень ратуши открывает исследования (Кладбище — ур. 2, Деревня — ур. 4, Город — ур. 5) и расширяет территорию."
+				""
+				"&eКолония живёт, только пока рядом кто-то из её игроков.&r"
+				""
+				"&7Задание засчитается само, когда вы поставите ратушу. Награда — материалы на хижину строителя (доски, дверь, жезл), булыжник и каменные инструменты.&r"
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "4D640312D7D84A9D"
+			rewards: [
+				{
+					count: 32
+					id: "3DFC2094FAE49E8D"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					id: "111607DD073CBBD0"
+					item: "minecraft:oak_door"
+					type: "item"
+				}
+				{
+					id: "567D95DD8FA07A9E"
+					item: "structurize:sceptergold"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "51A4C0ABB06EA43F"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					id: "72106F7F8D6DFD5C"
+					item: "minecraft:stone_axe"
+					type: "item"
+				}
+				{
+					id: "2238CBED2EDA45B0"
+					item: "minecraft:stone_pickaxe"
+					type: "item"
+				}
+				{
+					id: "60EC0914F286B240"
+					item: "minecraft:stone_shovel"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "minecolonies:minecolonies/place_townhall"
+				criterion: ""
+				id: "7EE9D177CDAA4F7B"
+				type: "advancement"
+			}]
+			title: "Ратуша"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7EF50C3626A9B1A3"]
+			description: [
+				"&bДом&r даёт кровати: каждое место — ещё один житель. Без жилья колония не растёт."
+				""
+				"Дом 3 уровня нужен для исследований Школы и Библиотеки, 4 и 5 уровни — для исследований «Аванпост» и «Деревушка»."
+				""
+				"Хорошее жильё повышает счастье, а счастье — скорость работы."
+				""
+				"&7Засчитается, когда строитель достроит дом 1 уровня. Награда — на следующие хижины: бочка (таверна), мотыга (ферма), удочка (рыбак).&r"
+			]
+			icon: "minecolonies:blockhutcitizen"
+			id: "348083731927BEDC"
+			rewards: [
+				{
+					count: 24
+					id: "30A37C8B267CC205"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					id: "2FF93F97F7ABCA8F"
+					item: "minecraft:barrel"
+					type: "item"
+				}
+				{
+					id: "3498134C3D43C6EF"
+					item: "minecraft:wooden_hoe"
+					type: "item"
+				}
+				{
+					id: "50D4FBFDFFF6B6F8"
+					item: "minecraft:fishing_rod"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "minecolonies:minecolonies/build_citizen"
+				criterion: ""
+				id: "6811DFCCFBC81F3F"
+				type: "advancement"
+			}]
+			title: "Дом (жильё)"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["348083731927BEDC"]
+			description: [
+				"&bТаверна&r даёт жильё и привлекает &bпутешественников&r. Их можно нанять в колонию за предметы, которые они просят: быстрый способ получить жителей с хорошими навыками."
+				""
+				"Строится один раз на колонию. &7Засчитается, когда таверна будет достроена.&r"
+			]
+			icon: "minecolonies:blockhuttavern"
+			id: "510D6AB99D69934A"
+			rewards: [
+				{
+					count: 2
+					id: "7706203AB9EA970C"
+					item: "minecraft:white_bed"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "44B002C0E948D9F4"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "minecolonies:minecolonies/build_tavern"
+				criterion: ""
+				id: "5C1582E30E0CBAB0"
+				type: "advancement"
+			}]
+			title: "Таверна"
+			x: 8.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7EF50C3626A9B1A3"]
+			description: [
+				"&bКурьер&r носит предметы между зданиями и &bскладом&r. &cБез склада курьер почти бесполезен&r — ставьте склад сразу следом (награда — сундук на его крафт)."
+				""
+				"Рабочие сами по чужим сундукам не ходят: нужное им приносит курьер со склада, вы руками или кнопка &eJ → Запросы → Выполнить&r."
+				""
+				"Правило: примерно 1 курьер на 5–8 рабочих зданий. Если запросы висят «в доставке», нужен ещё курьер."
+			]
+			icon: "minecolonies:blockhutdeliveryman"
+			id: "363B0D242B7A9742"
+			rewards: [
+				{
+					count: 8
+					id: "6C39F31DC151E15D"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "24D60681AF6B0658"
+					item: "minecraft:chest"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "622464BDB941E982"
+				item: "minecolonies:blockhutdeliveryman"
+				type: "item"
+			}]
+			title: "Хижина курьера"
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["363B0D242B7A9742"]
+			description: [
+				"&bСклад&r — общее хранилище колонии. Курьеры сдают туда продукцию и берут оттуда то, что просят работники."
+				""
+				"Уровень склада определяет число стеллажей и максимум курьеров."
+				""
+				"Складывайте лишние ресурсы в склад, а не в свои сундуки: тогда колония их «видит». Со склада же можно продавать на &eJ → Рынок&r (выручка — в казну)."
+			]
+			icon: "minecolonies:blockhutwarehouse"
+			id: "2603CE54DE391DB0"
+			rewards: [
+				{
+					count: 4
+					id: "2A7ECC6E0930F2F7"
+					item: "minecolonies:blockminecoloniesrack"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "7E43CC16CD70E41D"
+					item: "minecraft:chest"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "407CC71B33C5787D"
+				item: "minecolonies:blockhutwarehouse"
+				type: "item"
+			}]
+			title: "Склад"
+			x: 10.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7EF50C3626A9B1A3"]
+			description: [
+				"&bЛесоруб&r рубит деревья и пересаживает саженцы. Дерево нужно для всего."
+				""
+				"Дайте ему топор подходящего уровня. В хижине включите нужные породы в списке саженцев и пересадку, а в настройках задайте зону рубки (инструментом)."
+				""
+				"Сажайте рядом лес заранее. Уровень 3 нужен для исследования «Древообработка» (Лесопилка)."
+			]
+			icon: "minecolonies:blockhutlumberjack"
+			id: "78A591A52B9BA2E6"
+			rewards: [
+				{
+					count: 8
+					id: "4158A97FE47AD32A"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "37FEE2BCC916D719"
+					item: "minecraft:wooden_axe"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1E1BA0E2873D5D7D"
+					item: "minecraft:oak_sapling"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "6CC41CB912100DBE"
+				item: "minecolonies:blockhutlumberjack"
+				type: "item"
+			}]
+			title: "Хижина лесоруба"
+			x: 6.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["7EF50C3626A9B1A3"]
+			description: [
+				"&bШахтёр&r копает ствол шахты вниз и штреки на выбранном уровне: даёт камень, руду, уголь."
+				""
+				"Нужна кирка подходящего уровня. В хижине выберите уровень добычи. Шахта 2 уровня открывает исследование «Горячо!» (Плавильня), 3 — «Удар по железу!» (Кузница) и «Каменный торт» (Каменщик)."
+			]
+			icon: "minecolonies:blockhutminer"
+			id: "5FFA402BA9AD2A7F"
+			rewards: [
+				{
+					count: 24
+					id: "354C3F53E43EF826"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "703A7B9A8FFA9D1F"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "678037E7E22BFD62"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					id: "41C736EB31B9E981"
+					item: "minecraft:obsidian"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "64FA8F5A8E4FE10B"
+					item: "minecraft:ladder"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "25EAA73F66B61D71"
+				item: "minecolonies:blockhutminer"
+				type: "item"
+			}]
+			title: "Шахта"
+			x: 6.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["348083731927BEDC"]
+			description: [
+				"&bФермер&r обрабатывает поля и выращивает культуры, которые вы назначите в каждом поле."
+				""
+				"&eПоле&r — отдельный блок MineColonies: крафт из тюка сена (или тыквы), 3 палок и кожи. Поставьте его рядом с фермой, ПКМ по полю — выберите семена, затем назначьте поле в хижине фермера. Фермеру нужна мотыга."
+				""
+				"Ферма 3 уровня открывает исследования «Биоразлагаемый» (Компостёр) и «Пусть растёт» (Плантация)."
+				""
+				"&7Награда — сено, кожа и палки на первое поле, семена, костная мука, яблоко (столовая).&r"
+			]
+			icon: "minecolonies:blockhutfarmer"
+			id: "614D27CABF712EC9"
+			rewards: [
+				{
+					count: 8
+					id: "35BCA4D8A25072AF"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3452327220F8EBD3"
+					item: "minecraft:apple"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "600C74FB87D8B85C"
+					item: "minecraft:wheat_seeds"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "7C2F749825C4C821"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "D3BFE7BEAF41ACDF"
+					item: "minecraft:hay_block"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "FC6C83C031C6CBA3"
+					item: "minecraft:leather"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "23810F1AC2687196"
+					item: "minecraft:stick"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "32762BAAC07C2EB6"
+				item: "minecolonies:blockhutfarmer"
+				type: "item"
+			}]
+			title: "Ферма"
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["614D27CABF712EC9"]
+			description: [
+				"&bПовар&r готовит еду и раздаёт её жителям. Голодные жители работают медленнее и несчастны."
+				""
+				"Повару нужно топливо (уголь/дерево) и сырая еда. На нашем сервере разнообразие еды важно для счастья: держите несколько видов."
+			]
+			icon: "minecolonies:blockhutcook"
+			id: "4D60AB5C74C3FBF9"
+			rewards: [
+				{
+					count: 8
+					id: "7C92C7D97B85C8A7"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "4009DF847B035FD0"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "28ED93B4304DDB8B"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "13F056CD0A92901D"
+				item: "minecolonies:blockhutcook"
+				type: "item"
+			}]
+			title: "Столовая"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["348083731927BEDC"]
+			description: [
+				"&bРыбак&r ловит рыбу в ближайшем водоёме: простая ранняя еда. Нужна удочка и вода размером не меньше 20 блоков."
+				""
+				"Рыбак 3 уровня открывает исследование «Просеивание» (Просеиватель)."
+			]
+			icon: "minecolonies:blockhutfisherman"
+			id: "28007011CA1A9E65"
+			rewards: [
+				{
+					count: 8
+					id: "1441848B6534AC73"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "445AB33E2B0615E6"
+					item: "minecraft:string"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "446AAE927206D994"
+				item: "minecolonies:blockhutfisherman"
+				type: "item"
+			}]
+			title: "Хижина рыбака"
+			x: 10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["614D27CABF712EC9"]
+			description: [
+				"Хижины &bскотовода&r (коровы), &bпастуха&r (овцы), &bсвинопаса&r, &bкурятник&r, &bкроликовода&r и &bпчеловода&r разводят животных и пчёл."
+				""
+				"Дают мясо, кожу, шерсть, перья, яйца, мёд. Пастух нужен для шерсти на кровати. Дайте им корм и инструмент: ножницы пастуху, топор/меч мясникам, ведро скотоводу (молоко)."
+				""
+				"&7Крафт: доски + жезл + говядина / ножницы / свинина / яйцо / кролик / улей.&r"
+			]
+			icon: "minecolonies:blockhutcowboy"
+			id: "15C633932F36CC0C"
+			rewards: [
+				{
+					count: 8
+					id: "41782649B947C3E9"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "34A818A71C061108"
+					item: "minecraft:beef"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1078952F4D5EBB90"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "40E5ADE8577C819F"
+					item: "minecraft:lead"
+					type: "item"
+				}
+				{
+					id: "F661DF243291620D"
+					item: "minecraft:shears"
+					type: "item"
+				}
+				{
+					id: "E23797D2C10D0612"
+					item: "minecraft:bucket"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "203C9C76B119FE38"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Животноводство"
+			x: 10.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4D60AB5C74C3FBF9"]
+			description: [
+				"&bУниверситет&r проводит исследования, которые открывают новые здания и улучшения. Уровень университета ограничивает уровень исследований."
+				""
+				"Начните исследования рано, они идут долго. Первыми берите: «Выносливость» (Больница), ветку для производства, нужную вам, и «Тактическая подготовка», когда сторожевая башня станет 3 уровня."
+				""
+				"Исследования стоят предметов: смотрите стоимость перед запуском."
+			]
+			icon: "minecolonies:blockhutuniversity"
+			id: "275174C306D3CA87"
+			rewards: [
+				{
+					count: 32
+					id: "7B29C9053D69FE29"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "64CB336EDBA2C33D"
+					item: "minecraft:carrot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "5F8A6BEBB7D40E0E"
+					item: "minecraft:feather"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "58E654D23CC2A812"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					id: "4DCC6CF9AE248276"
+					item: "minecraft:brewing_stand"
+					type: "item"
+				}
+				{
+					id: "4A36F4551BB9072C"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "67FBE51184915E98"
+				item: "minecolonies:blockhutuniversity"
+				type: "item"
+			}]
+			title: "Университет"
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["275174C306D3CA87"]
+			description: [
+				"&bЛекарь&r лечит больных жителей. Больные не работают."
+				""
+				"Открывается исследованием «Выносливость». Держите в больнице лечебные предметы, которые просит лекарь."
+			]
+			icon: "minecolonies:blockhuthospital"
+			id: "72FB518F44AEF18B"
+			rewards: [
+				{
+					count: 8
+					id: "71AF6B927088E082"
+					item: "minecraft:stone"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3C0F73AD67645DEA"
+					item: "minecraft:bone"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "79FC9DC6AC8BD20E"
+				item: "minecolonies:blockhuthospital"
+				type: "item"
+			}]
+			title: "Больница"
+			x: 16.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["72FB518F44AEF18B"]
+			description: [
+				"&bГробовщик&r хоронит павших жителей и может их воскресить (шанс растёт с исследованиями)."
+				""
+				"Открывается исследованием «Воспоминания» (ратуша 2). На нашем сервере воскрешённый страж сохраняет свой боевой уровень (в течение 24 ч)."
+			]
+			icon: "minecolonies:blockhutgraveyard"
+			id: "2B2FDE89F3CBF2EA"
+			rewards: [
+				{
+					count: 16
+					id: "673928570F70EE97"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "14B164079200AC7D"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "22E529D4EDC5F23D"
+				item: "minecolonies:blockhutgraveyard"
+				type: "item"
+			}]
+			title: "Кладбище"
+			x: 18.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["275174C306D3CA87"]
+			description: [
+				"&bШкола&r учит детей колонии, они вырастают с лучшими навыками."
+				""
+				"Открывается исследованием «Высшее образование» (нужен дом 3 уровня)."
+			]
+			icon: "minecolonies:blockhutschool"
+			id: "062AFAEADEFE2ECC"
+			rewards: [
+				{
+					count: 16
+					id: "23664C11078BF308"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "18F7AE16A20EA058"
+					item: "minecraft:book"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "4F1A802853F55F22"
+				item: "minecolonies:blockhutschool"
+				type: "item"
+			}]
+			title: "Школа"
+			x: 16.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["275174C306D3CA87"]
+			description: [
+				"&bБиблиотека&r: жители учатся там в свободное время и повышают интеллект (быстрее исследования и некоторые профессии)."
+				""
+				"Открывается исследованием «Проницательный» (дом 3 уровня)."
+				""
+				"&7Награда — на башню чародея: стол зачарований (4 обсидиана, 2 алмаза, книга).&r"
+			]
+			icon: "minecolonies:blockhutlibrary"
+			id: "690C1A8B7C410181"
+			rewards: [
+				{
+					count: 8
+					id: "2E6D1FCB8E8D28FD"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "6CF997812258BC52"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3929749C6CBB94DE"
+					item: "minecraft:obsidian"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "596CA58FD0468380"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "92C6DE0269FBC57A"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "6D4D578FAEAC0F11"
+				item: "minecolonies:blockhutlibrary"
+				type: "item"
+			}]
+			title: "Библиотека"
+			x: 16.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7EF50C3626A9B1A3"]
+			description: [
+				"&bСтраж&r охраняет территорию: рыцарь, лучник или маг (исследование «Mage Troops», казармы 3). Ставьте башни по периметру."
+				""
+				"&eПравило MineColonies:&r башня уровня N выдаёт стражу снаряжение уровня не выше N. &eНа нашем сервере&r в эту шкалу добавлены металлы модов: дерево/золото 0, камень/медь 1, железо/серебро 2, алмаз/драконья кость 3, незерит/драконья сталь 4. Башня 5 — любое. Топоры, копья и катаны тоже подходят как оружие."
+				""
+				"&eУровни бойцов (сервер):&r база стража = уровень его башни/казарм × 10, рабочего = уровень его здания × 3 (до 15); сверху боевой опыт (страж до +25, житель до +10), максимум 75. Смотреть: &e/npclevels info&r."
+				""
+				"Магу нужна книга заклинаний хотя бы с одним заклинанием. Башня 3 уровня открывает «Тактическую подготовку» (Казармы)."
+				""
+				"&7Засчитается, когда башня будет достроена.&r"
+			]
+			icon: "minecolonies:blockhutguardtower"
+			id: "3D2147A2114AB0C8"
+			rewards: [
+				{
+					count: 32
+					id: "5DCFFC2EC0EECADC"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					id: "17673FD187E8A7DE"
+					item: "minecraft:shield"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "minecolonies:minecolonies/build_guard_tower"
+				criterion: ""
+				id: "20BD0298D12DEE08"
+				type: "advancement"
+			}]
+			title: "Сторожевая башня"
+			x: 8.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["7E2606DF209F61D4"]
+			description: [
+				"&bКазармы&r — крепость с 4 башнями стражей. Нужны против крупных &cнабегов&r: их сила растёт вместе с колонией."
+				""
+				"Открываются исследованием «Тактическая подготовка». Казармы 3 уровня открывают Стрельбище и Боевую академию."
+				""
+				"Уровень казарм также задаёт базовый уровень ваших рекрутов (Recruits): &e10 × уровень казарм&r (без казарм — 5), сверху до +25 за бои, максимум 75."
+				""
+				"&7Награда — на следующие хижины: 3 лука (стрельбище), 3 железных меча (боевая академия), 2 жезла.&r"
+			]
+			icon: "minecolonies:blockhutbarracks"
+			id: "7029770D906B0ECB"
+			rewards: [
+				{
+					count: 3
+					id: "45DA738CFABED9B2"
+					item: "minecraft:iron_sword"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "60F1A8F61D2E9639"
+					item: "minecraft:bow"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "3DD8E51483447245"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "FE6D2B48A2A62736"
+					item: "structurize:sceptergold"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2259F8E06697682F"
+				item: "minecolonies:blockhutbarracks"
+				type: "item"
+			}]
+			title: "Казармы"
+			x: 12.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["7029770D906B0ECB"]
+			description: [
+				"&bСтрельбище&r тренирует лучников, &bБоевая академия&r — рыцарей: стражи там качают свои &eнавыки MineColonies&r (меткость, сила и т.д.), не уходя в бой."
+				""
+				"Число над головой (уровень сервера, npclevels) от них не растёт: оно зависит от уровня башни/казарм и боевого опыта."
+				""
+				"Открываются исследованиями «Улучшенные луки» и «Улучшенные мечи» (казармы 3)."
+			]
+			icon: "minecolonies:blockhutcombatacademy"
+			id: "17CDE6EAF4C2BE73"
+			rewards: [{
+				count: 8
+				id: "2D44E4F47FBB5B42"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5CD36EADA43A366B"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Стрельбище и Боевая академия"
+			x: 14.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5FFA402BA9AD2A7F"]
+			description: [
+				"&bПлавильщик&r переплавляет руду в слитки (с бонусом к выходу на высоких уровнях). Нужно топливо."
+				""
+				"Исследование «Горячо!» (шахта 2). Плавильня 3 открывает «Эти лёгкие!» (Стеклодув)."
+			]
+			icon: "minecolonies:blockhutsmeltery"
+			id: "14DC527C7ADA6D6E"
+			rewards: [
+				{
+					count: 8
+					id: "5E056AE0BD3B24CA"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "32017ED4519CF1E0"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "3E2A8C2152AC1AE3"
+					item: "minecraft:coal"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "517ECB2815C3D4A9"
+				item: "minecolonies:blockhutsmeltery"
+				type: "item"
+			}]
+			title: "Плавильня"
+			x: 8.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["14DC527C7ADA6D6E"]
+			description: [
+				"&bКузнец&r делает инструменты, оружие и броню для жителей. Важно для стражей: кузница делает оружие нужного уровня."
+				""
+				"Исследование «Удар по железу!» (шахта 3). Кузница 3 открывает Механика."
+			]
+			icon: "minecolonies:blockhutblacksmith"
+			id: "47A89BCED5823127"
+			rewards: [
+				{
+					count: 8
+					id: "527CBBB4B5C7743F"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					id: "4776203A7FFD4BD0"
+					item: "minecraft:redstone_block"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "13B1B9F7AC6DF1A9"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7FA24A98D5674D71"
+				item: "minecolonies:blockhutblacksmith"
+				type: "item"
+			}]
+			title: "Кузница"
+			x: 10.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["5FFA402BA9AD2A7F"]
+			description: [
+				"&bКаменщик&r делает каменные блоки, ступеньки, плиты для строительства."
+				""
+				"Исследование «Каменный торт» (шахта 3). Открывает Кирпичный двор («Флинтстоуны») и Дробильщика («Дробильный камень»)."
+			]
+			icon: "minecolonies:blockhutstonemason"
+			id: "0E279CF360AC9F0A"
+			rewards: [
+				{
+					count: 16
+					id: "3A8E084BF8FE80EF"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "348D0AFFBDE8A504"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "5CD2C33FFE5ECE21"
+					item: "minecraft:string"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "4CF895239F07C67A"
+				item: "minecolonies:blockhutstonemason"
+				type: "item"
+			}]
+			title: "Каменщик"
+			x: 8.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["78A591A52B9BA2E6"]
+			description: [
+				"&bПлотник&r крафтит деревянные предметы: доски, ступени, двери, сундуки — снимает огромную часть запросов строителя."
+				""
+				"Исследование «Древообработка» (лесоруб 3). Лесопилка открывает Стрельника («Работа с нитью»)."
+			]
+			icon: "minecolonies:blockhutsawmill"
+			id: "225D24527F6AC7B1"
+			rewards: [{
+				count: 32
+				id: "1FBBF11CBA5170FC"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				id: "19C6F367B4DD4F69"
+				item: "minecolonies:blockhutsawmill"
+				type: "item"
+			}]
+			title: "Лесопилка"
+			x: 8.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["0E279CF360AC9F0A"]
+			description: [
+				"&bКирпичный двор&r (кирпич, терракота), &bДробильщик&r (гравий, песок), &bБетономешалка&r (бетон, нужен дробильщик), &bСтеклодув&r (стекло), &bСтрельник&r (стрелы, луки)."
+				""
+				"Стройте по мере того, как строитель начинает просить эти материалы. Каждой мастерской нужно своё исследование (Кирпичный двор и Дробильщик — от каменщика, Стеклодув — от плавильни 3, Стрельник — от лесопилки)."
+				""
+				"&7Награда — ключевые предметы рецептов: булыжник и железо (дробильщик), стекло (стеклодув), белый цементный порошок (бетономешалка), нить (стрельник).&r"
+			]
+			icon: "minecolonies:blockhutcrusher"
+			id: "6FD73FEC8BF37A5F"
+			rewards: [
+				{
+					count: 32
+					id: "102E9B2D243BFC10"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "77BBFE51C35EC6EF"
+					item: "minecraft:sand"
+					type: "item"
+				}
+				{
+					id: "FFB85954BE6E0FC9"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "CDC4D6C4DC6EFD1B"
+					item: "minecraft:glass"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "D409EB421148A0FD"
+					item: "minecraft:white_concrete_powder"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "B83E0B9E849A8253"
+					item: "minecraft:string"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "0B6993B7128E2DE1"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Мастерские второго ряда"
+			x: 10.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["614D27CABF712EC9"]
+			description: [
+				"&bКомпостёр&r делает удобрение (ускоряет поля), &bПлантация&r выращивает сахарный тростник, бамбук, кактусы и др., &bФлорист&r — цветы, &bКрасильщик&r — красители."
+				""
+				"Исследования «Биоразлагаемый» и «Пусть растёт» (ферма 3), «Сила цветов» и «Радужное небо» (компостёр 3)."
+				""
+				"&7Хижины: компостёр — бочка, плантация — кактус, флорист — мак, красильщик — красный краситель (всё в награде). Компостёр ставьте первым.&r"
+			]
+			icon: "minecolonies:blockhutcomposter"
+			id: "37396634FB46FB2B"
+			rewards: [
+				{
+					id: "6E804D96CD7978A0"
+					item: "minecolonies:barrel_block"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "3F036D9E3FBC2ACF"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "7F22E6AE0C4A2AAA"
+					item: "minecraft:cactus"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "2228DCCE81104714"
+					item: "minecraft:poppy"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "C416DA9B41351DA1"
+					item: "minecraft:red_dye"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "05A016F06EF52EA3"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Компостёр, плантация, флорист"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4D60AB5C74C3FBF9"]
+			description: [
+				"&bПекарь&r печёт хлеб и выпечку — лучшая еда, чем сырая. &bКухня шеф-повара&r готовит сложные блюда для счастья жителей."
+				""
+				"Исследования не нужны. Крафт: пекарня — доски + жезл + пшеница, кухня — доски + жезл + коптильня. Важно, когда жителей станет больше 20."
+			]
+			icon: "minecolonies:blockhutbaker"
+			id: "64ED995D0BF4B572"
+			rewards: [
+				{
+					count: 32
+					id: "59B12AB7E6C01E0E"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "7B62BCB943C7C41A"
+					item: "minecraft:sugar"
+					type: "item"
+				}
+				{
+					id: "65C3C661D0A63AD0"
+					item: "minecraft:smoker"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "1EDC6CE9E8B90448"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Пекарня и кухня шеф-повара"
+			x: 14.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"28007011CA1A9E65"
+				"225D24527F6AC7B1"
+			]
+			description: [
+				"&bПросеиватель&r просеивает гравий/песок/землю и даёт руды и ресурсы без шахты."
+				""
+				"Исследование «Просеивание»: нужен &eрыбак 3&r и уже изученная «Древообработка» (лесоруб 3, лесопилка). Крафт хижины: доски + жезл + 3 нити."
+				""
+				"Просеивателю нужна &eсетка&r (сито): первая — «Нитяная сетка». Без неё он не работает."
+			]
+			icon: "minecolonies:blockhutsifter"
+			id: "59EB908BEE9112EC"
+			rewards: [
+				{
+					count: 32
+					id: "5F43F85041AD9D34"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "6759FC6B058C829C"
+					item: "minecraft:sand"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "3A6268D1AC537157"
+					item: "minecraft:string"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "08EFB60624D99976"
+				item: "minecolonies:blockhutsifter"
+				type: "item"
+			}]
+			title: "Просеиватель"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["47A89BCED5823127"]
+			description: [
+				"&bМеханик&r крафтит механизмы, рельсы, редстоун-предметы."
+				""
+				"Исследование «Что тебе нужно?» (кузница 3)."
+			]
+			icon: "minecolonies:blockhutmechanic"
+			id: "5E139318843E2282"
+			rewards: [
+				{
+					count: 16
+					id: "24CF6F86BEF53972"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "14B3661CBDFA3746"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "20B3B6E494E54716"
+				item: "minecolonies:blockhutmechanic"
+				type: "item"
+			}]
+			title: "Механик"
+			x: 12.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["690C1A8B7C410181"]
+			description: [
+				"&bЧародей&r собирает опыт у жителей и создаёт зачарованные книги. Полезно для экипировки стражей и шахтёров."
+				""
+				"&eБашня чародея 3 уровня&r открывает исследование «Больше свитков», а за ним — «Откройте Нижний мир» (Шахта Нижнего мира) и «Волшебные зелья» (Башня алхимика). Без чародея 3 этих зданий не будет."
+				""
+				"&7Награда — обсидиан на хижину Нижнего мира, лазурит и книги.&r"
+			]
+			icon: "minecolonies:blockhutenchanter"
+			id: "6131AD65BEA7852D"
+			rewards: [
+				{
+					count: 16
+					id: "3E98BDA839EA6AA8"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "13A0E29CAA7E70F8"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "02BDF6AEAD0715A5"
+					item: "minecraft:obsidian"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2952C04C7786A8D0"
+				item: "minecolonies:blockhutenchanter"
+				type: "item"
+			}]
+			title: "Башня чародея"
+			x: 18.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3C8C68490DD6E9A8"]
+			description: [
+				"&bАлхимик&r варит зелья (в том числе для больницы)."
+				""
+				"Исследование «Волшебные зелья» — следующее после «Откройте Нижний мир» (ветка технологий, нужна башня чародея 3). Крафт: доски + жезл + варочная стойка."
+			]
+			icon: "minecolonies:blockhutalchemist"
+			id: "48D4A867E6083D49"
+			rewards: [
+				{
+					count: 8
+					id: "1E2F9F68B49BA7C9"
+					item: "minecraft:nether_wart"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "7ADE8AE856BD5683"
+					item: "minecraft:blaze_powder"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "6242C0F0A102108F"
+					item: "minecraft:glass_bottle"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "37589A522077F919"
+				item: "minecolonies:blockhutalchemist"
+				type: "item"
+			}]
+			title: "Башня алхимика"
+			x: 22.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["275174C306D3CA87"]
+			description: [
+				"&bМистическое место&r — декоративное здание, которое поднимает счастье всей колонии."
+				""
+				"Исследование «Амбиции». Крафт: доски + жезл + алмаз (алмаз был в награде за университет)."
+				""
+				"&7Засчитается, когда здание будет достроено.&r"
+			]
+			icon: "minecolonies:blockhutmysticalsite"
+			id: "544A6A6B781E32FD"
+			rewards: [
+				{
+					count: 8
+					id: "12618A863EBEB28F"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
+					id: "5BD66D884539277C"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "minecolonies:minecolonies/build_mysticalsite"
+				criterion: ""
+				id: "25902AE6FFB2AE69"
+				type: "advancement"
+			}]
+			title: "Мистическое место"
+			x: 16.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["6131AD65BEA7852D"]
+			description: [
+				"&bРаботник Нижнего мира&r ходит в Нижний мир через портал в хижине и приносит ресурсы."
+				""
+				"Цепочка: &eБашня чародея 3 → «Больше свитков» → «Откройте Нижний мир»&r. Крафт хижины: доски + жезл + обсидиан. Дайте работнику еду, броню и оружие."
+				""
+				"&7Награда — огниво, золото и варочная стойка (хижина алхимика).&r"
+			]
+			icon: "minecolonies:blockhutnetherworker"
+			id: "3C8C68490DD6E9A8"
+			rewards: [
+				{
+					id: "715E047723BA0BA2"
+					item: "minecraft:flint_and_steel"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "107AA9D5877719B9"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "07D4E0151BE7EEF9"
+					item: "minecraft:brewing_stand"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "6A59E1790BD7CBBD"
+				item: "minecolonies:blockhutnetherworker"
+				type: "item"
+			}]
+			title: "Шахта Нижнего мира"
+			x: 20.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["275174C306D3CA87"]
+			description: [
+				"Дальше колония растёт так: строите больше домов → больше жителей → больше рабочих зданий."
+				""
+				"Поднимайте ратушу до 4–5 для исследований «Деревня» и «Город» (больше жителей). Улучшайте лесоруба, шахту и ферму до 3+ — это открывает большую часть производства."
+				""
+				"Стили построек (Stylecolonies и др.) выбираются в жезле строителя при размещении каждого здания. Свой стиль для каждого здания — можно, но выбирайте его сразу: потом поменять сложно."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "37DFE72C729737CC"
+			rewards: [
+				{
+					count: 64
+					id: "79FFD38A657250D1"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "59EF41301C959E60"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "1DBF9F4643AC4574"
+					item: "minecraft:glass"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "09B76987E69251B9"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Рост: дома, ратуша, улучшения"
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["DC0593FBAD6B4B7C"]
+			description: [
+				"&eОсобенность сервера (WarNTaxes):&r здания колонии приносят налог в &bказну колонии&r. Казна — отдельно от вашего кошелька."
+				""
+				"&eОсновной способ — J → Финансы:&r там видно налог к сбору и долг, кнопки &bСобрать налог&r, &bВ казну&r, &bИз казны&r, &bПогасить долг&r и перевод игроку. Владелец и офицеры могут всё, остальные жители — только пополнять казну и переводить."
+				""
+				"Запасной способ — команды: &e/wnt checktax&r, &e/wnt claimtax&r, &e/wnt treasury status&r, &e/wnt treasury deposit <сумма> wallet&r; окно налогов — &eAlt + T&r или &e/taxgui&r."
+				""
+				"Из казны оплачиваются улучшения обороны (&e/wnt invest list&r) и закупки строителю через &e/colonybuy&r (следующий квест). Подробности — книга «Кодекс войны и налогов» (глава «Экономика»)."
+				""
+				"&7Награда — 50 ◎ в кошелёк: внесите их в казну через J → Финансы, и следующий квест можно попробовать сразу.&r"
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "2C690D249FA2E271"
+			rewards: [{
+				ftb_money: 50.0d
+				id: "6F6DFD1F7E27A420"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "510CE57A241E9A47"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Налоги и казна"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2C690D249FA2E271"]
+			description: [
+				"&eОсобенность сервера:&r застрявшие запросы &bстроителя&r можно купить за деньги &eиз казны колонии&r (не из кошелька). Сначала пополните казну: &eJ → Финансы → В казну&r или &e/wnt treasury deposit <сумма> wallet&r."
+				""
+				"Покупается только то, что есть в текущем списке материалов строителя, и не больше нужного. Другие здания — через &eJ → Запросы → Выполнить&r (из кошелька)."
+				""
+				"&e/colonybuy list&r — застрявшие запросы с ценой; &e/colonybuy pay <id>&r или &e/colonybuy pay all&r — оплатить, предметы сразу в хижину строителя."
+				"&e/colonybuy auto on|off&r — автопокупка, &e/colonybuy budget <n>&r — её дневной бюджет, &e/colonybuy price&r — цена предмета в руке."
+				"Владельцу и офицерам в чат приходит кнопка &e[Купить за N]&r."
+				""
+				"Цена — базовая ×1,2. Лимит — &e5000 ◎ в сутки&r на колонию. Нельзя купить алмазы, незерит, изумруды, руды, слитки, драгоценные камни, обсидиан, металлические блоки и предметы с NBT."
+				""
+				"&aВо время войны, осады и набегов покупка тоже работает.&r"
+			]
+			icon: "minecolonies:blockhutbuilder"
+			id: "4C71D6CBD5199E92"
+			rewards: [
+				{
+					count: 32
+					id: "41FF6CD2205CF6B4"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "6CAC4ECA29275F92"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7E0BDED4579A0386"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Покупка застрявших запросов"
+			x: 8.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3D2147A2114AB0C8"]
+			description: [
+				"Колонию атакуют &cварвары и пираты&r (набеги MineColonies) и другие игроки. Игроки могут устроить набег (&e/wnt raid&r) или объявить войну (&e/wnt wagewar&r)."
+				""
+				"Держите стражей с оружием нужного уровня, стены и казармы. Мир: &e/wnt peace whitepeace&r. Осадные машины и рекруты — глава «Война»."
+				""
+				"Во время войны экономика не блокируется: J → Запросы, Финансы, Рынок и &e/colonybuy&r работают."
+			]
+			icon: "minecolonies:blockhutbarracks"
+			id: "7E2606DF209F61D4"
+			rewards: [
+				{
+					count: 8
+					id: "59B5553A67BA2C89"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					id: "609269CFBE758EA4"
+					item: "minecraft:iron_block"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "05C470FF02A3399C"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Набеги и войны"
+			x: 10.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["4D640312D7D84A9D"]
+			description: [
+				"&eНа сервере есть своя панель колонии — клавиша &bJ&r.&r Работает на территории вашей колонии (зайдите туда хотя бы раз)."
+				""
+				"&bКолония&r — сводка: жители, жильё, счастье, голодные, больные, казна, кошелёк, война/мир."
+				"&bСтройка&r — все заказы строителям и чего им не хватает."
+				"&bЗапросы&r — открытые запросы всех зданий. Кнопка &bПоказать&r подсветит здание, &bВыполнить&r / &bВыполнить все видимые&r — оплатить запрос &eиз кошелька&r, предметы сразу уйдут жителю (только владелец и офицеры)."
+				"&bПростой&r — кто без работы и какие здания без работника. &bЖалобы&r и &bСчастье&r — что не нравится жителям."
+				"&bФинансы&r — казна: внести, снять, собрать налог, погасить долг, перевести деньги игроку."
+				"&bРынок&r — товары всех колоний и аукционы: продажа со склада, выручка идёт в казну."
+				""
+				"Начинайте каждую проверку колонии с J: это быстрее, чем обходить хижины."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "DC0593FBAD6B4B7C"
+			rewards: [
+				{
+					count: 16
+					id: "0C0841447569C750"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "B85D66EDDDEBA9F8"
+					item: "minecraft:bread"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "0AB115CAE282671D"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Панель колонии (J)"
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4D640312D7D84A9D"]
+			description: [
+				"Колонию можно вести вместе с друзьями. Пока игрока нет в списке колонии, он для неё &cчужой&r: не может открыть хижины, ломать и ставить блоки."
+				""
+				"&eКак добавить:&r"
+				"1. Друг должен хотя бы раз зайти на сервер (иначе ник не найдётся)."
+				"2. &bПКМ по ратуше&r → вкладка &bРазрешения&r."
+				"3. В поле &bДобавить игрока&r впишите ник и нажмите &bДобавить&r."
+				"4. Новый игрок попадает в ранг &7Neutral&r (гость) — сразу смените ему ранг на &bOfficer&r или &aFriend&r в том же списке (следующий квест)."
+				""
+				"Добавлять могут владелец и ранги с правом «Изменить права доступа». Удалить игрока — там же, кнопкой у его ника."
+				""
+				"&7Ранги в списке — английские: Owner, Officer, Friend, Neutral, Hostile.&r"
+			]
+			icon: "minecraft:player_head"
+			id: "6BFEA9DD9338CF0F"
+			rewards: [
+				{
+					count: 16
+					id: "46E02171D17F413B"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					id: "307F9A491802A7A4"
+					item: "minecraft:white_bed"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2FFBA3C307120FA3"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Друзья: добавить игрока"
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6BFEA9DD9338CF0F"]
+			description: [
+				"Права в колонии раздаются &eрангами&r. Стандартные:"
+				""
+				"&6Owner&r — владелец: всё, включая права."
+				"&bOfficer&r — соуправляющий: ставит, ломает и &bулучшает хижины&r, ставит и ломает блоки, открывает сундуки, созывает стражу, получает сообщения колонии."
+				"&aFriend&r — друг: открывает окна хижин, жмёт двери и рычаги, подбирает предметы. &cНе&r может ломать/ставить блоки и открывать сундуки."
+				"&7Neutral&r — гость: только двери/ворота."
+				"&cHostile&r — враг: стража атакует его."
+				""
+				"Для совместной стройки другу нужен &bOfficer&r. Friend — для гостей, которым вы доверяете меньше."
+				""
+				"Тонкая настройка: во вкладке &bРазрешения&r выберите ранг и включайте или выключайте отдельные действия (ломать блоки, открывать контейнеры, ставить хижины и т.д.). Можно создать свой ранг — поле «Добавить новый ранг»."
+			]
+			icon: "minecraft:writable_book"
+			id: "77D7E148CE183B0E"
+			rewards: [
+				{
+					count: 16
+					id: "BCCD1F65B72C1CB7"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "6286B55EC1668C2A"
+					item: "minecraft:chest"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "E71CB9523DAF8C38"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ранги и права"
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["77D7E148CE183B0E"]
+			description: [
+				"&bОфицер&r — главный ранг для друзей, с которыми вы строите колонию."
+				""
+				"&eБыстро через команду:&r &e/mc colony addOfficer <ID колонии> <ник>&r (ID колонии — в ратуше или &e/mc colony list&r). Команду может дать владелец или офицер."
+				""
+				"&eЧто получает офицер на нашем сервере:&r"
+				"• В &eJ → Запросы&r — кнопки &bВыполнить&r; в &eJ → Финансы&r — все операции с казной (снять, собрать налог, погасить долг)."
+				"• Кнопку &e[Купить за N]&r от &e/colonybuy&r и сообщения колонии."
+				"• Управление стражей и хижинами наравне с владельцем."
+				""
+				"Обычные жители-игроки (не офицеры) в J могут только пополнять казну и переводить деньги."
+				""
+				"&cОсторожно:&r офицер может снимать деньги из казны и ломать хижины. Давайте этот ранг только тем, кому доверяете."
+				""
+				"&7Союз с другой колонией (не общий доступ, а дипломатия) — вкладка &bАльянсы&r в ратуше и глава «Война».&r"
+			]
+			icon: "minecraft:golden_helmet"
+			id: "21ED508B5755A121"
+			rewards: [
+				{
+					count: 16
+					id: "78C1E81949FB1F2A"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					id: "CC94A04E29B3B701"
+					item: "structurize:sceptergold"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "FD3BB39387A18C70"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Офицер: управлять вместе"
+			x: 4.0d
+			y: 4.5d
+		}
+	]
+	title: "Путь колонии"
+}

@@ -1,0 +1,749 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hunt"
+	group: "46F7B06134EF6D6F"
+	icon: {
+		Count: 1
+		id: "minecraft:iron_sword"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "4FEEB732F10E3157"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"По одной награде за каждый вид врагов. Квесты на убийство засчитываются, только пока квест открыт."
+				""
+				"Награды выдаются опытом и монетами магазина."
+			]
+			id: "03E38DD3CB55167B"
+			rewards: [{
+				ftb_money: 125.0d
+				id: "5C06F383BA282478"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "6C2E8E13207A2FC8"
+				type: "checkmark"
+			}]
+			title: "&6Доска наград"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["03E38DD3CB55167B"]
+			description: ["Самые частые ночные мобы. Днём горят на солнце, но в шлеме — нет."]
+			id: "3655A68F316A94FC"
+			rewards: [
+				{
+					count: 8
+					id: "2FC69023A4D39190"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					ftb_money: 100.0d
+					id: "1FD6A2AB0C004529"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:zombie"
+				id: "5A6B2E8DE509E0F2"
+				type: "kill"
+				value: 20L
+			}]
+			title: "Зомби"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["03E38DD3CB55167B"]
+			description: ["Стреляют издалека — сокращайте дистанцию или прикрывайтесь щитом (ПКМ, блок Epic Fight)."]
+			id: "2E1CBC67EC1EBC2E"
+			rewards: [
+				{
+					count: 16
+					id: "4FFABEE6168C3A47"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					ftb_money: 100.0d
+					id: "4C50AF15DCE6A582"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:skeleton"
+				id: "05E68C51921E84EE"
+				type: "kill"
+				value: 20L
+			}]
+			title: "Скелеты"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["03E38DD3CB55167B"]
+			description: ["Пауки лазают по стенам и днём нейтральны, если их не трогать. С них падают нити и паучьи глаза."]
+			id: "6896C9990F3A90F4"
+			rewards: [
+				{
+					count: 8
+					id: "27CC4B1FD60F81C1"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					ftb_money: 100.0d
+					id: "6E62DDE8864662C4"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:spider"
+				id: "3B18BC583FA7FE4A"
+				type: "kill"
+				value: 15L
+			}]
+			title: "Пауки"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["03E38DD3CB55167B"]
+			description: ["Подкрадываются и взрываются. Отходите, как только услышите шипение — или убейте с одного-двух ударов."]
+			id: "16BDB0A2F7FA0E50"
+			rewards: [
+				{
+					count: 8
+					id: "6ACC55C01A99F083"
+					item: "minecraft:gunpowder"
+					type: "item"
+				}
+				{
+					ftb_money: 125.0d
+					id: "2A9D927FABB59692"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:creeper"
+				id: "2B7244E5DFB40554"
+				type: "kill"
+				value: 10L
+			}]
+			title: "Криперы"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["03E38DD3CB55167B"]
+			description: ["Ведьмы бросают зелья отравления и слабости и лечат себя. Нападайте быстро, держите молоко под рукой."]
+			id: "79FCA77C534A6A28"
+			rewards: [
+				{
+					count: 8
+					id: "224E624325198C62"
+					item: "minecraft:glass_bottle"
+					type: "item"
+				}
+				{
+					ftb_money: 150.0d
+					id: "22275CE85F4D74BA"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:witch"
+				id: "690EB08210E33BEA"
+				type: "kill"
+				value: 5L
+			}]
+			title: "Ведьмы"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3655A68F316A94FC"]
+			description: ["Фантомы нападают на тех, кто долго не спал."]
+			id: "5EDA7502EC220777"
+			rewards: [{
+				ftb_money: 150.0d
+				id: "7B0D3694AC4174F3"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "minecraft:phantom"
+				id: "26F8A678DCFB2E43"
+				type: "kill"
+				value: 5L
+			}]
+			title: "Фантомы"
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["2E1CBC67EC1EBC2E"]
+			description: ["Не смотрите им в глаза. Под навесом высотой в 2 блока эндермен до вас не дотянется. Вода их ранит."]
+			id: "537E418F7B20B4DB"
+			rewards: [
+				{
+					count: 2
+					id: "0899335F0E372F11"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					ftb_money: 200.0d
+					id: "4FA49FC43FF1A0D5"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:enderman"
+				id: "3989F1A0DE486BCB"
+				type: "kill"
+				value: 10L
+			}]
+			title: "Эндермены"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["6896C9990F3A90F4"]
+			description: ["Разбойники ходят патрулями и охраняют аванпосты. Бейте капитана с флагом — получите «Дурное знамение»."]
+			id: "27B5779EB6073E30"
+			rewards: [
+				{
+					count: 4
+					id: "0A92F80FB8CA13D3"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					ftb_money: 150.0d
+					id: "759A6D0207E61BF6"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:pillager"
+				id: "03386E926AA8CFB3"
+				type: "kill"
+				value: 10L
+			}]
+			title: "Разбойники"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["27B5779EB6073E30"]
+			description: ["Поборники бьют топором очень больно — держите блок или уклоняйтесь (кнопка мыши 4)."]
+			id: "4B8BA923420E7479"
+			rewards: [
+				{
+					count: 4
+					id: "3D31719903CF50C5"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					ftb_money: 200.0d
+					id: "4BBE62A7936D2BC5"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:vindicator"
+				id: "25D71CE844423E8D"
+				type: "kill"
+				value: 5L
+			}]
+			title: "Поборники"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4B8BA923420E7479"]
+			description: ["Заклинатели живут в лесных особняках и приходят с рейдами."]
+			id: "50B69B012E9E8046"
+			rewards: [{
+				ftb_money: 300.0d
+				id: "5017085F093A2A2B"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "minecraft:evoker"
+				id: "2D25F1B0FF5721BC"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Заклинатель"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4B8BA923420E7479"]
+			description: ["Разоритель приходит с рейдом разбойников. Много здоровья, сбивает с ног; оглушите его блоком щита."]
+			id: "3CB17AAC5464B73B"
+			rewards: [{
+				ftb_money: 300.0d
+				id: "44C9B04B902D6675"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "minecraft:ravager"
+				id: "55703E22D9BA515D"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Разоритель"
+			x: 8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["16BDB0A2F7FA0E50"]
+			description: ["Ифриты живут в адских крепостях и стреляют огненными шарами. Зелье огнестойкости сильно упростит бой."]
+			id: "55C4D2BFC64113D8"
+			rewards: [{
+				ftb_money: 200.0d
+				id: "1A0AD14720ADF1E9"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "minecraft:blaze"
+				id: "0CAA8C0871A646CB"
+				type: "kill"
+				value: 10L
+			}]
+			title: "Ифриты"
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["55C4D2BFC64113D8"]
+			description: ["Магмовые кубы обитают в Незере, особенно в базальтовых дельтах. При смерти делятся на меньшие."]
+			id: "0CD8C8DEBC6ADA1F"
+			rewards: [{
+				ftb_money: 150.0d
+				id: "41A82C6F8A8FBF7B"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "minecraft:magma_cube"
+				id: "3686B4CC82486EAB"
+				type: "kill"
+				value: 10L
+			}]
+			title: "Магмовые кубы"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["55C4D2BFC64113D8"]
+			description: ["Скелеты-иссушители охраняют адские крепости; их удар накладывает иссушение. С них может выпасть череп."]
+			id: "45233D0EFD560E03"
+			rewards: [
+				{
+					count: 16
+					id: "5CBE7F4213C68AA5"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					ftb_money: 250.0d
+					id: "4A7F74DB5A0AE4D4"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:wither_skeleton"
+				id: "2B9D3929653C51F8"
+				type: "kill"
+				value: 5L
+			}]
+			title: "Скелеты-иссушители"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["55C4D2BFC64113D8"]
+			description: ["Пиглины не нападают, если на вас есть хоть один золотой предмет брони. С ними можно меняться золотом."]
+			id: "655B4F9568C58756"
+			rewards: [
+				{
+					count: 16
+					id: "786BCC94AD43E968"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+				{
+					ftb_money: 150.0d
+					id: "21D39F0D1DABAC0A"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:piglin"
+				id: "5496FD77FE60E416"
+				type: "kill"
+				value: 10L
+			}]
+			title: "Пиглины"
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["655B4F9568C58756"]
+			description: ["Громилы охраняют бастионы."]
+			id: "0C6F14541AF8C15B"
+			rewards: [{
+				ftb_money: 250.0d
+				id: "07DB46E957993BFF"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "minecraft:piglin_brute"
+				id: "27CA5A685F861580"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Пиглин-громила"
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["655B4F9568C58756"]
+			description: ["Хоглины живут в багровых лесах Незера и подбрасывают врагов. Боятся искажённых грибов."]
+			id: "66920A2068966F45"
+			rewards: [
+				{
+					count: 8
+					id: "0C7681678FCB7619"
+					item: "minecraft:cooked_porkchop"
+					type: "item"
+				}
+				{
+					ftb_money: 150.0d
+					id: "2A7F0E5AE3B43655"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:hoglin"
+				id: "0CD9361359AB87A4"
+				type: "kill"
+				value: 5L
+			}]
+			title: "Хоглины"
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["537E418F7B20B4DB"]
+			description: ["Шалкеры охраняют города Края."]
+			id: "28938602B1CF0FCF"
+			rewards: [{
+				ftb_money: 300.0d
+				id: "727DC0FCED0E1B5A"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "minecraft:shulker"
+				id: "1A60F28F5A2FCEBE"
+				type: "kill"
+				value: 5L
+			}]
+			title: "Шалкеры"
+			x: 6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2E1CBC67EC1EBC2E"]
+			description: ["Ферроус Ротнот стережёт подземные залы. Бейте его в спину после промаха."]
+			id: "1DDAEC78A986ABD2"
+			rewards: [
+				{
+					count: 8
+					id: "51F2F5DD068FDF4E"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					ftb_money: 750.0d
+					id: "337FE78BFABCF7BD"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "mowziesmobs:ferrous_wroughtnaut"
+				id: "66E04391710EBF0A"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&cЖелезный рыцарь"
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3655A68F316A94FC"]
+			description: ["Хищное растение джунглей."]
+			id: "3015E884890C7D68"
+			rewards: [{
+				ftb_money: 150.0d
+				id: "5E5C429F1632A4E9"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "mowziesmobs:foliaath"
+				id: "14EB6FF5DD131AAB"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Фолиаат"
+			x: 4.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1DDAEC78A986ABD2"]
+			description: ["Вождь-солнцептица в рощах саванны."]
+			id: "0EEB11DC482637C2"
+			rewards: [
+				{
+					count: 8
+					id: "1E87D506222C0BAE"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					ftb_money: 1000.0d
+					id: "32009C56876FBA01"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "mowziesmobs:umvuthi"
+				id: "56161D04F76107CC"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&cУмвути"
+			x: 10.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1DDAEC78A986ABD2"]
+			description: ["Огромный ледяной зверь спит в заснеженных краях. Будить на свой страх и риск."]
+			id: "74366946C478B0CC"
+			rewards: [
+				{
+					count: 16
+					id: "3D5FC21054E3354E"
+					item: "minecraft:packed_ice"
+					type: "item"
+				}
+				{
+					ftb_money: 1000.0d
+					id: "1F2C1D155242A242"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "mowziesmobs:frostmaw"
+				id: "5572426ADB9208D2"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&bМорозная пасть"
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1DDAEC78A986ABD2"]
+			description: ["Летающие змеи морских утёсов."]
+			id: "0A63A3BDF2BD4F68"
+			rewards: [{
+				ftb_money: 500.0d
+				id: "3DEECD39CE2B38D3"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				entity: "mowziesmobs:naga"
+				id: "7336422135889186"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Нага"
+			x: 10.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["0EEB11DC482637C2"]
+			description: ["Пройдите испытание Скульптора — взберитесь на вершину его столпа."]
+			id: "3D70BD24BB98285D"
+			rewards: [{
+				ftb_money: 1250.0d
+				id: "3B243E1EE5D8978A"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				advancement: "mowziesmobs:sculptor_challenge"
+				criterion: ""
+				id: "286D80C9497E1D91"
+				type: "advancement"
+			}]
+			title: "&cИспытание Скульптора"
+			x: 12.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["28938602B1CF0FCF"]
+			description: ["Древние стражи охраняют подводные монументы."]
+			id: "7DB0001A80CFDDAB"
+			rewards: [
+				{
+					count: 16
+					id: "5AC2F9293BF47C8A"
+					item: "minecraft:prismarine_shard"
+					type: "item"
+				}
+				{
+					ftb_money: 750.0d
+					id: "028185D65B30C106"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:elder_guardian"
+				id: "6CA1EF3659DD86D8"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&9Древний страж"
+			x: 8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["45233D0EFD560E03"]
+			description: ["Призывается тремя черепами скелета-иссушителя на песке душ в виде буквы «Т». Сражайтесь под землёй, подальше от колонии."]
+			id: "4001FB7AA3CD7DB8"
+			rewards: [
+				{
+					count: 3
+					id: "4EADF696AF3A4A5E"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					ftb_money: 1500.0d
+					id: "21E25A4561AAE3AD"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:wither"
+				id: "05ACB1063851CE53"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&4Иссушитель"
+			x: 8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7DB0001A80CFDDAB"]
+			description: ["Хранитель почти слеп, но слышит каждый шаг. Подумайте дважды."]
+			id: "0C085BA7BA8515E2"
+			rewards: [
+				{
+					count: 3
+					id: "103D512C672903C1"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					ftb_money: 1500.0d
+					id: "0DB98480BF0CB309"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:warden"
+				id: "4EC1E5DB7A653C5F"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&3Хранитель"
+			x: 10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["28938602B1CF0FCF"]
+			description: ["Сначала разбейте кристаллы Края на башнях, потом бейте дракона, когда он садится на портал."]
+			id: "6123E11BDB4C7665"
+			rewards: [
+				{
+					count: 3
+					id: "29A2C04209CE9BEB"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					ftb_money: 1500.0d
+					id: "42763FBB12D5797D"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				entity: "minecraft:ender_dragon"
+				id: "062A1627AC27BBF7"
+				type: "kill"
+				value: 1L
+			}]
+			title: "&5Дракон Края"
+			x: 8.0d
+			y: -2.0d
+		}
+	]
+	subtitle: ["Награды за головы мобов и боссов"]
+	title: "Охота"
+}

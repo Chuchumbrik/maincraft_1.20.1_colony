@@ -1,0 +1,534 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hero_path"
+	group: "46F7B06134EF6D6F"
+	icon: "epicclassmod:ancient_journey"
+	id: "69814631E99BF7D8"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Ваш персонаж растёт по уровням Epic Class Mod: от &e1&r до &e75&r. Опыт класса дают убийства мобов (уровневые мобы — больше), боссов и вражеских солдат."
+				""
+				"Кривая опыта на сервере круче стандартной: до 75 уровня нужно около 493 тыс. опыта. Это долгий путь — глава покажет, что открывается по дороге."
+				""
+				"Наград здесь нет: уровень класса квестами не отслеживается, поэтому все отметки — «Прочитано»."
+				""
+				"&7Клавиши — глава «Начни здесь», квест «Управление: класс». Здесь только механики.&r"
+			]
+			icon: "epicclassmod:ancient_journey"
+			id: "5D05815EA426D004"
+			rewards: [{
+				ftb_money: 50.0d
+				id: "2722267613D442D9"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "788ADBBDE8409BB9"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "&6Путь героя"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D05815EA426D004"]
+			description: [
+				"Клавиша &eY&r открывает книгу класса: уровень, опыт до следующего, &bочки характеристик&r, пассивные способности, квесты класса и карта."
+				""
+				"Там же видно, сколько свободных очков (SP) у вас сейчас."
+			]
+			icon: "epicclassmod:ancient_journey"
+			id: "58DB5BC6B9CAC9CD"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "425AA63ABE4E49F8"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "7B962DFE6429F542"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Книга класса"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D05815EA426D004"]
+			description: [
+				"Шесть классов. Выбор делается один раз при первом входе; сменить класс может только администратор."
+				""
+				"Ниже — короткая справка по каждому. Читать все необязательно: квесты классов помечены как необязательные."
+			]
+			icon: "minecraft:armor_stand"
+			id: "1D33DF8C86E7C75D"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7D2D1D727A960D65"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6003E5981270DFB1"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Классы"
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1D33DF8C86E7C75D"]
+			description: [
+				"Катана. Стойте 5 сек — восстановите 30% здоровья; шанс урона сквозь броню; усиленная первая атака после паузы. Способность: накопите 4 заряда атаками и телепортируйтесь к цели."
+				""
+				"Пассивные способности открываются на уровнях: 1, 5, 10 и 20."
+				""
+				"Способность класса — клавиша &eC&r (в описании класса — «F»)."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "11C8152FDE0ACFE2"
+			optional: true
+			rewards: [{
+				ftb_money: 25.0d
+				id: "10D559A0E87DD073"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "1022861BF9D656C4"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Мечник"
+			x: -1.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["1D33DF8C86E7C75D"]
+			description: [
+				"Щит. Броня при блоке, медленнее изнашивается предмет во второй руке, аура лечит союзников в радиусе 10 блоков при блоке. Способность: «Святилище» после 10 зарядов атаки."
+				""
+				"Пассивные способности открываются на уровнях: 1, 5, 10 и 20."
+				""
+				"Способность класса — клавиша &eC&r (в описании класса — «F»)."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:shield"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "45F694BD68672F36"
+			optional: true
+			rewards: [{
+				ftb_money: 25.0d
+				id: "753F7DC1DDFB6018"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4171A463877987A8"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Паладин"
+			x: 0.2d
+			y: -4.5d
+		}
+		{
+			dependencies: ["1D33DF8C86E7C75D"]
+			description: [
+				"Двуручный меч. Всегда +урон и −броня; сферы лечения с убийств; «Последний рывок» — 7 сек неуязвимости перед смертью (раз в 5 игровых дней). Способность: притянуть цель после 4 зарядов."
+				""
+				"Пассивные способности открываются на уровнях: сразу, 5, 10 и 20."
+				""
+				"Способность класса — клавиша &eC&r (в описании класса — «F»)."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_axe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "69B2A1CC2B8FF296"
+			optional: true
+			rewards: [{
+				ftb_money: 25.0d
+				id: "770915E4CA67913A"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "5A4572C448AE43AE"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Берсерк"
+			x: 1.4d
+			y: -4.5d
+		}
+		{
+			dependencies: ["1D33DF8C86E7C75D"]
+			description: [
+				"Парные кинжалы. Удар в спину усиливает первый удар (раз в 6 сек), убийство ускоряет на 6 сек; «Дымовая завеса» сбрасывает агрессию мобов."
+				""
+				"Пассивные способности открываются на уровнях: 1, 5, 10 и 15."
+				""
+				"Способность класса — клавиша &eC&r (в описании класса — «F»)."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "3E9EEE4C8C3DE258"
+			optional: true
+			rewards: [{
+				ftb_money: 25.0d
+				id: "154BFE2B3895C1C2"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "19B92EBDBB8BD824"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Жнец"
+			x: 2.6d
+			y: -4.5d
+		}
+		{
+			dependencies: ["1D33DF8C86E7C75D"]
+			description: [
+				"Лук. Постойте 3 сек — следующий выстрел сильнее; шанс пробивающего урона; серия выстрелов ускоряет; метка охотника — помеченные враги получают больше урона."
+				""
+				"Пассивные способности открываются на уровнях: 1, 5, 10 и 15."
+				""
+				"Способность класса — клавиша &eC&r (в описании класса — «F»)."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:bow"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "79B88BE6F4A64416"
+			optional: true
+			rewards: [{
+				ftb_money: 25.0d
+				id: "46721A532169A6C7"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "70862C8028297D04"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ловец ветра"
+			x: 3.8d
+			y: -4.5d
+		}
+		{
+			dependencies: ["1D33DF8C86E7C75D"]
+			description: [
+				"Посох / гримуар. +2% к восстановлению маны всегда, +50% после 7 сек без движения, −5% урона от огня, взрывов, яда и иссушения. Способность: рывок на 8 блоков за 50 маны."
+				""
+				"Пассивные способности открываются на уровнях: 1, 5, 10 и 15."
+				""
+				"Способность класса — клавиша &eC&r (в описании класса — «F»)."
+			]
+			icon: "irons_spellbooks:graybeard_staff"
+			id: "1B7E993CEC8673DE"
+			optional: true
+			rewards: [{
+				ftb_money: 25.0d
+				id: "3F39AAEEC91ABBF8"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "3106F6255079A0AA"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Чародей"
+			x: 5.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["58DB5BC6B9CAC9CD"]
+			description: [
+				"С каждым уровнем вы получаете очки характеристик и вкладываете их в книге класса (&eY&r): здоровье, атака, магическая атака, защита, скорость передвижения, скорость атаки, мана, восстановление маны, удача, восстановление здоровья."
+				""
+				"Сброс распределённых очков стоит &e20 алмазов&r. Планируйте под свой класс: Чародею — мана и магическая атака, Берсерку — атака и скорость атаки."
+			]
+			icon: "minecraft:experience_bottle"
+			id: "68C96BDB49067006"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "2713B65AB78CB2F4"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "27A618EAD00D1891"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Очки характеристик"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["68C96BDB49067006"]
+			description: [
+				"В инвентаре есть кнопка &bПоказать атрибуты&r: там все ваши характеристики и откуда они берутся (наведите и зажмите Shift)."
+				""
+				"Кроме обычных, есть особые атрибуты: &bшанс и урон крита&r, &bкража жизни&r, &bсверхлечение&r, &bогненный и холодный урон&r, &bскорость натяжения&r лука. Их дают зачарования Апофеоза, броня и аффиксы."
+			]
+			icon: "minecraft:golden_apple"
+			id: "7E51FD4971C0278B"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7CFC467FF4B2F5FD"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "13C8F2A98C182521"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Атрибуты персонажа"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["68C96BDB49067006"]
+			description: [
+				"Открывается &bвторая пассивная способность&r у всех классов."
+				""
+				"Мобы в мире бывают разных уровней: чем выше уровень моба, тем он сильнее и тем больше даёт опыта и монет."
+			]
+			icon: "minecraft:iron_ingot"
+			id: "5C10B75CFB73E531"
+			tasks: [{
+				id: "090F5909B1F6BB22"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Уровень 5"
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5C10B75CFB73E531"]
+			description: [
+				"Открывается &bтретья пассивная способность&r."
+				""
+				"Самое время осваивать оружие Epic Fight (глава «Боевой путь») и зачарования (глава «Апофеоз»)."
+			]
+			icon: "minecraft:gold_ingot"
+			id: "174549AB3335AFA1"
+			tasks: [{
+				id: "58928B2A061E07BD"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Уровень 10"
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["174549AB3335AFA1"]
+			description: ["Последняя, &bчетвёртая пассивка&r: на 15 уровне у Жнеца, Ловца ветра и Чародея, на 20 — у Мечника, Паладина и Берсерка."]
+			icon: "minecraft:diamond"
+			id: "6B47D5BB77F0CBB2"
+			tasks: [{
+				id: "6E3BBA3CC444B40C"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Уровень 15–20"
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6B47D5BB77F0CBB2"]
+			description: [
+				"Все способности класса открыты; дальше рост идёт за счёт очков характеристик."
+				""
+				"Готовьтесь к сильным мобам: с уровневых мобов падают руды, алмазы и изумруды (чем выше уровень моба, тем лучше добыча)."
+			]
+			icon: "minecraft:emerald"
+			id: "28B790250E19D70E"
+			tasks: [{
+				id: "53DE76D95327CB60"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Уровень 25"
+			x: 12.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["28B790250E19D70E"]
+			description: ["Уровень боссов. Мёртвый король, Эхо Тироса, драконы, Иссушитель, Хранитель и Эндер-дракон на сервере — боссы 48–55 уровня. Ходите группой: опыт за босса получают и помощники (50%, если нанесли хотя бы 5% урона)."]
+			icon: "minecraft:netherite_ingot"
+			id: "5594C5AF9D956C13"
+			tasks: [{
+				id: "6B7ED6742F7D6091"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Уровень 50"
+			x: 14.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5594C5AF9D956C13"]
+			description: ["Максимальный уровень на сервере. Всем игрокам придёт объявление о вашем достижении."]
+			icon: "minecraft:nether_star"
+			id: "655D1692630B6F77"
+			size: 1.5d
+			tasks: [{
+				id: "03D26660BE43B151"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "&6Уровень 75 — Легенда"
+			x: 16.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["58DB5BC6B9CAC9CD"]
+			description: [
+				"В книге класса (&eY&r) есть сюжетные задания и задание мастера класса. &bКомпас задания&r указывает на цель."
+				""
+				"Задания мастера ведут в опасные места (например, Чародея — за Посохом крови). Награды за них выдаёт сам Epic Class Mod."
+			]
+			icon: "epicclassmod:job_compass"
+			id: "7FD63ACD15405CA2"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "3175A8E99A37F561"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4692FB9F7B0ACC97"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Квесты класса"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["68C96BDB49067006"]
+			description: [
+				"У ваших стражей MineColonies и рекрутов тоже есть уровни (до 75). База стража — уровень его башни × 10, рекрута — 10 × уровень ваших казарм (без колонии — 5), рабочего — уровень его здания × 3 (до 15); сверху боевой опыт: до +25 (у жителей до +10)."
+				""
+				"Уровень повышает здоровье, урон и броню бойца (на 75: здоровье ×2,5, урон ×1,6, +10 брони). После смерти боевой опыт сбрасывается (воскрешённый страж сохраняет уровень 24 часа). Проверить: &e/npclevels info&r."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_chestplate"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "2B3FFD0D8930BFCD"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "281F4E253EDE05D4"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "36225AD81065ACF9"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Уровни бойцов колонии и рекрутов"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["68C96BDB49067006"]
+			description: [
+				"PvP на сервере идёт через войны и набеги WarNTaxes; за убийство игрока на войне победитель получает 5% баланса жертвы."
+				""
+				"Для честного PvP часть способностей ослаблена: «Последний рывок» Берсерка против игроков длится 3 сек (против мобов 7), Дымовая завеса Жнеца не делает его невидимым для игроков и не сбивает стражей и рекрутов, телепорты к меткам и группе отключены, притяжение Берсерка тянет игроков не дальше 6 блоков."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:crossbow"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "343931038E9096F7"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "6FF91A3EF00C4D14"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4C697F61851A1B7F"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "ПвП и баланс классов"
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"174549AB3335AFA1"
+				"7E51FD4971C0278B"
+			]
+			dependency_requirement: "one_completed"
+			description: ["Продолжение пути героя: &e«Боевой путь»&r (оружие и стили Epic Fight), &e«Апофеоз»&r (зачарования и аффиксы), &e«Охота»&r и &e«Ежедневные задания»&r (опыт и монеты)."]
+			icon: "minecraft:book"
+			id: "3F6826157A5638E7"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "5158B5543807CE19"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "17B48A646A653107"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Дальше"
+			x: 10.0d
+			y: 1.0d
+		}
+	]
+	title: "&6Путь героя"
+}

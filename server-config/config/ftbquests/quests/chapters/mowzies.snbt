@@ -1,0 +1,293 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "mowzies"
+	group: "46F7B06134EF6D6F"
+	icon: "mowziesmobs:wrought_helmet"
+	id: "2884968E17F02E77"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["27FBCEC0C25C803A"]
+			description: [
+				"Mowzie's Mobs добавляет боссов с уникальными трофеями: оружием и артефактами, которые не ломаются. Убийства боссов засчитываются в главе «Охота», а здесь — их трофеи."
+				"Ненужные трофеи можно продать в магазине (&eO&r, вкладка «Скупка: трофеи боссов»)."
+			]
+			icon: "mowziesmobs:wrought_axe"
+			id: "626FB42B87A5B235"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "5180882990ABC9DF"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "565A10BBFCA9A89A"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "&6Боссы Моуззи"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["626FB42B87A5B235"]
+			description: ["Трофей Железного рыцаря (Ферроус Ротнот). Никогда не ломается. &eПКМ&r — удар широкой дугой, &eShift + ПКМ&r — удар по земле с ударной волной."]
+			icon: "mowziesmobs:wrought_axe"
+			id: "6D6D00A66715C6EA"
+			rewards: [{
+				ftb_money: 250.0d
+				id: "4E697ABC665F70AE"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "7291127631613F6E"
+				item: "mowziesmobs:wrought_axe"
+				type: "item"
+			}]
+			title: "Топор Тысячи Металлов"
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6D6D00A66715C6EA"]
+			description: ["Второй трофей Железного рыцаря — шлем, который никогда не ломается."]
+			icon: "mowziesmobs:wrought_helmet"
+			id: "79416CF10DB3AA23"
+			rewards: [{
+				ftb_money: 200.0d
+				id: "359B5EDF63489347"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "1CFD9346BAC8A8CA"
+				item: "mowziesmobs:wrought_helmet"
+				type: "item"
+			}]
+			title: "Кованый шлем"
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["626FB42B87A5B235"]
+			description: ["Маска вождя Умвути (рощи саванны). Не ломается. Наденьте её, затем с другой маской умвутаны в руке нажмите &eПКМ&r — призовёте союзника; ПКМ по нему вернёт маску."]
+			icon: "mowziesmobs:sol_visage"
+			id: "49837F6B1293182B"
+			rewards: [{
+				ftb_money: 300.0d
+				id: "68D21DF4AC7502B3"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "64571768F635B869"
+				item: "mowziesmobs:sol_visage"
+				type: "item"
+			}]
+			title: "Лик Солнца"
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["49837F6B1293182B"]
+			description: ["Воины-умвутана в саванне роняют свои маски. Вместе с Ликом Солнца маска призывает воина-союзника."]
+			icon: {
+				Count: 1
+				id: "mowziesmobs:umvuthana_mask_fury"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0DFFBCE3846A7D56"
+			rewards: [{
+				ftb_money: 100.0d
+				id: "05938AAA18C2ED5C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "21644BD62CD260B7"
+				item: {
+					Count: 1
+					id: "mowziesmobs:umvuthana_mask_fury"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Маска умвутаны"
+			x: 4.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["626FB42B87A5B235"]
+			description: ["Трофей Морозной пасти (снежные края). Удерживайте &eПКМ&r — ледяной смерч перед вами. Перезаряжается в инвентаре."]
+			icon: {
+				Count: 1
+				id: "mowziesmobs:ice_crystal"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "6E13192ABF18F0ED"
+			rewards: [{
+				ftb_money: 300.0d
+				id: "1825C6F99BF03224"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "1151C2CC164DBD51"
+				item: {
+					Count: 1
+					id: "mowziesmobs:ice_crystal"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Кристалл Бурана"
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["626FB42B87A5B235"]
+			description: ["Падает с наги — летающих змей морских утёсов. Из клыка делают кинжал, дротики и зелье сопротивления яду."]
+			icon: "mowziesmobs:naga_fang"
+			id: "0E78935657219868"
+			rewards: [{
+				ftb_money: 150.0d
+				id: "6ADA996A923FEA90"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "092383F4C4DF97C9"
+				item: "mowziesmobs:naga_fang"
+				type: "item"
+			}]
+			title: "Клык наги"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0E78935657219868"]
+			description: ["Отравляет цель и наносит двойной урон в спину."]
+			icon: {
+				Count: 1
+				id: "mowziesmobs:naga_fang_dagger"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0D8C180C18174866"
+			rewards: [{
+				ftb_money: 100.0d
+				id: "7168837417225A4B"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "505D1D271321C9EB"
+				item: {
+					Count: 1
+					id: "mowziesmobs:naga_fang_dagger"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Кинжал из клыка наги"
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["626FB42B87A5B235"]
+			description: ["Трофей Скульптора (испытание на вершине столпа). &eПКМ&r в сторону врага — три камня вылетят снарядами. Со Скульптора падают и вещи геоманта (роба, пояс, бусы, сандалии)."]
+			icon: {
+				Count: 1
+				id: "mowziesmobs:sculptor_staff"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "2B55CDEC85630DC7"
+			rewards: [{
+				ftb_money: 300.0d
+				id: "77E78D06D28C0931"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "7CFCB23FF497BEB3"
+				item: {
+					Count: 1
+					id: "mowziesmobs:sculptor_staff"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Посох Геомантии"
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["626FB42B87A5B235"]
+			description: ["Падает с фолиаата (хищного растения джунглей). Посадите в дёрн и кормите мясом каждые полдня — через 2 дня вырастет свой фолиаат-страж."]
+			icon: "mowziesmobs:foliaath_seed"
+			id: "20CDD8E54AFF0637"
+			rewards: [{
+				ftb_money: 100.0d
+				id: "04F80729780F45AD"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4290C9B8E5B6F5DF"
+				item: "mowziesmobs:foliaath_seed"
+				type: "item"
+			}]
+			title: "Семя Пастецвета"
+			x: 2.0d
+			y: -2.5d
+		}
+		{
+			description: [
+				"Отдельных клавиш у Mowzie's Mobs нет — бой идёт через Epic Fight (клавиши: «Начни здесь» → «Управление: бой»)."
+				"Трофеи боссов сдаются в квестах этой главы; убийства засчитываются и в «Охоте». Ненужное продайте в магазине (&eO&r)."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:shield"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "27FBCEC0C25C803A"
+			rewards: [{
+				ftb_money: 20.0d
+				id: "24EF47D87245293C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "5B0EFECBABDFC51E"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Перед охотой на боссов"
+			x: -2.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Трофеи боссов и их сила"]
+	title: "Боссы Моуззи"
+}

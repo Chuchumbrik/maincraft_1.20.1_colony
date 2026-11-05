@@ -1,0 +1,1030 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "war"
+	group: "6CBCCB4882FF76B3"
+	icon: "recruits:recruit_block"
+	id: "28AFD186D571996E"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Колонии могут воевать друг с другом. Для этого понадобятся армия (Villager Recruits), осадные машины (Siege Machines, Siege Weapons) и флот (Small Ships). Правила войн и рейдов задаёт War'N Taxes."
+				""
+				"&7Клавиши — глава «Начни здесь», квест «Управление: армия, осада, корабли». Здесь только механики.&r"
+			]
+			id: "12910035520DA2D3"
+			rewards: [
+				{
+					count: 4
+					id: "00DA599CD9BA8405"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					ftb_money: 50.0d
+					id: "2D141B708634864A"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "5657754474CF58AF"
+				type: "checkmark"
+			}]
+			title: "&6Искусство войны"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["12910035520DA2D3"]
+			description: [
+				"Поставьте стол рекрута: житель без профессии, занявший его, станет рекрутом. Нанимают рекрутов за изумруды."
+				""
+				"Цена найма и лимит бойцов — в квесте «Найм отряда»."
+			]
+			id: "155C96CBCBCDA531"
+			rewards: [{
+				count: 8
+				id: "3C6C3746E5111C68"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1E040364FC471C2B"
+				item: "recruits:recruit_block"
+				type: "item"
+			}]
+			title: "Стол рекрута"
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6BE2EDADB62A5F2E"]
+			description: ["Лучники стреляют из-за спин пехоты."]
+			id: "4608722ACAE8E1E1"
+			rewards: [{
+				count: 32
+				id: "5D0DB646B16B4D28"
+				item: "minecraft:arrow"
+				type: "item"
+			}]
+			tasks: [{
+				id: "528DA92400E6FF50"
+				item: "recruits:bowman_block"
+				type: "item"
+			}]
+			title: "Стол лучника"
+			x: 6.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4608722ACAE8E1E1"]
+			description: ["Арбалетчики медленнее, но бьют сильнее."]
+			id: "22518F4C9B163130"
+			rewards: [{
+				count: 6
+				id: "6C769E13997A6833"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2E050456D0BE47EA"
+				item: "recruits:crossbowman_block"
+				type: "item"
+			}]
+			title: "Стол арбалетчика"
+			x: 8.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["6BE2EDADB62A5F2E"]
+			description: ["Щитоносцы держат строй и закрывают стрелков."]
+			id: "514BF5E09B69B266"
+			rewards: [{
+				id: "1BAC1C44DF401FD5"
+				item: {
+					Count: 1
+					id: "minecraft:shield"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3FEA553D881E17EE"
+				item: "recruits:recruit_shield_block"
+				type: "item"
+			}]
+			title: "Стол щитоносца"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["514BF5E09B69B266"]
+			description: ["Конница — быстрые удары по флангам."]
+			id: "359AC8A82BCDFD28"
+			rewards: [{
+				count: 8
+				id: "0E7D13C60219FA1E"
+				item: "minecraft:hay_block"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6B4AA7C2967264E4"
+				item: "recruits:horseman_block"
+				type: "item"
+			}]
+			title: "Стол всадника"
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["359AC8A82BCDFD28"]
+			description: ["Конные лучники."]
+			id: "1D13776E379AF0C8"
+			rewards: [{
+				count: 6
+				id: "72E43D176B45CFEB"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0309B0E8C83CD33B"
+				item: "recruits:nomad_block"
+				type: "item"
+			}]
+			title: "Стол кочевника"
+			x: 10.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6BE2EDADB62A5F2E"]
+			description: ["Знамя для вашей армии."]
+			id: "2B2A5A50C05C52CC"
+			rewards: [{
+				count: 4
+				id: "5ABE7D08225CDF2D"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			tasks: [{
+				id: "173B20D6F21D604A"
+				item: "recruits:held_banner_item"
+				type: "item"
+			}]
+			title: "Знамя отряда"
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["155C96CBCBCDA531"]
+			description: ["Мод Workers позволяет нанимать рабочих (шахтёров, лесорубов, фермеров и др.) по той же схеме, что и рекрутов. Наймите хотя бы одного и отметьте квест."]
+			id: "558CFD530CDB26C4"
+			rewards: [{
+				count: 32
+				id: "1E8C8A89D3E62796"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				id: "534C6D93A5534F71"
+				type: "checkmark"
+			}]
+			title: "Рабочие"
+			x: 2.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["155C96CBCBCDA531"]
+			description: [
+				"Призывные бумаги Colonists Recruited переводят жителя колонии MineColonies в солдаты."
+				""
+				"Это самый дешёвый способ собрать армию из своих жителей, но счастье колонии от призыва падает."
+			]
+			id: "5F38BDD18DD30D1E"
+			rewards: [{
+				count: 4
+				id: "7C76A2B575D372ED"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			tasks: [{
+				id: "62BC29F3FF69B39E"
+				item: "colonistsrecruited:infantryenlistmentpaper"
+				type: "item"
+			}]
+			title: "Призыв колонистов"
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5F38BDD18DD30D1E"]
+			description: ["Бумага призыва лучника: ПКМ по жителю колонии MineColonies — он станет рекрутом-лучником. Учтите: призыв снижает счастье колонии."]
+			id: "4894EC94C099BC47"
+			rewards: [{
+				count: 4
+				id: "28E82AABDCBB5E20"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			tasks: [{
+				id: "03524C7E73831020"
+				item: "colonistsrecruited:archerenlistmentpaper"
+				type: "item"
+			}]
+			title: "Призыв лучников"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5F38BDD18DD30D1E"]
+			description: ["Бумага призыва тяжёлой пехоты: житель колонии становится щитоносцем. Есть также бумаги арбалетчика, всадника и конного лучника."]
+			id: "6027D2C9D3767054"
+			rewards: [{
+				count: 8
+				id: "767547CFCABEC6A9"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "004BD28FB1D980C9"
+				item: "colonistsrecruited:heavyinfantryenlistmentpaper"
+				type: "item"
+			}]
+			title: "Тяжёлая пехота"
+			x: 4.0d
+			y: -0.2d
+		}
+		{
+			dependencies: ["12910035520DA2D3"]
+			description: [
+				"Осадные машины Siege Machines собирают на осадном верстаке."
+				""
+				"Рекруты могут садиться на осадные машины: прикажите «Оседлать!», глядя на машину."
+			]
+			id: "5705C11DF1E110D6"
+			rewards: [{
+				count: 32
+				id: "5A2B7E46AA04746A"
+				item: "minecraft:oak_planks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "55CAEA6921233119"
+				item: "siegemachines:siege_workbench"
+				type: "item"
+			}]
+			title: "Осадный верстак"
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5705C11DF1E110D6"]
+			description: ["Баллиста бьёт болтами далеко и точно — хороша против конницы и осадных машин."]
+			id: "6AEA2952666D54A3"
+			rewards: [{
+				count: 16
+				id: "4D77AA2F5FA8E792"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "siegemachines:ballista"
+				criterion: ""
+				id: "3BCE68DD5637D723"
+				type: "advancement"
+			}]
+			title: "Баллиста"
+			x: 4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5705C11DF1E110D6"]
+			description: ["Катапульта бросает камни через стены и разрушает укрепления."]
+			id: "195EE5F26AD9C925"
+			rewards: [{
+				count: 32
+				id: "4CC84E528E4B74DD"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "siegemachines:catapult"
+				criterion: ""
+				id: "22CC66288D47D35A"
+				type: "advancement"
+			}]
+			title: "Катапульта"
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5705C11DF1E110D6"]
+			description: ["Таран проламывает ворота."]
+			id: "50C70444F383BC48"
+			rewards: [{
+				count: 16
+				id: "57AEDB2783FFCC08"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "siegemachines:battering_ram"
+				criterion: ""
+				id: "76FC06C06352BE8A"
+				type: "advancement"
+			}]
+			title: "Таран"
+			x: 4.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["50C70444F383BC48"]
+			description: ["Осадная лестница ставится к стене; по ней лезут вверх (&eпробел&r), слезть — &eCtrl + L&r (команды осады)."]
+			id: "0DD6C9D0756D03FB"
+			rewards: [{
+				count: 16
+				id: "4B22D4DB946C4A0D"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "siegemachines:siege_ladder"
+				criterion: ""
+				id: "79F331BEDF3AF62C"
+				type: "advancement"
+			}]
+			title: "Осадная лестница"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["195EE5F26AD9C925"]
+			description: ["Бьёт дальше катапульты."]
+			id: "6366E296905F7554"
+			rewards: [
+				{
+					count: 32
+					id: "540CC4B16F303219"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "362C83CAB42458E3"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "siegemachines:trebuchet"
+				criterion: ""
+				id: "1B4F1B9BD6991B7A"
+				type: "advancement"
+			}]
+			title: "Требушет"
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6366E296905F7554"]
+			description: ["Мортира — пороховое орудие навесного огня."]
+			id: "2837244F343CE84E"
+			rewards: [{
+				count: 8
+				id: "2EBAD83CC6B3971B"
+				item: "minecraft:gunpowder"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "siegemachines:mortar"
+				criterion: ""
+				id: "004A7CD783F88E0B"
+				type: "advancement"
+			}]
+			title: "Мортира"
+			x: 8.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2837244F343CE84E"]
+			description: ["Кулеврина — дальнобойное пороховое орудие прямой наводки."]
+			id: "093B4FD9A77F9414"
+			rewards: [
+				{
+					count: 8
+					id: "744D18F3AC967C44"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "6A58466DEC8B92BB"
+					item: "minecraft:gunpowder"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "siegemachines:culverin"
+				criterion: ""
+				id: "11B7025E5CB92453"
+				type: "advancement"
+			}]
+			title: "Кулеврина"
+			x: 10.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["093B4FD9A77F9414"]
+			description: ["Постройте все осадные машины."]
+			id: "29C1810DEB8C24B3"
+			rewards: [{
+				count: 2
+				id: "52AA7FEB500192D8"
+				item: "minecraft:iron_block"
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				advancement: "siegemachines:master_engineer"
+				criterion: ""
+				id: "1F23FFC5CE6D85C5"
+				type: "advancement"
+			}]
+			title: "&eМастер-инженер"
+			x: 12.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5705C11DF1E110D6"]
+			description: ["Стол для орудий Siege Weapons — переносных катапульт и баллист."]
+			id: "6CF7918CA6296EA9"
+			rewards: [{
+				count: 32
+				id: "1F1E2C12CAD50D5C"
+				item: "minecraft:oak_planks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5748855E407DC7D7"
+				item: "siegeweapons:siege_table_block"
+				type: "item"
+			}]
+			title: "Осадный стол"
+			x: 2.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["6CF7918CA6296EA9"]
+			description: ["Заряжается булыжными связками, огненными и взрывными горшками."]
+			id: "6ECBA90BA8A0B6D0"
+			rewards: [{
+				count: 32
+				id: "0315D65D35378D4D"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			tasks: [{
+				id: "253988C0D54935FB"
+				item: "siegeweapons:catapult_item"
+				type: "item"
+			}]
+			title: "Лёгкая катапульта"
+			x: 4.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["6CF7918CA6296EA9"]
+			description: ["Переносная баллиста Siege Weapons: лёгкая и быстрая в развёртывании."]
+			id: "7476E99FC5B35D6E"
+			rewards: [
+				{
+					count: 8
+					id: "558AA4DD51F38C68"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "3A64F3F9B205B0F8"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "719451FDB176B81E"
+				item: "siegeweapons:ballista_item"
+				type: "item"
+			}]
+			title: "Лёгкая баллиста"
+			x: 4.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["6ECBA90BA8A0B6D0"]
+			description: ["Огненные горшки — снаряд для лёгкой катапульты: поджигают цель."]
+			id: "34A3A73252B8C4F9"
+			rewards: [{
+				count: 8
+				id: "6383FF72F8BC5509"
+				item: "minecraft:gunpowder"
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "6ADA211AE122C4A1"
+				item: "siegeweapons:fire_pot_item"
+				type: "item"
+			}]
+			title: "Огненные горшки"
+			x: 6.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["12910035520DA2D3"]
+			description: [
+				"Небольшое торговое судно Small Ships. Подходят корабли из любого дерева, но квест ждёт дубовый."
+				""
+				"Корабли ведёт игрок или рекрут; парус — &eAlt + R&r, сесть к пушке — &eAlt + F&r."
+			]
+			id: "4A94BD8B86247F27"
+			rewards: [{
+				count: 16
+				id: "74A6FDCBEF80ECD4"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4C0C9E25C205BC77"
+				item: "smallships:oak_cog"
+				type: "item"
+			}]
+			title: "Когг"
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A94BD8B86247F27"]
+			description: ["Пушки ставятся на корабли."]
+			id: "7C0CDAC95A60123E"
+			rewards: [{
+				count: 8
+				id: "35026972324C1362"
+				item: "minecraft:gunpowder"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3329185FBE314E6A"
+				item: "smallships:cannon"
+				type: "item"
+			}]
+			title: "Корабельная пушка"
+			x: -2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7C0CDAC95A60123E"]
+			description: ["Военный корабль с местом под пушки."]
+			id: "50FDB0F0B816B22E"
+			rewards: [{
+				count: 8
+				id: "7A68E8E40F7F10BD"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "634BC7B4847D8E09"
+				item: "smallships:oak_war_galley"
+				type: "item"
+			}]
+			title: "Боевая галера"
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["16F0EA037FD91D10"]
+			description: [
+				"Объявите войну другой колонии по правилам War'N Taxes. Сначала изучите кодекс (глава «Экономика»)."
+				""
+				"Команда: &e/wnt wagewar <колония>&r, присоединиться к идущей войне — &e/wnt joinwar&r, статус — &e/wnt warinfo&r. Условия — в квесте «Условия войны и набега»."
+			]
+			id: "0D88F63D067DF9A7"
+			rewards: [{
+				count: 8
+				id: "676DE0C9B531E86A"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "minecolonytax:codex/declare_war"
+				criterion: ""
+				id: "65D514A719D06D82"
+				type: "advancement"
+			}]
+			title: "&cОбъявление войны"
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D88F63D067DF9A7"]
+			description: [
+				"Совершите набег на чужую колонию."
+				""
+				"Команда: &e/wnt raid <колония>&r. Пока идёт набег, вы крадёте налоги колонии. Осада колонии — &e/wnt besiege <колония>&r."
+			]
+			id: "3E34694D498ACC02"
+			rewards: [{
+				count: 8
+				id: "782B44DC5538A807"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				advancement: "minecolonytax:codex/start_raid"
+				criterion: ""
+				id: "65CEDF2046011FA3"
+				type: "advancement"
+			}]
+			title: "&cНабег"
+			x: 16.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["155C96CBCBCDA531"]
+			description: [
+				"Рекрута нанимают за &aизумруды&r: поставьте стол нужного типа — житель без профессии займёт его и станет рекрутом. ПКМ по рекруту — окно найма и его инвентарь (снаряжение, еда)."
+				"Цены на сервере: рекрут &a4&r, лучник &a6&r, арбалетчик &a8&r, щитоносец &a10&r, кочевник &a19&r, всадник &a20&r изумрудов. Лимит — &e40&r бойцов на игрока."
+				"В деревнях встречаются &bзнатные жители&r — у них тоже можно нанять бойцов."
+			]
+			icon: "recruits:recruit_spawn_egg"
+			id: "6BE2EDADB62A5F2E"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "37BFA3EBFD6DF662"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "0EA5DBF56FDBA80B"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Найм отряда"
+			x: 4.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6BE2EDADB62A5F2E"]
+			description: [
+				"&eH&r — меню командования. Команды разбиты на категории: &bперемещение&r, &bбой&r и &bпрочее&r; колёсико мыши листает категории, ПКМ по списку групп выбирает все группы."
+				"Перемещение: «За мной!», «Вольно!», «Держать позицию», «Держать мою позицию», «Сменить позицию» и «Двигаться и удерживать» (туда, куда вы смотрите), «Вперёд!/Назад!» (~10 блоков), «Вернуться к позиции», «Патрулировать», «Оседлать!/Спешиться!»."
+				"Рекруты умеют садиться на лошадей, корабли Small Ships и осадные машины (баллисты, катапульты, требушеты, мортиры, кулеврины, тараны, лестницы)."
+			]
+			icon: "minecraft:goat_horn"
+			id: "2F38C9F0BBA08D26"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "786586DD65F0B2FC"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "4F2D7F90A3AE84F4"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Командное меню"
+			x: 4.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2F38C9F0BBA08D26"]
+			description: [
+				"Бойцов удобно делить на &bгруппы&r (например, пехота, стрелки, конница) и командовать каждой отдельно из меню &eH&r."
+				"В настройках групп можно: назначить ближайших рекрутов в группу, объединить группы, передать группу другому игроку или соратнику по фракции."
+			]
+			icon: "minecraft:white_banner"
+			id: "6C207603699C8889"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7C1BA90F42DB3AFE"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6C3130EC5573B837"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Группы"
+			x: 6.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["6C207603699C8889"]
+			description: [
+				"Команда «Формация» выстраивает отряд: линия, V-образная, квадрат, пустой квадрат, круг, пустой круг, треугольник, походная или без формации."
+				"Дополнительно: «Развернуть» — повернуть строй туда, куда вы смотрите; «Плотно» — сократить интервалы вдвое; «Удерживать» — бойцы не сходят с мест."
+			]
+			icon: "minecraft:armor_stand"
+			id: "5CA90C38D8884BAA"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "68210DC325842304"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "3343F5D5A59DB2B7"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Формации"
+			x: 8.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5CA90C38D8884BAA"]
+			description: [
+				"Режим агрессии: &bпассивно&r (не атакуют), &bнейтрально&r (только враждебных мобов), &bагрессивно&r (вражеских игроков и рекрутов), &cрейд&r (всех живых в поле зрения — осторожно с жителями)."
+				"«Щиты вверх/вниз», «Огонь по готовности / Прекратить огонь», «Огонь по позиции» (стрелки бьют по области, куда вы смотрите), «Атаковать!» (врагов в выбранной области), «Отменить цели»."
+			]
+			icon: "minecraft:target"
+			id: "65D9A8AFE7A1DF1F"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "25FDEEDA74D5EACE"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6BC2CFDF6CFD3D3B"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Боевые приказы"
+			x: 10.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["6BE2EDADB62A5F2E"]
+			description: [
+				"Рекруты голодают и теряют &bмораль&r, если их не кормить. Положите еду им в инвентарь или назначьте &bточку снабжения&r: в меню &eH&r → «Снабжение», глядя на сундук (или существо) с едой. Там же «Отдых» — область, где бойцы отдыхают."
+				"На сервере &eжалованье выключено&r и рекруты &eне умирают от голода&r, но голодный отряд с низкой моралью воюет хуже. Не годится в еду: ядовитый картофель, паучий глаз, иглобрюх."
+			]
+			icon: "minecraft:bread"
+			id: "6BC25A3116B743E2"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "13575F1E80EC61BD"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "73E9E424C6DB7A46"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Снабжение и мораль"
+			x: 2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["65D9A8AFE7A1DF1F"]
+			description: [
+				"У рекрута два роста. Свой уровень Recruits: до &e20&r, за опыт в боях. И общий уровень бойца сервера (npclevels): база = &e10 × уровень казарм&r вашей колонии (без колонии — 5), сверху до &e+25&r за боевой опыт, максимум &e75&r."
+				"На максимуме: здоровье ×2,5, урон ×1,6, +10 брони. После смерти боевой опыт сбрасывается. Опыт за убийства игроков, рейдеров, солдат и боссов больше обычного; помощь отряда (2+ бойца) даёт +15%. Проверить: &e/npclevels info&r."
+			]
+			icon: "minecraft:experience_bottle"
+			id: "632377CE17B53BE0"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "27024C008726BB1D"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "5E251883EAEAFB5E"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Уровни бойцов"
+			x: 12.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["22518F4C9B163130"]
+			description: [
+				"На сервере рекруты-бойцы ближнего боя берут &bлюбое оружие ближнего боя&r с уроном от 2: мечи, топоры, копья, катаны, трезубцы, булавы модов. Кирки, лопаты, мотыги, щиты и луки оружием не считаются."
+				"Если в инвентаре несколько подходящих, боец сам возьмёт самое сильное. Анимации боя у рекрутов — от Epic Fight."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:trident"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "165A7D8A68DA8BD6"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "1B1FB29B5F939DFA"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "0A07B717FF567F4D"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Оружие рекрутов"
+			x: 10.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["359AC8A82BCDFD28"]
+			description: [
+				"Конный рекрут с &bрыцарским копьём&r Epic Knights (например, железным) наносит урон тараном: чем быстрее несётся лошадь в сторону цели, тем сильнее удар."
+				"Дайте всаднику копьё в основную руку и пустите конницу в атаку на открытой местности."
+			]
+			icon: {
+				Count: 1
+				id: "magistuarmory:iron_chivalrylance"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0FFD76D49F1F7175"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "22C9A0C5E7BFF4C9"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "71CA193D2FC1BB64"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Рыцарский таран"
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["12910035520DA2D3"]
+			description: [
+				"&eU&r — экран фракции (Recruits). Создание стоит &a10 изумрудов&r; в фракции до &e5 игроков&r. Там же дипломатия (союзник / нейтрал / враг), цвета, знамя и управление юнитами. &eB&r — карта территорий Recruits; полная карта JourneyMap — &eM&r."
+				"Захват территорий (claims) на сервере выключен: земли колоний защищает MineColonies, а войны идут через War'N Taxes."
+			]
+			icon: "minecraft:red_banner"
+			id: "6BB526F7B6E2C57B"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "369CBB151448F4D7"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6B9B7E8561345427"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Фракция"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6BB526F7B6E2C57B"]
+			description: [
+				"&eAlt + P&r — ранги и права фракции (Ranks and Titles): Лидер, Соправитель, Старейшина, Участник. Названия рангов можно переименовать."
+				"Там же заявки на вступление, повышение и исключение участников, дипломатия и карта. Лидера нельзя снять или изменить."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:golden_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "1589A48CC63C9DB3"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "792B3950B9F181E9"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "574F969A806DAB4D"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ранги фракции"
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["08F2BB39BBF75518"]
+			description: [
+				"Чтобы объявить &cвойну&r: ратуша 2+, две сторожевые башни, хижина строителя и дом, минимум &e5 стражей&r, без долгов по налогам. Противник должен принять войну."
+				"Чтобы устроить &cнабег&r: ратуша, две сторожевые башни и минимум &e3 стража&r. Колонию нельзя атаковать, если у неё меньше 2 стражей или нет сторожевой башни; офлайн-набеги запрещены."
+				"Набег длится до 5 минут, война — до 3 суток; на войне у каждого 5 жизней. Новичкам даётся 2 часа защиты."
+				""
+				"&7Перед войной нужна фракция (квест «Фракция» в начале главы).&r"
+			]
+			icon: "minecolonies:blockhutguardtower"
+			id: "16F0EA037FD91D10"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "3DE5DC3BED5D26C0"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "07A761CF516DB10C"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Условия войны и набега"
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D88F63D067DF9A7"]
+			description: [
+				"Войну можно закончить миром: &e/wnt peace whitepeace&r (белый мир) или &e/wnt peace reparations <сумма>&r (с выплатой); ответ — &e/wnt peace accept&r / &e/wnt peace decline&r."
+				"Победитель может предложить &bвассалитет&r (&e/wnt vasalize <процент> <колония>&r): вассал 7 дней платит дань. Итоги войны: победа +20%, поражение −20%, ничья −10% налогов."
+				"Полный список команд — &e/wnt help&r и книга «Кодекс войны и налогов»."
+			]
+			icon: "minecraft:white_banner"
+			id: "6289349301374EDD"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "301C239086ED60AB"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "60B85E46A49C45A6"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Мир, выкуп и вассалы"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3E34694D498ACC02"]
+			description: [
+				"Набег крадёт налоги колонии: от 5% до 25% за время набега, плюс 10% за каждого убитого стража. Защитники при успешной обороне получают 15%. За убийство игрока на войне — 5% его баланса."
+				"Налоги, казна (&e/wnt treasury&r) и вложения в оборону (&e/wnt invest&r) — в главе «Экономика»."
+			]
+			icon: "minecraft:emerald"
+			id: "6F1E6AC742B78BA1"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "74CB8DED0A0B3857"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "41E47DD27E4AADAB"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Налоги и война"
+			x: 18.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["12910035520DA2D3"]
+			description: [
+				"Колонию защищают &bстражи MineColonies&r (сторожевые башни, казармы) и ваши рекруты. Во время набега стражи получают сопротивление урону."
+				"При набеге жители 3+ уровня берутся за оружие как &bополчение&r и ищут нападающих. Стражи-маги, рыцари и лучники — в главах «Путь колонии» и «Путь героя»."
+			]
+			icon: "minecolonies:blockhutbarracks"
+			id: "08F2BB39BBF75518"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "70FB330C568B7521"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "719990F7B5D6A1E6"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Оборона колонии"
+			x: 12.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Армия, осада, флот и войны колоний"]
+	title: "Война"
+}

@@ -1,0 +1,64 @@
+
+[timing]
+	#How often stuck requests are scanned (auto-buy + prompts), seconds
+	#Range: 10 ~ 3600
+	scanIntervalSeconds = 60
+	#Min seconds between prompts for one colony (new stuck requests only)
+	#Range: 0 ~ 86400
+	notifyCooldownSeconds = 300
+	#Send the clickable '[Buy for N]' prompt to online owner/officers
+	notify = true
+	#Tell online owner/officers what auto-buy bought
+	notifyAutoPurchases = true
+
+[general]
+	#Master switch
+	enabled = true
+	#Global price multiplier applied to prices.json base prices
+	#Range: 0.0 ~ 100.0
+	markup = 1.2
+	#Unit price is never below (SDM Shop sell-back price of the item) x this value. 0 = off
+	#Range: 0.0 ~ 100.0
+	sellbackFloorMultiplier = 1.2
+	#Building types whose stuck requests can be bought (registry path or full id, e.g. builder / minecolonies:builder)
+	buildings = ["builder"]
+	#Builder only: buy only items that are in the builder's current resource list, capped to the needed amount
+	onlyNeededForBuild = true
+	#Also treat requests parked in the 'retrying' resolver as stuck
+	includeRetrying = true
+	#Max items bought for a single request in one purchase
+	#Range: 1 ~ 100000
+	maxItemsPerRequest = 640
+
+[limits]
+	#Max treasury coins a colony may spend per real day (manual + auto). 0 = unlimited
+	#Range: > 0
+	dailyLimitPerColony = 5000
+	#Default daily auto-buy budget when auto is switched on
+	#Range: > 0
+	defaultAutoBudget = 1000
+	#Never spend the treasury below this amount (keeps a war chest). 0 = may spend everything
+	#Range: > 0
+	treasuryReserve = 0
+
+[war]
+	#Disable buying while the colony is in a WarNTaxes war
+	blockDuringWar = false
+	#Disable buying while the colony is besieged/occupied
+	blockDuringSiege = false
+	#Disable buying while the colony is being raided (WarNTaxes player/entity/claiming raids)
+	blockDuringRaid = false
+	#Disable buying during a MineColonies barbarian/pirate raid
+	blockDuringColonyRaid = false
+
+[items]
+	#Allow buying items that carry NBT (other than Domum Ornamentum)
+	allowNbtItems = false
+	#Allow Domum Ornamentum blocks, priced from their component blocks
+	domumOrnamentum = true
+	#Domum Ornamentum price = average component unit price x this
+	#Range: 0.0 ~ 100.0
+	domumFactor = 1.25
+	#Append every purchase to logs/colonybuy.log
+	logPurchases = true
+

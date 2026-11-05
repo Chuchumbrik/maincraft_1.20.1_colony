@@ -1,0 +1,954 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "combat"
+	group: "46F7B06134EF6D6F"
+	icon: {
+		Count: 1
+		id: "epicfight:iron_longsword"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "32C1FB9B0F32027A"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"На сервере стоит Epic Fight: оружие получает собственные комбо, уклонения и блоки. Боевой режим, атака, блок, уклонение и навыки — у каждого своя клавиша (см. ниже)."
+				""
+				"Combat Evolution и Epic Fight Resurrection дополняют боёвку, а Skill Tree добавляет дерево навыков."
+				""
+				"&7Клавиши — глава «Начни здесь», квест «Управление: бой». Здесь только механики.&r"
+			]
+			id: "18C33473A14BC90A"
+			rewards: [
+				{
+					ftb_money: 50.0d
+					id: "722C21CF14A61B9E"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+				{
+					count: 6
+					id: "40525E960CF0BA6E"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "343B128A272BDB24"
+				type: "checkmark"
+			}]
+			title: "&6Боевой стиль"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["18C33473A14BC90A"]
+			description: [
+				"&eK&r — редактор навыков: слоты уклонения, защиты, пассивных навыков и навыка передвижения. Откройте его и посмотрите, что уже экипировано, затем отметьте квест."
+				""
+				"Книги навыков на сервере &cне выпадают&r из мобов и сундуков (выключено в конфиге Epic Fight). Новые приёмы открываются в дереве навыков (&eN&r) за очки способностей — их получают из опыта прямо в окне дерева."
+			]
+			icon: "epicfight:skillbook"
+			id: "20ACFA8016EA5119"
+			rewards: [{
+				count: 4
+				id: "3B44ED2F7D23D8AD"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "750395F06BE5D586"
+				title: "Открыл редактор навыков (K)"
+				type: "checkmark"
+			}]
+			title: "Редактор и книги навыков"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["20ACFA8016EA5119"]
+			description: ["Камень способностей падает с шансом 1,5% с некоторых мобов, убитых игроком. Его используют в дереве навыков (&eN&r) вместе с очками способностей."]
+			id: "31CCEF23C3B56FC9"
+			rewards: [{
+				count: 4
+				id: "699C76C3A6AAD34F"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "600A1FBF74B841E2"
+				item: "epicskills:ability_stone"
+				type: "item"
+			}]
+			title: "Камень способностей"
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["18C33473A14BC90A"]
+			description: ["Универсальное оружие: хорошие комбо и блок."]
+			id: "2ABED229ED8C83B7"
+			rewards: [{
+				count: 3
+				id: "00CDCC0AC6766208"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2B4306187637556B"
+				item: {
+					Count: 1
+					id: "epicfight:iron_longsword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Длинный меч"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2ABED229ED8C83B7"]
+			description: ["Медленный, но бьёт по площади."]
+			id: "231F227142095F3D"
+			rewards: [{
+				count: 4
+				id: "7FD0BC5054AE2354"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "68B99DD33D409B4F"
+				item: {
+					Count: 1
+					id: "epicfight:iron_greatsword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Двуручный меч"
+			x: 4.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2ABED229ED8C83B7"]
+			description: ["Быстрые режущие удары."]
+			id: "194DD1350365AD31"
+			rewards: [{
+				count: 4
+				id: "1312796FA129A08D"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2D4ACADBE0419F57"
+				item: {
+					Count: 1
+					id: "epicfight:iron_tachi"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Тати"
+			x: 4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["18C33473A14BC90A"]
+			description: ["Длинный выпад и дистанция."]
+			id: "2ADE23C02F7E2C13"
+			rewards: [{
+				count: 4
+				id: "51C0E9FFB376D03D"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5F83F2276889A12B"
+				item: {
+					Count: 1
+					id: "epicfight:iron_spear"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Копьё"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["18C33473A14BC90A"]
+			description: ["Два кинжала — очень быстрые атаки."]
+			id: "724BB0F88882C10E"
+			rewards: [{
+				count: 4
+				id: "12D4B0053D91B252"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				count: 2L
+				id: "062795BDE89AB0C5"
+				item: {
+					Count: 1
+					id: "epicfight:iron_dagger"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Кинжалы"
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["194DD1350365AD31"]
+			description: ["Особый клинок с уникальными приёмами."]
+			id: "7445C0FAE4B6B79B"
+			rewards: [{
+				id: "3B48F02B57F7C60F"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				id: "224F7DD3E15374C0"
+				item: {
+					Count: 1
+					id: "epicfight:uchigatana"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "&eУтигатана"
+			x: 6.0d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"231F227142095F3D"
+				"7445C0FAE4B6B79B"
+			]
+			description: ["Незеритовая версия длинного меча: те же комбо и навык оружия, но больше урона и прочности. Делается на кузнечном столе: алмазный длинный меч + незеритовый слиток + шаблон улучшения."]
+			id: "2B5536FFF3D3CBA3"
+			rewards: [{
+				count: 2
+				id: "752BE1E892CEE495"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1F7BC1D958BC2B7C"
+				item: {
+					Count: 1
+					id: "epicfight:netherite_longsword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "&5Незеритовый длинный меч"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["231F227142095F3D"]
+			description: ["Оружие Weapons of Miracles — мощные размашистые удары."]
+			id: "549B8771EC5623B7"
+			rewards: [{
+				count: 4
+				id: "533C01965EC679F9"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "37B3E5D8528D3B81"
+				item: {
+					Count: 1
+					id: "wom:iron_greataxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Секира"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2ADE23C02F7E2C13"]
+			description: ["Посох из Weapons of Miracles: быстрые удары и подсечки."]
+			id: "1314A47E24590BE2"
+			rewards: [{
+				count: 4
+				id: "583D7F1C5BAC1564"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7C280C552BC3DA8A"
+				item: {
+					Count: 1
+					id: "wom:iron_staff"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Боевой посох"
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["549B8771EC5623B7"]
+			description: ["Незеритовая секира Weapons of Miracles — делается на кузнечном столе: алмазная секира + незеритовый слиток + шаблон улучшения."]
+			id: "13870B4B83F1A347"
+			rewards: [{
+				count: 2
+				id: "63EF5CCCBD8509F1"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				id: "198CA942AF85A5CB"
+				item: {
+					Count: 1
+					id: "wom:netherite_greataxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "&5Незеритовая секира"
+			x: 8.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["18C33473A14BC90A"]
+			description: ["Сталь Epic Knights нужна для лучшей рыцарской брони и оружия."]
+			id: "74D30AE14102DF90"
+			rewards: [
+				{
+					count: 16
+					id: "46D87ADE13099B3F"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "69FA49DA9EF90A6C"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 8L
+				id: "2FC8544C5112CFF6"
+				item: "magistuarmory:steel_ingot"
+				type: "item"
+			}]
+			title: "Сталь"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["74D30AE14102DF90"]
+			description: ["Лёгкий поддоспешник — первая ступень рыцарской брони."]
+			id: "3D8DEAAC613E8384"
+			rewards: [{
+				count: 4
+				id: "16F27D021952E5E0"
+				item: "magistuarmory:steel_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "55FA16651E4BA2D2"
+				item: {
+					Count: 1
+					id: "magistuarmory:gambeson_chestplate"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Стёганка"
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["74D30AE14102DF90"]
+			description: ["Полный рыцарский комплект: армет, кираса, поножи и сабатоны."]
+			id: "0DA8B35C9C367037"
+			rewards: [{
+				count: 8
+				id: "24CD1DECBECF7E59"
+				item: "magistuarmory:steel_ingot"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "44128A86A820FD24"
+					item: {
+						Count: 1
+						id: "magistuarmory:armet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5460E34CABA53AA0"
+					item: {
+						Count: 1
+						id: "magistuarmory:knight_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6A95549889505F00"
+					item: {
+						Count: 1
+						id: "magistuarmory:knight_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "19C9F781245B517D"
+					item: {
+						Count: 1
+						id: "magistuarmory:knight_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&bРыцарский доспех"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0DA8B35C9C367037"]
+			description: ["Вершина рыцарской брони."]
+			id: "23D665AF81A15078"
+			rewards: [{
+				count: 2
+				id: "2FF72280169B6EBF"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "58187B42B1786CFC"
+					item: {
+						Count: 1
+						id: "magistuarmory:maximilian_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "77A1FE32A66C32B7"
+					item: {
+						Count: 1
+						id: "magistuarmory:maximilian_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5952F78D9B967AE4"
+					item: {
+						Count: 1
+						id: "magistuarmory:maximilian_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1E4D9912050F37C4"
+					item: {
+						Count: 1
+						id: "magistuarmory:maximilian_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "&5Максимилиановский доспех"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["74D30AE14102DF90"]
+			description: ["Треугольный щит рыцаря."]
+			id: "15DEFF4650985A0B"
+			rewards: [{
+				count: 3
+				id: "75923B8748D0CA07"
+				item: "magistuarmory:steel_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3592A53157C1B3FB"
+				item: {
+					Count: 1
+					id: "magistuarmory:steel_heatershield"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Стальной щит"
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["74D30AE14102DF90"]
+			description: ["Огромный двуручный меч."]
+			id: "41E69483BAC1434E"
+			rewards: [{
+				count: 3
+				id: "4A5516D8B152F54D"
+				item: "magistuarmory:steel_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4952796F93ED29A8"
+				item: {
+					Count: 1
+					id: "magistuarmory:steel_zweihander"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Цвайхендер"
+			x: 2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["74D30AE14102DF90"]
+			description: ["Колющий меч против латников."]
+			id: "0CCC675AF30FC594"
+			rewards: [{
+				count: 3
+				id: "5059B9235C09956C"
+				item: "magistuarmory:steel_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2E37053989090EE9"
+				item: {
+					Count: 1
+					id: "magistuarmory:steel_estoc"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Эсток"
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["74D30AE14102DF90"]
+			description: ["Пика держит конницу на расстоянии."]
+			id: "71411CD7304D8863"
+			rewards: [{
+				count: 3
+				id: "658A1DECFE17B2E5"
+				item: "magistuarmory:steel_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "23A1A416B2390750"
+				item: {
+					Count: 1
+					id: "magistuarmory:steel_pike"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Пика"
+			x: 4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["71411CD7304D8863"]
+			description: ["Копьё для таранного удара с коня: чем быстрее скачете, тем сильнее удар."]
+			id: "0C18285944B5E2C6"
+			rewards: [{
+				id: "3B5B302577986AA4"
+				item: "minecraft:saddle"
+				type: "item"
+			}]
+			tasks: [{
+				id: "10A4AA670F019A10"
+				item: {
+					Count: 1
+					id: "magistuarmory:steel_chivalrylance"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Рыцарское копьё"
+			x: 6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0CCC675AF30FC594"]
+			description: ["Дробит броню."]
+			id: "1FD1D4C3F1572B30"
+			rewards: [{
+				count: 3
+				id: "6885A0143536051A"
+				item: "magistuarmory:steel_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "29CBE2A4F5A226C7"
+				item: {
+					Count: 1
+					id: "magistuarmory:steel_heavywarhammer"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Боевой молот"
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["18C33473A14BC90A"]
+			description: [
+				"&eR&r переключает режим. В &cбоевом&r (включён по умолчанию) работают комбо, блок, уклонение и навыки оружия. В режиме &aдобычи&r ЛКМ работает как в обычном Minecraft — копать, ставить блоки, взаимодействовать."
+				"Если не получается сломать блок или открыть что-то — проверьте режим."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0922D05515059930"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "43DCD12C23772E01"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "3E2D1F25E07AFCDC"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Режимы: бой и добыча"
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0922D05515059930"]
+			description: [
+				"&eЛКМ&r — серия ударов: каждое оружие имеет свою комбинацию. &eПКМ&r — блок: он тратит выносливость (жёлтая шкала), а при пустой шкале вас пробивают и оглушают."
+				"Тяжёлое оружие и броня утяжеляют персонажа — выносливость тратится быстрее. Удары по противнику оглушают его ненадолго."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:shield"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "68A58F5A213EB486"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7E56BFD9CA207956"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "2B653CC814D96718"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Атака, блок и выносливость"
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["68A58F5A213EB486"]
+			description: ["&eКнопка мыши 4&r (боковая) — уклонение: перекат или отшаг, смотря какой навык уклонения стоит в редакторе (&eK&r). Во время уклонения вы неуязвимы на долю секунды, но оно тоже тратит выносливость."]
+			icon: "minecraft:feather"
+			id: "54A7ACBB556F519B"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7760E88A3C7608C7"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "74EBF5987DDF7B88"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Уклонение"
+			x: -6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0922D05515059930"]
+			description: [
+				"&eG&r — зафиксировать камеру на ближайшем враге. &eAlt + ←/→&r — переключиться на соседнюю цель, &eсредняя кнопка мыши&r — свободное переключение."
+				"Фиксация особенно полезна против быстрых мобов и боссов."
+			]
+			icon: "minecraft:spyglass"
+			id: "6E56F0A6E5734368"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "6093C11A8C6BACDD"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "124BFF3BB1C52977"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Фиксация цели"
+			x: -4.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6E56F0A6E5734368"]
+			description: [
+				"У каждого типа оружия Epic Fight есть свой &bнавык оружия&r: например, у утигатаны — «Баттодзюцу». Он заряжается ударами по врагам; когда шкала заполнится, нажмите &eкнопку мыши 5&r (Weapon Innate / казнь)."
+				"Наведите курсор на оружие в инвентаре и зажмите &eЛевый Shift&r — увидите описание навыка."
+			]
+			icon: {
+				Count: 1
+				id: "epicfight:iron_tachi"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "25289373AE67B8E0"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "516D3084B2BE135D"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "5B422A07BB9CB84D"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Навык оружия"
+			x: -6.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["18C33473A14BC90A"]
+			description: [
+				"&eK&r — редактор навыков. Слоты: уклонение (перекат/отшаг), защита (блок, парирование, усиленная защита), пассивные навыки (например, «Берсерк», «Выносливость», «Мастер меча») и навык передвижения (&eПробел&r, например «Фантомный прыжок»)."
+				"Выученные навыки сохраняются после смерти."
+			]
+			icon: "epicfight:skillbook"
+			id: "2E7369F5C09CC62B"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "31AEB6C28F0360F6"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "61736AD0D1C5CE84"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Редактор навыков"
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2E7369F5C09CC62B"]
+			description: [
+				"&eN&r — дерево навыков (Epic Fight Skill Tree). Опыт персонажа можно обменять на &bочки способностей&r прямо в окне дерева, а за очки открывать узлы и сразу экипировать навыки."
+				"Узел открывается, только если открыт соседний. Вторая ветка, «Адская мощь», откроется после похода в Незер."
+			]
+			icon: "epicskills:ability_stone"
+			id: "6B213ABD74AE699F"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "3987A4887D345B91"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "085FC25BC88BE854"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Дерево навыков"
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["68A58F5A213EB486"]
+			description: [
+				"Оглушённого или ослабленного врага можно &cказнить&r: наведитесь на него и нажмите &eПКМ&r, когда на экране появится подсказка. Казнь наносит огромный урон."
+				"Чары «Резня» усиливают казни, «Устрашение» после казни отбрасывает и оглушает окружающих мобов. С щитом в левой руке: &eблок + навык оружия&r — контрудар щитом (тратит выносливость)."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_axe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "3F9DA647C746462F"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "553DA0CAEF544D46"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6A27EB1E9F180428"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Казнь оглушённого врага"
+			x: -6.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["549B8771EC5623B7"]
+			description: ["Оружие Weapons of Miracles (секиры, посохи и др.) имеет собственные анимации, комбо и навыки оружия — отличные от обычного Epic Fight. Попробуйте каждое: стиль подходит под разные противников."]
+			icon: {
+				Count: 1
+				id: "wom:iron_greataxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "1572467301FA95AC"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "3A37004465D7922C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "41BA344B513A4777"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Стили оружия"
+			x: 6.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["3D8DEAAC613E8384"]
+			description: [
+				"Броня Epic Knights идёт от лёгкой к тяжёлой: &7стёганка → кольчуга → бригантина и полулаты → латы, рыцарский и готический доспех → максимилиановский&r. Лучшие доспехи требуют стали."
+				"Чем тяжелее доспех, тем выше защита, но тем быстрее тратится выносливость Epic Fight."
+			]
+			icon: {
+				Count: 1
+				id: "magistuarmory:platemail_chestplate"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "1EFB733BDE111CA2"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "314897831F885D14"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "5F57E1724FC7BE95"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ступени рыцарской брони"
+			x: -2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0C18285944B5E2C6"]
+			description: [
+				"Рыцарское копьё бьёт тем сильнее, чем быстрее скачет лошадь — разгоняйтесь и бейте на ходу. Пика и копьё длинные: ими удобно держать всадника на расстоянии."
+				"Лошадь тоже можно бронировать. Конные рекруты с копьём таранят так же — см. главу «Война»."
+			]
+			icon: "minecraft:saddle"
+			id: "6EDF9E0608339530"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "67DA3743D58B0556"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "659540F20CCFBEAD"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Конный бой"
+			x: 8.0d
+			y: 5.0d
+		}
+	]
+	subtitle: ["Epic Fight, дерево навыков и рыцарское снаряжение"]
+	title: "Боевой путь"
+}

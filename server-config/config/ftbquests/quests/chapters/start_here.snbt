@@ -1,0 +1,511 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "start_here"
+	group: ""
+	icon: "minecraft:compass"
+	id: "4FF61A505104C8AF"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Это сервер &6«Война и Колонии»&r: колонии MineColonies, классы Epic Class Mod, бой Epic Fight, магия Iron's Spells, драконы Ice and Fire, армии Recruits, осадные машины, войны и налоги между фракциями, экономика с монетами."
+				""
+				"&eКак листать главы:&r слева вверху книги, рядом с надписью «Задачи», есть маленькая &eстрелка&r. Нажмите её — откроется &eсписок глав&r (Колония, Герой, Магия, Драконы, Война, Экономика…). Её легко не заметить!"
+				""
+				"Эта глава — короткая инструкция: управление, выбор класса и куда идти дальше. За прочитанные квесты дают немного монет &e◎&r — не забудьте нажать «Забрать награду»."
+				""
+				"Книга квестов открывается клавишей &e`&r (&eЁ&r в русской раскладке). Квесты с замком откроются после предыдущих — линии показывают порядок."
+			]
+			icon: "minecraft:compass"
+			id: "0E436018A7564540"
+			rewards: [{
+				ftb_money: 50.0d
+				id: "690106E61927BEDC"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "38FB3707BAC12614"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "&6Добро пожаловать!"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0E436018A7564540"]
+			description: [
+				"При первом входе открывается окно выбора класса Epic Class Mod: &bМечник&r, &bПаладин&r, &bБерсерк&r, &bЖнец&r, &bЛовец ветра&r или &bЧародей&r."
+				""
+				"&cВыбор окончательный:&r сменить класс может только администратор. Стартовые предметы выдаются один раз."
+				""
+				"Пока класс не выбран, вы не получаете и не наносите урон, а мобы вас не трогают — но не дольше 10 минут в сумме. Окно будет напоминать о себе."
+				""
+				"Подробно про классы и уровни — глава &e«Путь героя»&r."
+			]
+			icon: "epicclassmod:ancient_journey"
+			id: "41803D372AF8898E"
+			rewards: [{
+				ftb_money: 50.0d
+				id: "6C761A482B7A9742"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "27160CFA4F1920F6"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Выбор класса"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0E436018A7564540"]
+			description: [
+				"&eR&r — режим боя Epic Fight (боевой / обычный). &eЛКМ&r — атака (комбо), &eПКМ&r — блок (тратит выносливость), &eлевый Shift&r — подсказка по оружию."
+				""
+				"&eКнопка мыши 4&r (боковая) — уклонение, &eПробел&r — навык передвижения."
+				""
+				"&eG&r — фиксация на цели, &eAlt + ←/→&r — соседняя цель, &eсредняя кнопка мыши&r — свободное переключение цели."
+				""
+				"&eКнопка мыши 5&r — навык оружия; по оглушённому врагу — казнь (Combat Evolution). &eK&r — редактор навыков, &eN&r — дерево навыков."
+				""
+				"Это единственный список клавиш боя: в главе «Боевой путь» — только механики. Любую клавишу можно поменять: Настройки → Управление."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "06DED0B698B9D2DF"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "5000E022CA1A9E65"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "62466EEF2989CD49"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Управление: бой"
+			x: 2.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0E436018A7564540"]
+			description: [
+				"&eY&r — книга класса: профиль, уровень, очки характеристик, умения и квесты класса."
+				""
+				"&eC&r — способность класса (в описаниях классов она указана как «F»; на сервере перенесена на C)."
+				""
+				"&eAlt + E&r — окно слотов Curios: кольца, амулеты, пояс, книга заклинаний."
+				""
+				"&7Клавиши магии — отдельный квест «Управление: магия» в ветке «Магия»: они работают только когда у вас есть книга заклинаний.&r"
+			]
+			icon: "epicclassmod:ancient_journey"
+			id: "7A1EDE138C74F1A1"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "2B8C67272F36CC0C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "7F7BED7AFCB76FA5"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Управление: класс"
+			x: 2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["76DA319836ADEE16"]
+			description: [
+				"&7Пригодится, когда появится своя колония&r (лагерь снабжения → строитель → ратуша, глава «Путь колонии»). До этого квест можно просто прочитать."
+				""
+				"&eJ&r — панель колонии: сводка, запросы (кнопка «Выполнить» платит из кошелька), стройка, жалобы, счастье, рынок."
+				"&eAlt + B&r — очки построек MineColonies. &eAlt + T&r — окно налогов WarNTaxes. &eAlt + H&r — выбрать стража (Ice and Fire Colonies)."
+				""
+				"Инструмент строителя: &eстрелки&r и &eNum +/−&r — сдвиг схемы, &eShift + ←/→&r — поворот, &eNum *&r — отражение, &eEnter&r — поставить."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "04833BE7EB4336D6"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "565FBD13F3CBF2EA"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "2351F937E20EC4EB"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Управление: колония"
+			x: 8.5d
+			y: -3.75d
+		}
+		{
+			dependencies: ["0E436018A7564540"]
+			description: [
+				"&eO&r — магазин сервера (монеты &e◎&r). &e`&r (&eЁ&r) — эта книга квестов."
+				""
+				"&eM&r — полная карта JourneyMap, &eB&r — новая путевая точка, &eCtrl + Z&r — показать/скрыть метки, &eCtrl + J&r — мини-карта вкл/выкл."
+				""
+				"&eAlt + U&r — история смертей: где лежит ваше тело с вещами."
+				""
+				"Apotheosis: &eCtrl + O&r — радиальная добыча (если у инструмента есть это свойство)."
+				""
+				"Подробно про смерть, карту, Jade, /home, /tpa, /rtp — глава &e«Выживание и интерфейс»&r."
+			]
+			icon: "minecraft:map"
+			id: "2035A665543F2B7C"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "4EA2E98606D3CA87"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "0A0F59E2BA033E1C"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Управление: магазин, карта, смерть"
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["41803D372AF8898E"]
+			description: [
+				"&ePvP&r идёт через войны и набеги фракций (WarNTaxes): объявление войны, осада, мир. За убийство игрока на войне вы получаете &e5% его баланса&r монет (PvP-экономика WarNTaxes)."
+				""
+				"&eСмерть:&r вещи остаются в теле на месте гибели — найдите его через историю смертей (&eAlt + U&r)."
+				""
+				"&eТелепорты&r Epic Class Mod к меткам карты и к участникам группы на сервере отключены."
+				""
+				"&eМонеты&r ◎ дают за убийство враждебных мобов (больше за уровневых), рейдеров, вражеских солдат и боссов (100). С мобов из спавнеров — ничего."
+			]
+			icon: "minecraft:writable_book"
+			id: "7FE7231EB4452CF6"
+			rewards: [{
+				ftb_money: 50.0d
+				id: "4C079CA9DE391DB0"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "1992CBAFF4CBC822"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Правила мира"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7FE7231EB4452CF6"]
+			description: [
+				"Своя колония MineColonies: жители, здания, налоги и стражи."
+				""
+				"1) &e«Путь колонии»&r — пошаговое обучение: что строить, в каком порядке и зачем."
+				"2) &e«Колония: достижения»&r — достижения за постройки и исследования, с наградами. Начинайте с «Пути колонии»."
+				""
+				"Клавиши колонии — квест «Управление: колония» справа."
+			]
+			icon: "minecolonies:blockhutbuilder"
+			id: "76DA319836ADEE16"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "4BD54E7F66B61D71"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "732D11E423E68379"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ветка: Колония"
+			x: 6.5d
+			y: -3.75d
+		}
+		{
+			dependencies: ["7FE7231EB4452CF6"]
+			description: [
+				"Развитие персонажа: класс, уровни 1–75, характеристики и атрибуты."
+				""
+				"Главы: &e«Путь героя»&r, &e«Боевой путь»&r (оружие Epic Fight), &e«Апофеоз»&r (зачарования)."
+				""
+				"Боссы Mowzie's Mobs и их трофеи — глава &e«Боссы Моуззи»&r."
+			]
+			icon: "epicclassmod:job_compass"
+			id: "315E87D891539974"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "64EC5754C07C2EB6"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "1A14147ACC0F6048"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ветка: Герой"
+			x: 6.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["7FE7231EB4452CF6"]
+			description: [
+				"Заклинания, книги, школы магии и магические боссы."
+				""
+				"Глава &e«Магия»&r — от первой эссенции до Эха Тироса."
+			]
+			icon: "irons_spellbooks:iron_spell_book"
+			id: "7F58FC6534199E9F"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "27E0AD9B0A92901D"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "41B361F829D7AB48"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ветка: Магия"
+			x: 6.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["7FE7231EB4452CF6"]
+			description: [
+				"Мир Ice and Fire: драконы, мифические существа, серебро и сапфиры."
+				""
+				"Глава &e«Драконы (Лёд и Пламя)»&r."
+			]
+			icon: "minecraft:dragon_head"
+			id: "43468C735F807805"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "407938EDB119FE38"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "5F2EA834E7E3CE49"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ветка: Драконы"
+			x: 6.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["7FE7231EB4452CF6"]
+			description: [
+				"Армии Recruits, осадные машины, корабли, войны и набеги между фракциями."
+				""
+				"Глава &e«Война»&r."
+			]
+			icon: "minecraft:white_banner"
+			id: "23AB407874133BE1"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "45CA53A9EDC5F23D"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "73EC40271A49A4A6"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ветка: Война"
+			x: 6.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["7FE7231EB4452CF6"]
+			description: [
+				"Монеты ◎, магазин сервера (&eO&r), налоги колонии и казна."
+				""
+				"Глава &e«Экономика»&r."
+				""
+				"Готовка Farmer's Delight — глава &e«Кухня»&r."
+			]
+			icon: "minecraft:emerald"
+			id: "52B316E885B5D522"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "417A0530D12DEE08"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "33E9C0759B795FF7"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Ветка: Экономика"
+			x: 6.5d
+			y: 3.75d
+		}
+		{
+			dependencies: [
+				"76DA319836ADEE16"
+				"315E87D891539974"
+				"7F58FC6534199E9F"
+				"43468C735F807805"
+				"23AB407874133BE1"
+				"52B316E885B5D522"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"Когда освоитесь, заглядывайте в &e«Ежедневные задания»&r (повторяются раз в несколько часов, платят монетами) и &e«Охоту»&r (доска наград за мобов)."
+				""
+				"Этот квест откроется после любой из веток выше."
+			]
+			hide_dependency_lines: true
+			icon: "minecraft:clock"
+			id: "0E8D726ADDFBE8C2"
+			rewards: [{
+				ftb_money: 75.0d
+				id: "338DE6CEB4DD4F69"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "73EE743356287672"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Каждый день: задания и охота"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7F58FC6534199E9F"]
+			description: [
+				"&cРаботает только с книгой заклинаний&r в слоте Curios (первая книга — квест «Книги заклинаний» в главе «Магия»). Пока книги и заклинаний нет, эти клавиши ничего не делают."
+				""
+				"&eZ&r (удерживать) — колесо заклинаний. &eV&r — применить выбранное заклинание. &eЛевый Alt + колёсико&r — прокрутка панели заклинаний на хотбаре."
+				""
+				"Быстрые ячейки заклинаний (quick cast) не назначены — при желании задайте их: Управление → Iron's Spells. Ману и характеристики чародея показывает книга класса (&eY&r)."
+			]
+			icon: "irons_spellbooks:gold_spell_book"
+			id: "7A428F45114AB0C8"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "29B8A4F97ADA6D6E"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "2F9BCDD5F4C2BE73"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Управление: магия"
+			x: 8.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["23AB407874133BE1"]
+			description: [
+				"&7Пригодится, когда появятся рекруты, осадные машины или корабль (глава «Война»).&r"
+				""
+				"Рекруты: &eH&r — командное меню отряда, &eU&r — фракция, &eB&r — карта территорий (та же клавиша ставит метку JourneyMap), &eAlt + P&r — ранги и звания фракции."
+				""
+				"Осадные машины: &eX&r — сесть / использовать, &eI&r — инвентарь машины, &eПробел&r — лезть по осадной лестнице."
+				"Команды осады (Recruits Siege Compat): &eCtrl + B&r — экран команд, &eCtrl + F&r — огонь, &eCtrl + R&r — удар тарана, &eCtrl + G&r — прыжок тарана, &eCtrl + L&r — слезть с лестницы."
+				""
+				"Корабли Small Ships: &eAlt + R&r — парус, &eAlt + F&r — к пушке."
+			]
+			icon: "minecraft:white_banner"
+			id: "1C4F39E660AC9F0A"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "6E72CC68FB46FB2B"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "44BA48A57F6AC7B1"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Управление: армия, осада, корабли"
+			x: 8.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["43468C735F807805"]
+			description: [
+				"&7Пригодится, когда у вас будет свой дракон (глава «Драконы»).&r"
+				""
+				"&eПКМ пустой рукой&r — сесть на дракона (с 3-й стадии) или посадить малыша на плечо. &eShift + ПКМ&r — инвентарь дракона."
+				""
+				"В полёте: &eПробел&r — набор высоты, &eAlt + X&r — снижение, &eAlt + V&r — дыхание (огонь / лёд / молния), &eAlt + G&r — удар когтями, &eF7&r — вид камеры."
+				""
+				"Колония: &eAlt + H&r — выбрать стража, затем жезлом командования назначьте дракона напарником. Разрушение блоков драконами на сервере выключено."
+			]
+			icon: "minecraft:dragon_head"
+			id: "7918D0930DD6E9A8"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "58D21A489FA2E271"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6FBFCE59729737CC"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Управление: драконы"
+			x: 8.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["2035A665543F2B7C"]
+			description: [
+				"Если в клиенте включены шейдеры Iris: &eF6&r — выбор шейдера, &eF8&r — перезагрузка, &eF9&r — вкл/выкл."
+				""
+				"Квест необязательный — без шейдеров играть можно."
+			]
+			icon: "minecraft:glass"
+			id: "1BDF0FBC3ACE3B72"
+			optional: true
+			rewards: [{
+				ftb_money: 10.0d
+				id: "44B3F1C06697682F"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "3E8128B5D983EC9C"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Шейдеры (по желанию)"
+			x: 4.5d
+			y: 2.5d
+		}
+	]
+	title: "&6Начни здесь"
+}

@@ -1,0 +1,540 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "economy"
+	group: "56104B959F6BF66C"
+	icon: "minecraft:emerald"
+	id: "39ACCD2D0A8C7087"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"На сервере работает магазин SDM Shop, валюта — монеты &e◎&r (sdm_coin). Магазин открывается клавишей &eO&r."
+				""
+				"Квесты этой главы дают монеты на старт. Кухня Farmer's Delight теперь в отдельной главе «Кухня»."
+				""
+				"&7Клавиши — глава «Начни здесь», квест «Управление: магазин, карта, смерть». Здесь только механики.&r"
+			]
+			id: "65BAF3BB08884F48"
+			rewards: [{
+				ftb_money: 500.0d
+				id: "234BEA1DD1DCC63C"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "0E6F978FF4F3170D"
+				type: "checkmark"
+			}]
+			title: "&6Магазин сервера"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65BAF3BB08884F48"]
+			description: ["Изумруды — валюта жителей и рекрутов (найм бойцов, фракция). Магазин скупает изумруд за 8 ◎, но в покупках колонии через ColonyBuy и панель J изумруды запрещены."]
+			id: "347DC744E27BA6F4"
+			rewards: [{
+				ftb_money: 250.0d
+				id: "72BDA64BE79922C5"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				count: 16L
+				id: "37CB4C96E4429A3F"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			title: "Изумруды"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["347DC744E27BA6F4"]
+			description: ["Поторгуйте с жителем."]
+			id: "35B2E194EA938C74"
+			rewards: [{
+				ftb_money: 250.0d
+				id: "4FAF73E638971848"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				advancement: "minecraft:adventure/trade"
+				criterion: ""
+				id: "5F8E48E04859B91D"
+				type: "advancement"
+			}]
+			title: "Выгодная сделка"
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["347DC744E27BA6F4"]
+			description: ["Накопите немного изумрудов в блоках."]
+			id: "1479DC50F64DDB4D"
+			rewards: [{
+				ftb_money: 750.0d
+				id: "1A475BFCB5ABA39B"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				count: 4L
+				id: "535655D0CCC67981"
+				item: "minecraft:emerald_block"
+				type: "item"
+			}]
+			title: "Казна"
+			x: 4.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["65BAF3BB08884F48"]
+			description: ["Золото пригодится для торговли и снаряжения; магазин скупает золотые слитки во вкладке «Скупка: руды и металлы»."]
+			id: "286ADD701E45E2EC"
+			rewards: [{
+				ftb_money: 500.0d
+				id: "73158678711D2EEC"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				count: 32L
+				id: "351CEDC0277717AF"
+				item: "minecraft:gold_ingot"
+				type: "item"
+			}]
+			title: "Золотой запас"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["65BAF3BB08884F48"]
+			description: ["Как продать: откройте магазин (&eO&r), выберите вкладку «Скупка», нажмите на товар — предметы спишутся из инвентаря, монеты придут в кошелёк. Цена указана за лот (например, за 64 шт.)."]
+			id: "75D83C2649B7D4B9"
+			rewards: [{
+				ftb_money: 250.0d
+				id: "5F128C4AD4A53F52"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "772DB75EC3370636"
+				type: "checkmark"
+			}]
+			title: "Первая продажа"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65BAF3BB08884F48"]
+			description: ["Кодекс War'N Taxes объясняет, как колонии платят налоги и воюют."]
+			id: "4A257677783E19A8"
+			rewards: [{
+				ftb_money: 250.0d
+				id: "66552EC67473C1B6"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "62C1390CC1551078"
+				item: "minecolonytax:war_taxes_codex"
+				type: "item"
+			}]
+			title: "Кодекс войны и налогов"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A257677783E19A8"]
+			description: [
+				"Соберите налоги со своей колонии."
+				""
+				"&e/wnt checktax&r — сколько накопилось, &e/wnt claimtax&r (или &e/wnt claimtax <сумма>&r) — забрать в кошелёк монетами ◎, &eAlt + T&r — окно налогов."
+			]
+			id: "7EBFF9DB0A5DB277"
+			rewards: [
+				{
+					count: 8
+					id: "260AF3E7C3BBAB08"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					ftb_money: 750.0d
+					id: "05BAAE500772E7B7"
+					money_id: "sdm_coin"
+					type: "sdmshop:money"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				advancement: "minecolonytax:codex/claim_tax"
+				criterion: ""
+				id: "798E5609EAE7DBC3"
+				type: "advancement"
+			}]
+			title: "&eСбор налогов"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["65BAF3BB08884F48"]
+			description: [
+				"Монеты ◎ хранятся в кошельке SDM Economy: баланс виден в магазине (&eO&r) и в панели колонии (&eJ&r)."
+				"Откуда монеты: награды квестов, продажа в магазине, налоги колонии, война (набеги и победы). Куда: покупки в магазине, выполнение запросов колонии, казна колонии."
+			]
+			icon: "minecraft:gold_nugget"
+			id: "2C124795096A5BF0"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "3B4CB41DA60075A1"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "3D2CF1D250EB31F2"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Кошелёк"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65BAF3BB08884F48"]
+			description: [
+				"Вкладки: &aСкупка&r — ресурсы, руды и металлы, трофеи с мобов, трофеи боссов, продукция колонии (еда поваров). &eМагазин: полезное&r — покупка: факелы, стрелы, костная мука, жемчуг Края, золотые яблоки, бутылочки опыта, бирки, сёдла, поводки и др."
+				"Трофеи боссов (сердца и кровь драконов, клыки гидры, глаз циклопа, вещи Mowzie's Mobs) продаются дорого."
+			]
+			icon: "minecraft:chest"
+			id: "58150B98E217F57F"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "22FD2E3735958EB8"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "17FA271C83FC7EFA"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Вкладки магазина"
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4A257677783E19A8"]
+			description: [
+				"Здания колонии платят налог раз в &e60 минут&r (накопить можно до 10 000). Счастье жителей меняет сумму от ×0,5 до ×1,5; каждая сторожевая башня даёт +8%. Неактивная колония налог не копит."
+				"Налоги забирают в кошелёк монетами (&e/wnt claimtax&r) или переводят в казну."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "12B0111B558902A8"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "3CD4E7B94DE1E120"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "7DB4C1A6C6D944DF"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Налоги колонии"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["12B0111B558902A8"]
+			description: [
+				"Политики налогов: &aнизкая&r — доход −25%, счастье +0,2; &eвысокая&r — доход +25%, счастье −0,15; &cвоенная&r — доход +50%, счастье −0,25."
+				"Политика меняется в окне налогов (&eAlt + T&r). Учтите: ниже счастье — меньше множитель налога."
+			]
+			icon: "minecraft:writable_book"
+			id: "18D046381C608C48"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "36E0DD1127205651"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "321F8277EF3C8E48"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Налоговая политика"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["12B0111B558902A8"]
+			description: [
+				"Казна — общий кошелёк колонии (WarNTaxes). Из неё платят за вложения и за ColonyBuy; при поражении в войне часть казны забирает победитель."
+				"&e/wnt treasury status [id колонии]&r — баланс. Пополнить: &e/wnt treasury deposit <сумма> wallet&r (из кошелька), &e… tax&r (из налогов, по умолчанию) или &e… inventory&r (изумрудами из инвентаря). Вывести: &e/wnt treasury withdraw <сумма> wallet|tax|inventory&r. В конце можно указать id колонии."
+			]
+			icon: "minecraft:barrel"
+			id: "2A454BA8A7F30166"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "253E1C9567CFA9D0"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "242DC092C9C40C45"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Казна колонии"
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2A454BA8A7F30166"]
+			description: ["Из казны покупают улучшения колонии до 5 уровня (цена растёт ×2 за уровень): ополчение, оборона, укрепления (−5% урона за уровень), сила набега, шпионы (число, скорость, скрытность), контрразведка, вместимость казны (+2000 за уровень), эффективность налогов (+5% за уровень). &e/wnt invest list&r — список, &e/wnt invest status&r — уровни и цены, &e/wnt invest buy <тип>&r — купить."]
+			icon: "minecraft:iron_bars"
+			id: "5ED36C3448AE7C13"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7BFC2808A5BB2E36"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "7CC8A5CD26CF562A"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Вложения"
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7EBFF9DB0A5DB277"]
+			description: ["Колония может уйти в минус по налогам (до −2000). Пока есть долг, &cнельзя объявить войну&r и отправить шпиона; долг снижает счастье, а затянувшийся долг ведёт к заброшенности колонии."]
+			icon: "minecraft:paper"
+			id: "2D1791A16ED46E36"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "2F807DA5DDA2F2E6"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "0C77FC1153371933"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Долги"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["65BAF3BB08884F48"]
+			description: [
+				"&eJ&r — панель колонии: вкладки «Колония» (жители, жильё, казна, кошелёк, угроза), «Запросы», «Стройка», «Жалобы», «Счастье», «Простой», «Финансы», «Рынок». Кнопка «Показать» подсветит нужное здание."
+				"Работает, когда вы хотя бы раз заходили на территорию своей колонии."
+			]
+			icon: "minecraft:lectern"
+			id: "68D217E81B6EA4B6"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "2476C17E169159D4"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "337F3FCE429536B6"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Панель колонии"
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["68D217E81B6EA4B6"]
+			description: [
+				"Во вкладке «Запросы» владелец или офицер колонии может нажать &eВыполнить&r или &eВыполнить все видимые&r: сервер покажет итог и спишет монеты &eиз вашего кошелька&r, предметы попадут в здание."
+				"Если не хватает денег, предмет запрещён или без цены — причина будет написана в окне."
+			]
+			icon: "minecraft:gold_ingot"
+			id: "207E0B86C76766A2"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "388B57B54B77B0DF"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6A86C58BF74B2B12"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Выполнить за деньги"
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"68D217E81B6EA4B6"
+				"2A454BA8A7F30166"
+			]
+			description: [
+				"Когда строитель застрял без материалов, владельцу и офицерам приходит кнопка &e[Купить за N ◎]&r. Оплата — &eиз казны колонии&r, материалы кладутся в хижину строителя."
+				"&e/colonybuy list&r — зависшие запросы и цены, &e/colonybuy pay <id|all>&r — купить, &e/colonybuy auto on|off&r — автопокупка, &e/colonybuy budget <n>&r — дневной бюджет, &e/colonybuy price&r — цена предмета в руке. Лимит — 5000 ◎ в сутки на колонию; наценка ×1,2."
+			]
+			icon: "minecolonies:blockhutbuilder"
+			id: "3D4ABB929396A07C"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7C86A3781F59D596"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "3EC397BBBCF51A28"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Закупка для стройки из казны"
+			x: -2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["3D4ABB929396A07C"]
+			description: [
+				"Купить за деньги нельзя: алмазы, незерит, изумруды, руды и сырые металлы, слитки и самородки, драгоценные камни, обсидиан, металлические блоки и предметы с NBT. Их добывайте сами."
+				"Во время войны, осады и набегов закупка &aработает&r, как и вся экономика."
+			]
+			icon: "minecraft:barrier"
+			id: "131F7CC5AD54F9AA"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "79FE923D6049EFC6"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "35DBCF475EF75B6B"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Запреты покупки"
+			x: -4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["68D217E81B6EA4B6"]
+			description: [
+				"&eJ&r → вкладка &eРынок&r. Здесь товары всех колоний, купить может любой игрок — даже без колонии."
+				"Выберите лот, укажите «Лотов купить» и нажмите &eКупить&r: монеты ◎ списываются с кошелька и уходят &eв казну колонии-продавца&r, предметы — в инвентарь."
+				"Не влезло в инвентарь — заберите кнопкой &eЗабрать&r. Если казна продавца переполнена, покупка не пройдёт."
+			]
+			icon: "minecraft:chest"
+			id: "30983C68F9D520B1"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "225132CF6CF9A8B4"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "6CF50D5956F304EA"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "&aРынок колонии"
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2A454BA8A7F30166"]
+			description: [
+				"Только владелец и офицеры: вкладка &eСклад&r показывает всё, что лежит на стеллажах склада колонии — продавать можно &eлюбой товар&r."
+				"Заполните «В лоте» (штук в одном лоте), «Цена» и «Лотов», затем &eПродать&r — товар сразу уходит со склада на витрину, курьеры его уже не тронут."
+				"&eСнять&r — вернуть непроданное на склад. Все сделки видны в журнале &eJ → Финансы&r."
+			]
+			icon: "minecolonies:blockhutwarehouse"
+			id: "53C9A18B67D350EE"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "5EA0D14EA294744E"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "5752803C3101D83E"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Выставить товар"
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["30983C68F9D520B1"]
+			description: [
+				"Владелец/офицер: во вкладке &eСклад&r укажите «В лоте», стартовую «Цену», «Шаг» ставки и «Минут» (5–1440), нажмите &eАукцион&r."
+				"Покупатели: вкладка &eАукционы&r → &eСтавка&r (пусто = минимальная). Деньги списываются сразу; если вас перебили — возвращаются автоматически, даже офлайн."
+				"Ставка в последние &e60 с&r продлевает торги до 60 с. Победитель получает лот, деньги — в казну. Отменить можно только аукцион без ставок; без ставок товар вернётся на склад."
+			]
+			icon: "minecraft:bell"
+			id: "7580A6C0BEB6D31F"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "7377D5F1ED53A4E0"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "32BE41C057194460"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Аукцион"
+			x: -2.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["2D1791A16ED46E36"]
+			description: [
+				"Во время войны, осады и набега &aничего не блокируется&r: рынок, аукционы, казна, сбор налога и переводы работают. Покупайте союзников и снаряжение за ◎."
+				"ColonyBuy (закупка строителю из казны) на войне тоже работает."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:golden_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "1915E5C9517C1385"
+			rewards: [{
+				ftb_money: 25.0d
+				id: "345D4E930E6F5D62"
+				money_id: "sdm_coin"
+				type: "sdmshop:money"
+			}]
+			tasks: [{
+				id: "38777279D377D08A"
+				title: "Прочитано"
+				type: "checkmark"
+			}]
+			title: "Экономика и война"
+			x: 0.0d
+			y: 6.5d
+		}
+	]
+	subtitle: ["Деньги, торговля, налоги и производство"]
+	title: "Экономика"
+}
