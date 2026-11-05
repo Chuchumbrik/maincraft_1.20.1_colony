@@ -14,8 +14,18 @@ public final class ClientState {
     /** 1.7.1: dig-tool min tier floor. */
     public static volatile Net.TierState tier;
     public static volatile long tierAt;
+    /** 1.7.3: placed huts that are not already in the build queue. */
+    public static volatile Net.BuildState build;
+    public static volatile long buildAt;
     public static void onDash(Net.DashData d) { dash = d; dashAt = System.currentTimeMillis(); }
     public static void onTier(Net.TierState t) { tier = t; tierAt = System.currentTimeMillis(); }
+    public static void onBuild(Net.BuildState s) { build = s; buildAt = System.currentTimeMillis(); }
+    public static void onBuildResult(Net.BuildResult r) {
+        BoardScreen.clearBuildPending(r.pos());
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player != null) ClientSetup.requestBuild(r.colonyId());
+        if (mc.screen instanceof BoardScreen board) board.refreshFromNet();
+    }
     private ClientState() {}
     public static void onQuote(Net.Quote q) {
         Minecraft mc = Minecraft.getInstance();

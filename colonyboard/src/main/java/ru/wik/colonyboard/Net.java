@@ -52,9 +52,15 @@ public final class Net {
     public static final SimpleChannel TIER = NetworkRegistry.newSimpleChannel(
         new ResourceLocation(ColonyBoard.MODID, "tier"), () -> TIER_VERSION,
         NetworkRegistry.acceptMissingOr(TIER_VERSION), NetworkRegistry.acceptMissingOr(TIER_VERSION));
+    /** 1.7.3: optional channel for starting or upgrading a placed hut from J. Older clients simply lack it. */
+    public static final String BUILD_VERSION = Protocol.BUILD;
+    public static final SimpleChannel BUILD = NetworkRegistry.newSimpleChannel(
+        new ResourceLocation(ColonyBoard.MODID, "build"), () -> BUILD_VERSION,
+        NetworkRegistry.acceptMissingOr(BUILD_VERSION), NetworkRegistry.acceptMissingOr(BUILD_VERSION));
     private static final Map<UUID, Long> LAST = new ConcurrentHashMap<>();
     private static final Map<UUID, Long> LAST_DASH = new ConcurrentHashMap<>(), LAST_DASH_ACT = new ConcurrentHashMap<>();
     private static final Map<UUID, Long> LAST_TIER = new ConcurrentHashMap<>(), LAST_TIER_ACT = new ConcurrentHashMap<>();
+    private static final Map<UUID, Long> LAST_BUILD = new ConcurrentHashMap<>(), LAST_BUILD_ACT = new ConcurrentHashMap<>();
     private static final Map<UUID, Long> LAST_FULFIL = new ConcurrentHashMap<>();
 
     private Net() {}
@@ -78,6 +84,10 @@ public final class Net {
         TIER.messageBuilder(TierRequest.class, 0, NetworkDirection.PLAY_TO_SERVER).encoder(TierRequest::encode).decoder(TierRequest::decode).consumerMainThread(Net::onTierRequest).add();
         TIER.messageBuilder(TierState.class, 1, NetworkDirection.PLAY_TO_CLIENT).encoder(TierState::encode).decoder(TierState::decode).consumerMainThread(Net::onTierState).add();
         TIER.messageBuilder(TierSet.class, 2, NetworkDirection.PLAY_TO_SERVER).encoder(TierSet::encode).decoder(TierSet::decode).consumerMainThread(Net::onTierSet).add();
+        BUILD.messageBuilder(BuildRequest.class, 0, NetworkDirection.PLAY_TO_SERVER).encoder(BuildRequest::encode).decoder(BuildRequest::decode).consumerMainThread(Net::onBuildRequest).add();
+        BUILD.messageBuilder(BuildState.class, 1, NetworkDirection.PLAY_TO_CLIENT).encoder(BuildState::encode).decoder(BuildState::decode).consumerMainThread(Net::onBuildState).add();
+        BUILD.messageBuilder(BuildAct.class, 2, NetworkDirection.PLAY_TO_SERVER).encoder(BuildAct::encode).decoder(BuildAct::decode).consumerMainThread(Net::onBuildAct).add();
+        BUILD.messageBuilder(BuildResult.class, 3, NetworkDirection.PLAY_TO_CLIENT).encoder(BuildResult::encode).decoder(BuildResult::decode).consumerMainThread(Net::onBuildResult).add();
         CHANNEL.messageBuilder(MarketAction.class, 9, NetworkDirection.PLAY_TO_SERVER).encoder(MarketAction::encode).decoder(MarketAction::decode).consumerMainThread(Net::onMarketAction).add();
     }
 
@@ -288,6 +298,131 @@ public final class Net {
     private static void onTierState(TierState msg, Supplier<NetworkEvent.Context> ctx) {
         ctx.get().setPacketHandled(true);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ru.wik.colonyboard.client.ClientState.onTier(msg));
+    }
+
+    // ------------------------------------------------------------------ 1.7.3 placed hut build / upgrade
+    /** kind: 0 start, 1 upgrade. nativeType: 0 BUILD, 1 UPGRADE, -1 unsupported. deny: lang key or "". */
+    public record BuildHutRow(long pos, String literal, String key, int level, int max, int target, int kind, int nativeType, String deny) {}
+
+    public record BuildRequest(int colonyId) {
+        void encode(FriendlyByteBuf b) { b.writeInt(colonyId); }
+        static BuildRequest decode(FriendlyByteBuf b) { return new BuildRequest(b.readInt()); }
+    }
+
+    public record BuildState(int colonyId, boolean canManage, int unreadable, boolean truncated, List<BuildHutRow> huts) {
+        void encode(FriendlyByteBuf b) {
+            b.writeInt(colonyId); b.writeBoolean(canManage); b.writeVarInt(unreadable); b.writeBoolean(truncated);
+            List<BuildHutRow> list = huts.size() > ru.wik.colonyboard.server.BuildHut.MAX_ROWS ? huts.subList(0, ru.wik.colonyboard.server.BuildHut.MAX_ROWS) : huts;
+            b.writeCollection(list, (x, h) -> {
+                x.writeLong(h.pos()); x.writeUtf(h.literal(), 128); x.writeUtf(h.key(), 128);
+                x.writeVarInt(h.level()); x.writeVarInt(h.max()); x.writeVarInt(h.target());
+                x.writeVarInt(h.kind()); x.writeVarInt(h.nativeType()); x.writeUtf(h.deny(), 80);
+            });
+        }
+        static BuildState decode(FriendlyByteBuf b) {
+            return new BuildState(b.readInt(), b.readBoolean(), b.readVarInt(), b.readBoolean(),
+                b.readList(x -> new BuildHutRow(x.readLong(), x.readUtf(128), x.readUtf(128), x.readVarInt(), x.readVarInt(),
+                    x.readVarInt(), x.readVarInt(), x.readVarInt(), x.readUtf(80))));
+        }
+    }
+
+    /** expectedLevel + kind are the snapshot the player confirmed. The server recomputes both. */
+    public record BuildAct(int colonyId, long pos, int expectedLevel, int kind) {
+        void encode(FriendlyByteBuf b) { b.writeInt(colonyId); b.writeLong(pos); b.writeVarInt(expectedLevel); b.writeVarInt(kind); }
+        static BuildAct decode(FriendlyByteBuf b) { return new BuildAct(b.readInt(), b.readLong(), b.readVarInt(), b.readVarInt()); }
+    }
+
+    public record BuildResult(int colonyId, long pos, String deny, int level, int target, Component name) {
+        void encode(FriendlyByteBuf b) {
+            b.writeInt(colonyId); b.writeLong(pos); b.writeUtf(deny, 80); b.writeVarInt(level); b.writeVarInt(target); b.writeComponent(name);
+        }
+        static BuildResult decode(FriendlyByteBuf b) {
+            return new BuildResult(b.readInt(), b.readLong(), b.readUtf(80), b.readVarInt(), b.readVarInt(), b.readComponent());
+        }
+    }
+
+    public static boolean hasBuild(ServerPlayer p) {
+        try { return BUILD.isRemotePresent(p.connection.connection); } catch (Throwable t) { return false; }
+    }
+
+    private static void sendBuild(ServerPlayer p, IColony c) {
+        if (!hasBuild(p) || c == null) return;
+        ru.wik.colonyboard.server.BuildHut.Listing list = ru.wik.colonyboard.server.BuildHut.list(p, c);
+        List<BuildHutRow> rows = new ArrayList<>();
+        for (ru.wik.colonyboard.server.BuildHut.Hut h : list.huts) {
+            rows.add(new BuildHutRow(h.pos, h.literal, h.key, h.level, h.max, h.target, h.kind, h.nativeType, h.deny));
+        }
+        BUILD.send(PacketDistributor.PLAYER.with(() -> p), new BuildState(c.getID(), list.canManage, list.unreadable, list.truncated, rows));
+    }
+
+    private static void onBuildRequest(BuildRequest msg, Supplier<NetworkEvent.Context> ctx) {
+        ServerPlayer p = ctx.get().getSender();
+        ctx.get().setPacketHandled(true);
+        if (p == null) return;
+        long now = System.currentTimeMillis();
+        Long last = LAST_BUILD.get(p.getUUID());
+        if (last != null && now - last < 700) return;
+        LAST_BUILD.put(p.getUUID(), now);
+        IColony c = colony(p, msg.colonyId());
+        if (c == null) {
+            if (hasBuild(p)) BUILD.send(PacketDistributor.PLAYER.with(() -> p), new BuildState(msg.colonyId(), false, -2, false, List.of()));
+            return;
+        }
+        sendBuild(p, c);
+    }
+
+    private static void onBuildAct(BuildAct msg, Supplier<NetworkEvent.Context> ctx) {
+        ServerPlayer p = ctx.get().getSender();
+        ctx.get().setPacketHandled(true);
+        if (p == null) return;
+        long now = System.currentTimeMillis();
+        Long last = LAST_BUILD_ACT.get(p.getUUID());
+        if (last != null && now - last < 400) {
+            replyBuild(p, msg, ru.wik.colonyboard.logic.BuildActions.Deny.BUSY, msg.expectedLevel(), msg.expectedLevel(), Component.empty());
+            return;
+        }
+        LAST_BUILD_ACT.put(p.getUUID(), now);
+        ru.wik.colonyboard.logic.BuildActions.Gate gate = ru.wik.colonyboard.server.BuildHut.access(p, msg.colonyId());
+        IColony c = gate == ru.wik.colonyboard.logic.BuildActions.Gate.OK ? ru.wik.colonyboard.server.BuildHut.colonyIfAllowed(p, msg.colonyId()) : null;
+        if (c == null) {
+            ru.wik.colonyboard.logic.BuildActions.Deny deny = switch (gate) {
+                case WRONG_DIMENSION -> ru.wik.colonyboard.logic.BuildActions.Deny.WRONG_DIMENSION;
+                case FOREIGN -> ru.wik.colonyboard.logic.BuildActions.Deny.FOREIGN;
+                default -> ru.wik.colonyboard.logic.BuildActions.Deny.NO_COLONY;
+            };
+            replyBuild(p, msg, deny, msg.expectedLevel(), msg.expectedLevel(), Component.empty());
+            return;
+        }
+        ru.wik.colonyboard.server.BuildHut.Outcome out = ru.wik.colonyboard.server.BuildHut.act(p, c, msg.pos(), msg.expectedLevel(), msg.kind());
+        Component name = ru.wik.colonyboard.server.BuildHut.label(out.literal, out.key);
+        replyBuild(p, msg, out.deny, out.level, out.target, name);
+        if (out.deny == ru.wik.colonyboard.logic.BuildActions.Deny.NONE) {
+            c.getPackageManager().removeCloseSubscriber(p);
+            c.getPackageManager().addCloseSubscriber(p);
+        }
+        sendBuild(p, c);
+    }
+
+    private static void replyBuild(ServerPlayer p, BuildAct msg, ru.wik.colonyboard.logic.BuildActions.Deny deny, int level, int target, Component name) {
+        String key = ru.wik.colonyboard.logic.BuildActions.lang(deny);
+        Component shown = name == null ? Component.empty() : name;
+        BUILD.send(PacketDistributor.PLAYER.with(() -> p), new BuildResult(msg.colonyId(), msg.pos(), key, level, target, shown));
+        Component body = deny == ru.wik.colonyboard.logic.BuildActions.Deny.NONE
+            ? Component.translatable("colonyboard.build.ok", shown, level, target)
+            : Component.translatable("colonyboard.build.fail", Component.translatable(key));
+        int toast = deny == ru.wik.colonyboard.logic.BuildActions.Deny.NONE ? Toast.OK : Toast.FAIL;
+        glass(p, new Glass(toast, Component.translatable(deny == ru.wik.colonyboard.logic.BuildActions.Deny.NONE
+            ? "colonyboard.build.ok.title" : "colonyboard.toast.t.fail"), body, Component.empty(), msg.colonyId(), List.of(), 0), body);
+    }
+
+    private static void onBuildState(BuildState msg, Supplier<NetworkEvent.Context> ctx) {
+        ctx.get().setPacketHandled(true);
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ru.wik.colonyboard.client.ClientState.onBuild(msg));
+    }
+
+    private static void onBuildResult(BuildResult msg, Supplier<NetworkEvent.Context> ctx) {
+        ctx.get().setPacketHandled(true);
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ru.wik.colonyboard.client.ClientState.onBuildResult(msg));
     }
 
     // ------------------------------------------------------------------ messages

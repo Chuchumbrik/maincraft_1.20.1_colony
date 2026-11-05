@@ -13,6 +13,7 @@ import com.minecolonies.core.colony.buildings.moduleviews.WorkerBuildingModuleVi
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import ru.wik.colonyboard.logic.BuildActions;
 import ru.wik.colonyboard.model.Filter;
 import ru.wik.colonyboard.model.Row;
 import ru.wik.colonyboard.model.Search;
@@ -146,33 +147,51 @@ public final class Collector {
         return rows;
     }
 
+    /**
+     * Confirmed work orders already on this colony view. A placed hut with no order is not invented here;
+     * that list comes from the server build channel. One unreadable order does not drop the rest.
+     */
     public static List<Row> construction(IColonyView colony) {
         List<Row> rows = new ArrayList<>();
-        try {
-            for (com.minecolonies.api.colony.workorders.IWorkOrderView w : colony.getWorkOrders()) {
-                MutableComponent title = w.getDisplayName().copy();
-                title.append(" (" + w.getCurrentLevel() + "→" + w.getTargetLevel() + ")");
-                MutableComponent detail = Component.translatable("colonyboard.wo." + w.getWorkOrderType().name().toLowerCase(Locale.ROOT));
-                boolean waiting = !w.isClaimed(), missing = false;
-                if (waiting) detail.append(" · ").append(Component.translatable("colonyboard.wo.unclaimed"));
-                else {
-                    IBuildingView hut = colony.getClientBuildingManager().getBuilding(w.getClaimedBy());
-                    detail.append(" · ").append(Component.translatable("colonyboard.wo.builder",
-                        hut != null ? buildingName(hut) : Component.literal(w.getClaimedBy().toShortString())));
-                    if (hut != null) {
-                        int open = 0;
-                        try { open = hut.getOpenRequestsOfBuilding().size(); } catch (Throwable ignored) {}
-                        for (ICitizenDataView c : colony.getCitizens().values())
-                            if (w.getClaimedBy().equals(c.getWorkBuilding())) try { open += hut.getOpenRequests(c).size(); } catch (Throwable ignored) {}
-                        if (open > 0) { missing = true; detail.append(" · ").append(Component.translatable("colonyboard.wo.missing", open)); }
-                    }
-                }
-                detail.append(" · ").append(Component.translatable("colonyboard.wo.prio", w.getPriority()));
-                rows.add(new Row(title, detail, w.isClaimed() ? w.getClaimedBy() : w.getLocation(), waiting || missing, w.getPriority(), -1, w.getLocation(),
-                    null, -1, w.getID()));
-            }
-        } catch (Throwable ignored) {}
+        java.util.Collection<? extends com.minecolonies.api.colony.workorders.IWorkOrderView> orders;
+        try { orders = colony.getWorkOrders(); }
+        catch (Throwable t) {
+            rows.add(new Row(Component.translatable("colonyboard.wo.unreadable", "?"), Component.translatable("colonyboard.wo.unreadable.detail"),
+                null, true, 0, -1, null));
+            return rows;
+        }
+        int bad = BuildActions.mapSkippingFaults(orders, w -> workOrderRow(colony, w), rows);
+        if (bad > 0) rows.add(new Row(Component.translatable("colonyboard.wo.unreadable", bad),
+            Component.translatable("colonyboard.wo.unreadable.detail"), null, true, -100000, -1, null));
         return rows;
+    }
+
+    private static Row workOrderRow(IColonyView colony, com.minecolonies.api.colony.workorders.IWorkOrderView w) {
+        Component raw = w.getDisplayName();
+        MutableComponent title = (raw == null ? Component.literal("#" + w.getID()) : raw.copy());
+        title.append(" (" + w.getCurrentLevel() + "→" + w.getTargetLevel() + ")");
+        String type = w.getWorkOrderType() == null ? "?" : w.getWorkOrderType().name().toLowerCase(Locale.ROOT);
+        MutableComponent detail = Component.translatable("colonyboard.wo." + type);
+        BlockPos claimed = w.getClaimedBy();
+        boolean waiting = claimed == null || !w.isClaimed();
+        boolean missing = false;
+        if (waiting) detail.append(" · ").append(Component.translatable("colonyboard.wo.unclaimed"));
+        else {
+            IBuildingView hut = null;
+            try { hut = colony.getClientBuildingManager().getBuilding(claimed); } catch (Throwable ignored) {}
+            detail.append(" · ").append(Component.translatable("colonyboard.wo.builder",
+                hut != null ? buildingName(hut) : Component.literal(claimed.toShortString())));
+            if (hut != null) {
+                int open = 0;
+                try { open = hut.getOpenRequestsOfBuilding().size(); } catch (Throwable ignored) {}
+                for (ICitizenDataView c : colony.getCitizens().values())
+                    if (claimed.equals(c.getWorkBuilding())) try { open += hut.getOpenRequests(c).size(); } catch (Throwable ignored) {}
+                if (open > 0) { missing = true; detail.append(" · ").append(Component.translatable("colonyboard.wo.missing", open)); }
+            }
+        }
+        detail.append(" · ").append(Component.translatable("colonyboard.wo.prio", w.getPriority()));
+        BlockPos where = waiting ? w.getLocation() : claimed;
+        return new Row(title, detail, where, waiting || missing, w.getPriority(), -1, w.getLocation(), null, -1, w.getID());
     }
 
     /** Colony summary + citizens who are hungry or hurt. */
@@ -286,15 +305,18 @@ public final class Collector {
         int woWaiting = 0, woMissing = 0, woAll = 0;
         try {
             for (com.minecolonies.api.colony.workorders.IWorkOrderView w : colony.getWorkOrders()) {
-                woAll++;
-                if (!w.isClaimed()) { woWaiting++; continue; }
-                IBuildingView hut = colony.getClientBuildingManager().getBuilding(w.getClaimedBy());
-                if (hut == null) continue;
-                int open = 0;
-                try { open = hut.getOpenRequestsOfBuilding().size(); } catch (Throwable ignored) {}
-                for (ICitizenDataView c : colony.getCitizens().values())
-                    if (w.getClaimedBy().equals(c.getWorkBuilding())) try { open += hut.getOpenRequests(c).size(); } catch (Throwable ignored) {}
-                if (open > 0) woMissing++;
+                try {
+                    woAll++;
+                    BlockPos claimed = w.getClaimedBy();
+                    if (claimed == null || !w.isClaimed()) { woWaiting++; continue; }
+                    IBuildingView hut = colony.getClientBuildingManager().getBuilding(claimed);
+                    if (hut == null) continue;
+                    int open = 0;
+                    try { open = hut.getOpenRequestsOfBuilding().size(); } catch (Throwable ignored) {}
+                    for (ICitizenDataView c : colony.getCitizens().values())
+                        if (claimed.equals(c.getWorkBuilding())) try { open += hut.getOpenRequests(c).size(); } catch (Throwable ignored) {}
+                    if (open > 0) woMissing++;
+                } catch (Throwable ignored) {}
             }
         } catch (Throwable ignored) {}
         boolean server = d != null && d.colonyId() == colony.getID();

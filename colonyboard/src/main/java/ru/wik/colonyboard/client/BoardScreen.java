@@ -15,13 +15,16 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import ru.wik.colonyboard.ClientConfig;
 import ru.wik.colonyboard.Net;
+import ru.wik.colonyboard.logic.TextWrap;
 import ru.wik.colonyboard.model.Filter;
 import ru.wik.colonyboard.model.Row;
 import ru.wik.colonyboard.model.Search;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 /**
  * J menu. 1.7: dashboard ("what is on fire"), request search/kind filter, build queue (priority / buy for one build),
@@ -38,7 +41,11 @@ public class BoardScreen extends Screen {
     private static BlockPos buildingFilter = null;
     private static String reqQuery = "", citQuery = "", stockQuery = "";
     private static int reqKind = 0, citCat = 0;
+    /** Build tab: 0 queue, 1 placed and not started, 2 native upgrade. */
+    private static int buildSec = 0;
+    private static final Set<Long> BUILD_PENDING = new HashSet<>();
     private static final int ROW_H = 22;
+    private static final int SEC_QUEUE = 0, SEC_PLACED = 1, SEC_UPGRADE = 2;
     /** 1.6: "Open request" from a toast -> Requests tab, scroll to this row and flash it. */
     private static java.util.UUID focusId;
     private static long focusUntil;
@@ -64,6 +71,8 @@ public class BoardScreen extends Screen {
     private final List<Glass.Btn> favBtns = new ArrayList<>();
     private int listTop, listBottom, left, right;
     private Glass.Layout lay;
+    private List<BuildLine> buildLines = List.of();
+    private int buildContentH;
 
     public BoardScreen() { super(Component.translatable("colonyboard.tab.dash")); }
 
@@ -75,6 +84,7 @@ public class BoardScreen extends Screen {
         ClientSetup.requestSync(cid());
         ClientSetup.requestDash(cid());
         ClientSetup.requestTier(cid());
+        if (tab == BUILD) ClientSetup.requestBuild(cid());
         lay = Glass.Layout.of(width, height, TABS.length + 1);
         left = lay.left(); right = lay.right();
         int sw = lay.sideR() - lay.sideL(), th = lay.step() - 2;
@@ -90,7 +100,7 @@ public class BoardScreen extends Screen {
             addRenderableWidget(b);
         }
         addRenderableWidget(Glass.btn(Component.translatable("colonyboard.refresh"), btn -> {
-            ClientSetup.requestSync(cid()); ClientSetup.requestDash(cid()); refresh(); }, lay.sideL(), lay.tabY(TABS.length) + 4, sw, th));
+            ClientSetup.requestSync(cid()); ClientSetup.requestDash(cid()); ClientSetup.requestBuild(cid()); refresh(); }, lay.sideL(), lay.tabY(TABS.length) + 4, sw, th));
         buildingBtn = blockingBtn = fulfilAllBtn = stuckBtn = kindBtn = catBtn = budgetBtn = autoBtn = tierModeBtn = tierFloorBtn = null;
         finAmountBox = finTargetBox = null; finSrcBtn = null;
         favBtns.clear();
@@ -123,7 +133,7 @@ public class BoardScreen extends Screen {
                 stuckBtn = add(Glass.btn(Component.translatable("colonyboard.dash.buystuck.short"), b -> buyStuck(), left + 3 * q, 48, w - 3 * q, 18).accent(Glass.GREEN));
                 listTop = 72;
             }
-            case BUILD -> listTop = 26;
+            case BUILD -> listTop = layBuildSections();
             case STOCK -> {
                 Glass.Box sb = add(new Glass.Box(font, left + 1, 27, 2 * q - 4, 16, Component.translatable("colonyboard.search")));
                 sb.setMaxLength(40); sb.setValue(stockQuery); sb.setHint(Component.translatable("colonyboard.search.hint"));
@@ -147,7 +157,24 @@ public class BoardScreen extends Screen {
 
     private <T extends AbstractWidget> T add(T w) { return addRenderableWidget(w); }
 
-    private void go(int t) { tab = t; scroll = 0; if (t == STOCK || t == WAR || t == FIN || t == DASH) ClientSetup.requestDash(cid()); if (t == FIN) ClientSetup.requestTier(cid()); rebuildWidgets(); }
+    private void go(int t) { tab = t; scroll = 0; if (t == STOCK || t == WAR || t == FIN || t == DASH || t == BUILD) ClientSetup.requestDash(cid()); if (t == FIN) ClientSetup.requestTier(cid()); if (t == BUILD) ClientSetup.requestBuild(cid()); rebuildWidgets(); }
+
+    private int layBuildSections() {
+        String[] keys = {"colonyboard.build.sec.queue", "colonyboard.build.sec.placed", "colonyboard.build.sec.upgrade"};
+        int w = right - left, x = left, y = 26;
+        for (int i = 0; i < keys.length; i++) {
+            Component label = Component.translatable(keys[i]);
+            int bw = Math.min(w, font.width(label) + 16);
+            if (x > left && x + bw > right) { x = left; y += 20; }
+            final int sec = i;
+            Glass.Btn b = add(Glass.btn(label, btn -> { buildSec = sec; scroll = 0; refresh(); }, x, y, bw, 18)
+                .accent(buildSec == i ? Glass.GREEN : Glass.CYAN));
+            b.selected = buildSec == i;
+            b.active = buildSec != i;
+            x += bw + 4;
+        }
+        return y + 24;
+    }
 
     private void filterRow(int w, int third, boolean withFulfil) {
         int bw = withFulfil ? third : w / 2;
@@ -518,7 +545,13 @@ public class BoardScreen extends Screen {
                 }
                 rows = l;
             }
-            case BUILD -> { rows = new ArrayList<>(raw); rows.sort((a, b) -> Integer.compare(b.sortKey(), a.sortKey())); }
+            case BUILD -> {
+                if (buildSec == SEC_QUEUE) { rows = new ArrayList<>(raw); rows.sort((a, b) -> Integer.compare(b.sortKey(), a.sortKey())); }
+                else rows = new ArrayList<>();
+                buildLines = layoutBuild();
+                buildContentH = 0;
+                for (BuildLine line : buildLines) buildContentH += line.h;
+            }
             case CIT -> rows = Filter.apply(raw, null, false);
             default -> rows = raw;
         }
@@ -545,7 +578,7 @@ public class BoardScreen extends Screen {
         }
         if (blockingBtn != null) blockingBtn.setMessage(Component.translatable("colonyboard.filter.blocking",
             Component.translatable(blockingOnly ? "colonyboard.on" : "colonyboard.off")));
-        int max = Math.max(0, rows.size() * ROW_H - (listBottom - listTop));
+        int max = tab == BUILD ? Math.max(0, buildContentH - (listBottom - listTop)) : Math.max(0, rows.size() * ROW_H - (listBottom - listTop));
         if (focusId != null) {
             for (int i = 0; i < rows.size(); i++) if (focusId.equals(rows.get(i).requestId())) {
                 scroll = i * ROW_H - (listBottom - listTop) / 2.0 + ROW_H / 2.0;
@@ -564,14 +597,7 @@ public class BoardScreen extends Screen {
         List<RB> out = new ArrayList<>();
         switch (tab) {
             case BUILD -> {
-                if (r.ref() >= 0) {
-                    boolean mgr = dash() != null && dash().manager();
-                    boolean srv = ClientSetup.serverHasDash();
-                    out.add(new RB(Component.literal("▲"), Glass.CYAN, 15, srv && mgr, () -> woAction(Net.DashAction.WO_PRIO, r.ref(), 1)));
-                    out.add(new RB(Component.literal("▼"), Glass.CYAN, 15, srv && mgr, () -> woAction(Net.DashAction.WO_PRIO, r.ref(), -1)));
-                    out.add(new RB(Component.translatable("colonyboard.fulfil.one"), Glass.GREEN, 46, srv && canFulfil(), () -> woAction(Net.DashAction.WO_BUY, r.ref(), 0)));
-                }
-                if (r.canHighlight()) out.add(new RB(Component.translatable("colonyboard.highlight"), Glass.CYAN, 56, true, () -> highlight(r)));
+                // Queue actions are drawn under the text by layoutBuild, sized to the label.
             }
             case STOCK -> { if (r.ref() >= 0) out.add(new RB(Component.translatable("colonyboard.stock.tomarket"), Glass.AMBER, 62, true, () -> minecraft.setScreen(MarketScreen.stock()))); }
             case FAV -> {
@@ -610,7 +636,7 @@ public class BoardScreen extends Screen {
     @Override
     public void tick() {
         if (++ticks % 20 == 0) refresh();                                // views update live from network
-        if (ticks % 200 == 0 && colony != null) { ClientSetup.requestSync(colony.getID()); ClientSetup.requestDash(colony.getID()); if (tab == FIN) ClientSetup.requestTier(colony.getID()); }
+        if (ticks % 200 == 0 && colony != null) { ClientSetup.requestSync(colony.getID()); ClientSetup.requestDash(colony.getID()); if (tab == FIN) ClientSetup.requestTier(colony.getID()); if (tab == BUILD) ClientSetup.requestBuild(colony.getID()); }
     }
 
     @Override
@@ -638,6 +664,7 @@ public class BoardScreen extends Screen {
             return;
         }
         g.enableScissor(left, listTop, right, listBottom);
+        if (tab == BUILD) { renderBuild(g, mx, my); g.disableScissor(); return; }
         if (rows.isEmpty()) g.drawCenteredString(font, Component.translatable("colonyboard.empty"), (left + right) / 2, listTop + 10, Glass.GREEN);
         for (int i = 0; i < rows.size(); i++) {
             int y = listTop + i * ROW_H - (int) scroll;
@@ -677,6 +704,7 @@ public class BoardScreen extends Screen {
     @Override
     public boolean mouseClicked(double mx, double my, int button) {
         if (super.mouseClicked(mx, my, button)) return true;
+        if (tab == BUILD && clickBuild(mx, my)) return true;
         if (my < listTop || my >= listBottom) return false;
         int i = (int) ((my - listTop + scroll) / ROW_H);
         if (i < 0 || i >= rows.size()) return false;
@@ -717,9 +745,170 @@ public class BoardScreen extends Screen {
 
     @Override
     public boolean mouseScrolled(double mx, double my, double delta) {
-        int max = Math.max(0, rows.size() * ROW_H - (listBottom - listTop));
+        int content = tab == BUILD ? buildContentH : rows.size() * ROW_H;
+        int max = Math.max(0, content - (listBottom - listTop));
         scroll = Math.max(0, Math.min(max, scroll - delta * ROW_H));
         return true;
+    }
+
+    public void refreshFromNet() { refresh(); }
+
+    public static void markBuildPending(long pos) { BUILD_PENDING.add(pos); }
+    public static void clearBuildPending(long pos) { BUILD_PENDING.remove(pos); }
+    public static boolean buildPending(long pos) { return BUILD_PENDING.contains(pos); }
+
+    private record BuildBtn(Component label, int acc, boolean active, Runnable run, int w, int x, int y, int h) {}
+    private record BuildLine(List<String> title, List<String> detail, List<BuildBtn> buttons, Runnable open, boolean blocking, int h) {}
+
+    private List<BuildLine> layoutBuild() {
+        List<BuildLine> out = new ArrayList<>();
+        int textW = Math.max(40, right - left - 16);
+        if (buildSec == SEC_QUEUE) {
+            if (rows.isEmpty()) out.add(noteLine(Component.translatable("colonyboard.build.empty.queue").getString(), textW));
+            else for (Row r : rows) out.add(queueLine(r, textW));
+            return out;
+        }
+        if (!ClientSetup.serverHasBuild()) {
+            out.add(noteLine(Component.translatable("colonyboard.build.noserver").getString(), textW));
+            return out;
+        }
+        Net.BuildState st = ClientState.build;
+        if (st == null || colony == null || st.colonyId() != colony.getID()) {
+            out.add(noteLine(Component.translatable("colonyboard.build.loading").getString(), textW));
+            return out;
+        }
+        if (st.unreadable() == -2) {
+            out.add(noteLine(Component.translatable("colonyboard.build.deny.nocolony").getString(), textW));
+            return out;
+        }
+        if (st.unreadable() < 0) {
+            out.add(noteLine(Component.translatable("colonyboard.build.unreadable.all").getString(), textW));
+            return out;
+        }
+        int want = buildSec == SEC_PLACED ? 0 : 1;
+        List<Net.BuildHutRow> huts = new ArrayList<>();
+        for (Net.BuildHutRow h : st.huts()) if (h.kind() == want) huts.add(h);
+        if (huts.isEmpty()) out.add(noteLine(Component.translatable(buildSec == SEC_PLACED ? "colonyboard.build.empty.placed" : "colonyboard.build.empty.upgrade").getString(), textW));
+        for (Net.BuildHutRow h : huts) out.add(hutLine(h, textW));
+        if (st.unreadable() > 0) out.add(noteLine(Component.translatable("colonyboard.build.unreadable", st.unreadable()).getString(), textW));
+        if (st.truncated()) out.add(noteLine(Component.translatable("colonyboard.build.truncated").getString(), textW));
+        return out;
+    }
+
+    private BuildLine noteLine(String text, int textW) {
+        List<String> lines = TextWrap.wrap(text, textW, font::width);
+        if (lines.isEmpty()) lines = List.of(text);
+        return new BuildLine(lines, List.of(), List.of(), null, false, 8 + lines.size() * 10);
+    }
+
+    private BuildLine queueLine(Row r, int textW) {
+        List<String> title = TextWrap.wrap(r.title().getString(), textW, font::width);
+        List<String> detail = TextWrap.wrap(r.detail().getString(), textW, font::width);
+        if (title.isEmpty()) title = List.of("");
+        List<BuildBtn> buttons = new ArrayList<>();
+        if (r.ref() >= 0) {
+            boolean mgr = dash() != null && dash().manager();
+            boolean srv = ClientSetup.serverHasDash();
+            buttons.add(btn(Component.translatable("colonyboard.build.earlier"), Glass.CYAN, srv && mgr, () -> woAction(Net.DashAction.WO_PRIO, r.ref(), 1)));
+            buttons.add(btn(Component.translatable("colonyboard.build.later"), Glass.CYAN, srv && mgr, () -> woAction(Net.DashAction.WO_PRIO, r.ref(), -1)));
+            buttons.add(btn(Component.translatable("colonyboard.build.materials"), Glass.GREEN, srv && canFulfil(), () -> woAction(Net.DashAction.WO_BUY, r.ref(), 0)));
+        }
+        if (r.canHighlight()) buttons.add(btn(Component.translatable("colonyboard.highlight"), Glass.CYAN, true, () -> highlight(r)));
+        return packLine(title, detail, buttons, null, r.blocking(), textW);
+    }
+
+    private BuildLine hutLine(Net.BuildHutRow h, int textW) {
+        Component name = h.literal() != null && !h.literal().isBlank() ? Component.literal(h.literal())
+            : h.key() != null && !h.key().isBlank() ? Component.translatable(h.key()) : Component.translatable("colonyboard.build.noname");
+        String title = name.getString() + " (" + h.level() + "→" + h.target() + ")";
+        boolean pending = BUILD_PENDING.contains(h.pos());
+        String status = h.kind() == 0 ? Component.translatable("colonyboard.build.placed").getString()
+            : Component.translatable("colonyboard.build.upgrade.ready", h.level(), h.target()).getString();
+        if (pending) status += " · " + Component.translatable("colonyboard.build.pending").getString();
+        else if (h.deny() != null && !h.deny().isEmpty()) status += " · " + Component.translatable(h.deny()).getString();
+        final String shown = status;
+        List<String> titles = TextWrap.wrap(title, textW, font::width);
+        List<String> detail = TextWrap.wrap(shown, textW, font::width);
+        boolean enabled = !pending && (h.deny() == null || h.deny().isEmpty());
+        Runnable open = () -> minecraft.setScreen(new BuildConfirmScreen(this, cid(), h));
+        Component action = Component.translatable(h.kind() == 0 ? "colonyboard.build.start" : "colonyboard.build.upgrade", h.target());
+        List<BuildBtn> buttons = new ArrayList<>();
+        buttons.add(btn(action, enabled ? Glass.GREEN : Glass.AMBER, true, open));
+        BlockPos pos = BlockPos.of(h.pos());
+        buttons.add(btn(Component.translatable("colonyboard.highlight"), Glass.CYAN, true, () -> highlight(new Row(name, Component.literal(shown), pos, !enabled, 0, -1, pos))));
+        return packLine(titles.isEmpty() ? List.of(title) : titles, detail, buttons, open, !enabled, textW);
+    }
+
+    private BuildBtn btn(Component label, int acc, boolean active, Runnable run) {
+        int w = font.width(label) + 14;
+        return new BuildBtn(label, acc, active, run, w, 0, 0, 16);
+    }
+
+    private BuildLine packLine(List<String> title, List<String> detail, List<BuildBtn> buttons, Runnable open, boolean blocking, int textW) {
+        int[] widths = new int[buttons.size()];
+        for (int i = 0; i < buttons.size(); i++) widths[i] = buttons.get(i).w;
+        List<List<Integer>> packed = TextWrap.pack(widths, 4, textW);
+        List<BuildBtn> placed = new ArrayList<>();
+        int y = 4 + (title.size() + detail.size()) * 10 + 2;
+        for (List<Integer> row : packed) {
+            int x = 8;
+            int rowH = 16;
+            for (int idx : row) {
+                BuildBtn src = buttons.get(idx);
+                int w = Math.min(src.w, textW);
+                placed.add(new BuildBtn(src.label, src.acc, src.active, src.run, w, x, y, rowH));
+                x += w + 4;
+            }
+            y += rowH + 2;
+        }
+        int h = Math.max(22, y + 2);
+        return new BuildLine(title, detail, placed, open, blocking, h);
+    }
+
+    private void renderBuild(GuiGraphics g, int mx, int my) {
+        if (buildLines.isEmpty()) {
+            g.drawCenteredString(font, Component.translatable("colonyboard.empty"), (left + right) / 2, listTop + 10, Glass.GREEN);
+            return;
+        }
+        int y = listTop - (int) scroll;
+        for (BuildLine line : buildLines) {
+            int top = y;
+            if (top + line.h >= listTop && top <= listBottom) {
+                g.fill(left, top, right, top + line.h - 1, Glass.a(40, 0x16222F));
+                if (line.blocking) g.fill(left, top, left + 3, top + line.h - 1, Glass.a(200, Glass.RED));
+                int ty = top + 3;
+                for (String s : line.title) { g.drawString(font, s, left + 8, ty, line.blocking ? 0xFF8080 : Glass.TEXT, false); ty += 10; }
+                for (String s : line.detail) { g.drawString(font, s, left + 8, ty, 0x8FA3B6, false); ty += 10; }
+                for (BuildBtn b : line.buttons) {
+                    if (top + b.y + b.h < listTop || top + b.y > listBottom) continue;
+                    boolean hover = mx >= left + b.x && mx < left + b.x + b.w && my >= top + b.y && my < top + b.y + b.h && my >= listTop && my < listBottom;
+                    String shown = font.plainSubstrByWidth(b.label.getString(), Math.max(1, b.w - 8));
+                    boolean full = shown.equals(b.label.getString());
+                    Glass.button(g, font, full ? b.label : Component.literal(shown), left + b.x, top + b.y, b.w, b.h, b.acc, b.active, hover && b.active, false);
+                }
+            }
+            y += line.h;
+        }
+    }
+
+    private boolean clickBuild(double mx, double my) {
+        if (my < listTop || my >= listBottom) return false;
+        int y = listTop - (int) scroll;
+        for (BuildLine line : buildLines) {
+            if (my >= y && my < y + line.h) {
+                for (BuildBtn b : line.buttons) {
+                    int bx = left + b.x, by = y + b.y;
+                    if (mx >= bx && mx < bx + b.w && my >= by && my < by + b.h) {
+                        if (b.active && b.run != null) { b.run.run(); playClick(); }
+                        return true;
+                    }
+                }
+                if (line.open != null && mx >= left && mx < right) { line.open.run(); playClick(); return true; }
+                return true;
+            }
+            y += line.h;
+        }
+        return false;
     }
 
     @Override

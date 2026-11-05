@@ -109,4 +109,14 @@ public final class ClientSetup {
     public static void requestSync(int colonyId) {
         if (serverHasMod()) Net.CHANNEL.sendToServer(new Net.SyncRequest(colonyId));
     }
+
+    /** 1.7.3: placed huts with no work order, and huts that can take a native upgrade. */
+    public static boolean serverHasBuild() {
+        var c = Minecraft.getInstance().getConnection();
+        return c != null && Net.BUILD.isRemotePresent(c.getConnection());
+    }
+
+    public static void requestBuild(int colonyId) {
+        if (serverHasBuild()) Net.BUILD.sendToServer(new Net.BuildRequest(colonyId));
+    }
 }

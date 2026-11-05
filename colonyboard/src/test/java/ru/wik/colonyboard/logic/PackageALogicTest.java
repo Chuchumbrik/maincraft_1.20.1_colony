@@ -15,6 +15,7 @@ class PackageALogicTest {
         assertEquals("1", Protocol.AUTO);
         assertEquals("1", Protocol.DASH);
         assertEquals("1", Protocol.TIER);
+        assertEquals("1", Protocol.BUILD);
     }
 
     @Test void explicitColonyIdNeverFallsBack() {
