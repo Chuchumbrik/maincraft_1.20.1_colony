@@ -1,0 +1,14 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="colonyboard"
+version="${file.jarVersion}"
+displayName="Colony Board"
+description="Общая панель колонии MineColonies (J): сводка, запросы, стройки, склад, жители, казна/налоги, война, избранное, рынок."
+[[dependencies.colonyboard]]
+modId="minecolonies"
+mandatory=true
+versionRange="[1.1,)"
+ordering="AFTER"
+side="BOTH"
