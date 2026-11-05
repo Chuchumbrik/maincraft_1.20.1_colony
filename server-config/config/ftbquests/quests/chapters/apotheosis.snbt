@@ -421,19 +421,13 @@
 				{
 					count: 9L
 					id: "5FE3BF20BB4ABFFB"
-					item: {
-						Count: 9
-						id: "apotheosis:crystal_seashelf"
-					}
+					item: { Count: 9, id: "apotheosis:crystal_seashelf" }
 					type: "item"
 				}
 				{
 					count: 2L
 					id: "398CE6B12CC89712"
-					item: {
-						Count: 2
-						id: "apotheosis:heart_seashelf"
-					}
+					item: { Count: 2, id: "apotheosis:heart_seashelf" }
 					type: "item"
 				}
 			]
@@ -719,10 +713,7 @@
 			tasks: [{
 				count: 3L
 				id: "1ACDB5822E2F5713"
-				item: {
-					Count: 3
-					id: "minecraft:lapis_lazuli"
-				}
+				item: { Count: 3, id: "minecraft:lapis_lazuli" }
 				type: "item"
 			}]
 			title: "Другие хитрости"
@@ -1118,9 +1109,8 @@
 					type: "sdmshop:money"
 				}
 				{
-					count: 4
-					id: "3411995EF4435C49"
-					item: "apotheosis:gem_dust"
+					id: "1AFC8F7E0F9CE2A3"
+					item: "minecraft:anvil"
 					type: "item"
 				}
 			]
@@ -1148,10 +1138,9 @@
 					type: "sdmshop:money"
 				}
 				{
-					count: 4
-					id: "5A70D7A14C5A7BDD"
-					item: "apotheosis:common_material"
-					type: "item"
+					id: "E2B9392EC9ABD2F5"
+					type: "xp_levels"
+					xp_levels: 3
 				}
 			]
 			shape: "hexagon"

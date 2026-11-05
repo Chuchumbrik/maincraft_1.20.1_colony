@@ -96,11 +96,6 @@
 			id: "67A587F4BAD76C70"
 			rewards: [
 				{
-					id: "0181CA7B3448C53C"
-					item: "irons_spellbooks:common_ink"
-					type: "item"
-				}
-				{
 					count: 2
 					id: "7550D42608993564"
 					item: "minecraft:chain"
@@ -119,8 +114,18 @@
 					type: "item"
 				}
 				{
-					id: "4153064BBFA4DBA1"
-					item: "irons_spellbooks:blank_rune"
+					id: "DE3E8BDE1881D13D"
+					item: "irons_spellbooks:cooldown_rune"
+					type: "item"
+				}
+				{
+					id: "4147A2C13B1E3FB1"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+				{
+					id: "60F2AD71E3D5981C"
+					item: "minecraft:amethyst_shard"
 					type: "item"
 				}
 			]
@@ -151,8 +156,9 @@
 			id: "6CE7115DA2B23776"
 			rewards: [
 				{
-					id: "4B016E7BB94B93F9"
-					item: "irons_spellbooks:uncommon_ink"
+					count: 4
+					id: "C1083E81E84AB6B9"
+					item: "minecraft:copper_ingot"
 					type: "item"
 				}
 				{
@@ -201,14 +207,21 @@
 			id: "66762A4743104157"
 			rewards: [
 				{
-					id: "7CF77C5B3E6D55F7"
-					item: "irons_spellbooks:rare_ink"
+					count: 4
+					id: "ADE0136A37EE0560"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "93E93894BD9C3E01"
+					item: "irons_spellbooks:arcane_essence"
 					type: "item"
 				}
 				{
 					count: 2
-					id: "383464A6D6BED25C"
-					item: "irons_spellbooks:magic_cloth"
+					id: "1CFE4399AA5C4D5C"
+					item: "minecraft:white_wool"
 					type: "item"
 				}
 				{
@@ -529,8 +542,15 @@
 					type: "item"
 				}
 				{
-					id: "46FC1494A82B33C5"
-					item: "irons_spellbooks:upgrade_orb"
+					count: 2
+					id: "937E9EB4C4602E15"
+					item: "irons_spellbooks:arcane_ingot"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "CE253FD9F89139FE"
+					item: "irons_spellbooks:cinder_essence"
 					type: "item"
 				}
 			]
@@ -601,9 +621,15 @@
 			]
 			id: "551A4916F032ACCF"
 			rewards: [{
-				count: 3
-				id: "12BF12853B302708"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 4
+				id: "B4C6A3381B68D3B0"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 4
+				id: "8C6B5AD4598D32B7"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -626,9 +652,14 @@
 			id: "69838E3F12218D68"
 			rewards: [
 				{
-					count: 3
-					id: "20EDABAC9A96258A"
-					item: "irons_spellbooks:rare_ink"
+					id: "7DABE1E5CAE39930"
+					item: "minecraft:cauldron"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "8C9F7B419ADE69CA"
+					item: "minecraft:iron_ingot"
 					type: "item"
 				}
 				{
@@ -799,8 +830,15 @@
 					type: "item"
 				}
 				{
-					id: "142A9773FE47BA16"
-					item: "irons_spellbooks:upgrade_orb"
+					count: 2
+					id: "C26076C9746C3AF0"
+					item: "irons_spellbooks:arcane_ingot"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "B1B0C62DEED2E3A6"
+					item: "irons_spellbooks:cinder_essence"
 					type: "item"
 				}
 			]
@@ -2066,9 +2104,9 @@
 					type: "item"
 				}
 				{
-					count: 8
-					id: "732AA8967EB06CC4"
-					item: "minecraft:paper"
+					count: 9
+					id: "9D5B067B7168CF9C"
+					item: "minecraft:sugar_cane"
 					type: "item"
 				}
 				{
@@ -2079,7 +2117,13 @@
 				}
 				{
 					id: "67F5966ED59FBCE9"
-					item: "minecraft:leather_helmet"
+					item: {
+						Count: 1
+						id: "minecraft:leather_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 			]
@@ -2233,14 +2277,9 @@
 			}
 			id: "204B969DA081056A"
 			rewards: [{
-				id: "008A3E406FB09885"
-				item: {
-					Count: 1
-					id: "irons_spellbooks:tarnished_helmet"
-					tag: {
-						Damage: 0
-					}
-				}
+				count: 6
+				id: "980F1403C76D796D"
+				item: "irons_spellbooks:arcane_essence"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -2358,8 +2397,15 @@
 			description: ["Посох крови: только добыча. Сильный посох школы Крови; нужен Чародею для классового квеста Epic Class Mod."]
 			id: "3E6892FC6A0B4FC7"
 			rewards: [{
-				id: "7D262FAC17CE3C8D"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "278882BA8EB02B3C"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "4158F642DB15A2F0"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2376,8 +2422,15 @@
 			description: ["Посох Серобородого: универсальный магический посох, даёт ману и силу заклинаний."]
 			id: "64BAE7EF1F741415"
 			rewards: [{
-				id: "5116D43EE052CF24"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "7B72D7FA84682DAF"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "DB8D75EAC98E5E02"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2394,8 +2447,15 @@
 			description: ["Ледяной посох: усиливает школу Льда."]
 			id: "687D2431D774D6A4"
 			rewards: [{
-				id: "51F1AF3B3BC92D81"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "3C578C02FF5080B1"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "10DE7937DE7347DC"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2412,8 +2472,15 @@
 			description: ["Трость изобретателя: посох для смешанных школ, крафтится."]
 			id: "5B05AB9C1754A9F8"
 			rewards: [{
-				id: "0747CFBD50642018"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "DDE2BC6CEC108E99"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "4269038B190364B8"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2430,8 +2497,15 @@
 			description: ["Громоотвод: посох школы Молнии, только добыча."]
 			id: "6708D7E58ABBF10F"
 			rewards: [{
-				id: "76788C76DEB56493"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "DE82902B95870689"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "AE7C49846E117B27"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2448,8 +2522,15 @@
 			description: ["Магоборец: меч против магов, только добыча. В него можно вложить заклинание на наковальне."]
 			id: "59E324D64358C9D7"
 			rewards: [{
-				id: "14A7879244164379"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "54AAFF5A1AE211F0"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "EE31B45CAEE1006F"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2472,8 +2553,15 @@
 			description: ["Фламберг хранителя: оружие Древних рыцарей, падает с них."]
 			id: "2F2831E2C3B2DDA6"
 			rewards: [{
-				id: "2AAEEC83133E8786"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "9186A6647AAD26E1"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "8F8503238606E5F5"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2496,8 +2584,15 @@
 			description: ["Разрушитель чар: меч, который мешает касту противника."]
 			id: "6E66E60D0750E1D1"
 			rewards: [{
-				id: "73CBA66AB43E14A8"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "6EC53FEF04D9BE5F"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "A9F9D2F3E3CF531B"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2531,8 +2626,15 @@
 			description: ["Аметистовая рапира: быстрый магический клинок, крафтится."]
 			id: "7A0E7168249CFF1A"
 			rewards: [{
-				id: "5711057B58EF626D"
-				item: "irons_spellbooks:upgrade_orb"
+				count: 2
+				id: "AD1D191B988E251C"
+				item: "irons_spellbooks:arcane_ingot"
+				type: "item"
+			}
+			{
+				count: 2
+				id: "5563F080719ECF86"
+				item: "irons_spellbooks:cinder_essence"
 				type: "item"
 			}]
 			tasks: [{
@@ -2758,8 +2860,15 @@
 					type: "item"
 				}
 				{
-					id: "592BBED86217BC4A"
-					item: "irons_spellbooks:upgrade_orb"
+					count: 2
+					id: "7005D768FEE55B9A"
+					item: "irons_spellbooks:arcane_ingot"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "D4BAC569F6F596CE"
+					item: "irons_spellbooks:cinder_essence"
 					type: "item"
 				}
 			]
@@ -3284,9 +3393,15 @@
 			id: "5F4F21589F363BD8"
 			rewards: [
 				{
-					count: 2
-					id: "280C7D43BA0AF78C"
-					item: "irons_spellbooks:upgrade_orb"
+					count: 4
+					id: "BF0F96F0F5DD0380"
+					item: "irons_spellbooks:arcane_ingot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "9A68CF8EA71E7984"
+					item: "irons_spellbooks:cinder_essence"
 					type: "item"
 				}
 				{
@@ -3325,9 +3440,15 @@
 					type: "item"
 				}
 				{
-					count: 2
-					id: "213D36F755380B6A"
-					item: "irons_spellbooks:upgrade_orb"
+					count: 4
+					id: "682FB2A16DE30DD6"
+					item: "irons_spellbooks:arcane_ingot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "C1C60B48825A22B6"
+					item: "irons_spellbooks:cinder_essence"
 					type: "item"
 				}
 				{
@@ -3355,10 +3476,9 @@
 			invisible: true
 			optional: true
 			rewards: [{
-				count: 4
-				id: "15264B1226321AD3"
-				item: "irons_spellbooks:arcane_essence"
-				type: "item"
+				id: "4479E624EB715E93"
+				type: "xp_levels"
+				xp_levels: 3
 			}]
 			tasks: [{
 				id: "7531A4AB07A593DB"
@@ -3391,9 +3511,9 @@
 					type: "item"
 				}
 				{
-					count: 8
-					id: "498D581D490DC280"
-					item: "minecraft:paper"
+					count: 9
+					id: "3A7BC71B3255477E"
+					item: "minecraft:sugar_cane"
 					type: "item"
 				}
 			]
@@ -3591,9 +3711,9 @@
 			icon: "irons_spellbooks:staff_of_the_nines"
 			id: "6A93D226D306FA2C"
 			rewards: [{
-				count: 2
-				id: "3AF6877A3B9E66C8"
-				item: "irons_spellbooks:common_ink"
+				count: 4
+				id: "CA6B1740428759BF"
+				item: "irons_spellbooks:arcane_essence"
 				type: "item"
 			}]
 			size: 1.5d

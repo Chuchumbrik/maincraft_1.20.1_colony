@@ -56,8 +56,13 @@
 			id: "0D6E099A1A242153"
 			rewards: [
 				{
-					id: "2C0FFA33AF366627"
-					item: "minecolonies:blockhutbuilder"
+					id: "B463121C3E06A8CE"
+					item: "minecraft:oak_door"
+					type: "item"
+				}
+				{
+					id: "3108F3F754B29CDA"
+					item: "structurize:sceptergold"
 					type: "item"
 				}
 				{
@@ -160,12 +165,24 @@
 				}
 				{
 					id: "7598DF9C06B06375"
-					item: "minecraft:wooden_axe"
+					item: {
+						Count: 1
+						id: "minecraft:wooden_axe"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "17D5A934FDC26178"
-					item: "minecraft:wooden_pickaxe"
+					item: {
+						Count: 1
+						id: "minecraft:wooden_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 			]
@@ -1008,8 +1025,20 @@
 				}
 				{
 					count: 2
-					id: "326C6E95DBAC8062"
-					item: "minecolonies:blockhutguardtower"
+					id: "B9D5572252ACAD44"
+					item: "minecraft:bow"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "81F9F6E1875DFA9D"
+					item: "structurize:sceptergold"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "337F2846CBF0312E"
+					item: "minecraft:oak_planks"
 					type: "item"
 				}
 			]
